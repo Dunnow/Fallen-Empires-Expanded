@@ -114,5 +114,122 @@ country_event = {
                 #orbit_angle = 360
 			}
         }
+
+        # Create hyper relay "roads" to points of interest
+        country_event = { id = fex_core.3}
+    }
+}
+
+# Master gatekeeper for road building. Can also build a road by firing fex_core.4 on a system.
+event = {
+    id = fex_core.3
+    is_triggered_only = yes
+    hide_window = yes
+
+    immediate = {
+        every_system = {
+            limit = {
+                has_star_flag = fex_historical_system # Would they have been here?
+                NAND = {
+                    exists = owner
+                    owner = { is_fallen_empire = yes}
+                }
+            }
+
+            if = {
+                limit = { # These are location that would always have a road.
+                    OR = {
+                        AND = {
+                            has_any_megastructure = yes
+                            fex_has_hyper_relay = no
+                            has_no_non_gate_megastructure = no
+                        }
+                        has_star_flag = fex_spawn_road_source
+                    }
+                }
+                set_star_flag = fex_road_source
+                system_event = { id = fex_core.4 }
+            }
+        }
+    }
+}
+
+system_event = {
+    id = fex_core.4
+    is_triggered_only = yes
+    hide_window = yes
+
+    immediate = {
+        set_star_flag = fex_road_system
+        closest_system = {
+            limit = {
+                exists = owner
+                owner = {
+                    AND = {
+                        is_fallen_empire = yes
+                        is_fallen_empire_machine = no
+                    }
+                }
+            }
+            save_event_target_as = fex_road_target
+        }
+        every_neighbor_system = {
+            export_trigger_value_to_variable = {
+                variable = fex_road_distance
+                trigger = distance
+                parameters = { source = event_target:fex_road_target }
+            }
+        }
+        ordered_neighbor_system = {
+            order_by = fex_road_distance
+            position = 0
+            inverse = yes
+            # not perfect yet
+            limit = {
+                not = {
+                    has_star_flag = fex_road_system
+                    and = {
+                        exists = owner
+                        owner = { is_regular_empire = yes }
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    NOT = {
+                        AND = {
+                            exists = owner
+                            owner = { is_fallen_empire = yes }
+                        }
+                    }
+                }
+                system_event = { id = fex_core.4 }
+            }
+        }
+        if = {
+            limit = {
+                fex_has_hyper_relay = no
+            }
+            random_list = {
+                10 = {} # Nothing
+                40 = {
+                    spawn_megastructure = {
+                        type = hyper_relay_ruined
+                        random_pos = yes
+                        graphical_culture = mammalian_01 # FEs dont have a model for these
+                        #orbit_angle = 360
+                    }
+                }
+                30 = {
+                    spawn_megastructure = {
+                        type = hyper_relay
+                        random_pos = yes
+                        graphical_culture = mammalian_01 # FEs dont have a model for these
+                        #orbit_angle = 360
+                    }
+                }
+            }
+        }
+
     }
 }

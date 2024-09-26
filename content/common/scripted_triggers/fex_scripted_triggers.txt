@@ -27,3 +27,11 @@ fex_machine_fe_exists = {
         is_fallen_empire_machine = yes
     }
 }
+
+fex_has_hyper_relay = {
+    OR = {
+        has_megastructure = hyper_relay_ruined
+        has_megastructure = hyper_relay
+        has_megastructure = hyper_relay_restored
+    }
+}
