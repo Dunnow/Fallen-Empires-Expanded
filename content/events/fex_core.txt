@@ -1,0 +1,118 @@
+namespace = fex_core
+
+# Initial Setup
+event = {
+    id = fex_core.1
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        set_global_flag = fallen_empires_expanded_active
+        if = {
+            limit = { fex_materialist_fe_exists = yes }
+            random_country = {
+                limit = {  is_fallen_empire_materialist = yes }
+                save_global_event_target_as = fex_materialist_fe
+            }
+        }
+        if = {
+            limit = { fex_spiritualist_fe_exists = yes }
+            random_country = {
+                limit = {  is_fallen_empire_spiritualist = yes }
+                save_global_event_target_as = fex_spiritualist_fe
+            }
+        }
+        if = {
+            limit = { fex_xenophobe_fe_exists = yes }
+            random_country = {
+                limit = {  is_fallen_empire_xenophobe = yes }
+                save_global_event_target_as = fex_xenophobe_fe
+            }
+        }
+        if = {
+            limit = { fex_xenophile_fe_exists = yes }
+            random_country = {
+                limit = {  is_fallen_empire_xenophile = yes }
+                save_global_event_target_as = fex_xenophile_fe
+            }
+        }
+        if = {
+            limit = { fex_machine_fe_exists = yes }
+            random_country = {
+                limit = {  is_fallen_empire_machine = yes }
+                save_global_event_target_as = fex_machine_fe
+            }
+        }
+    }
+}
+
+# Per Country initial setup
+country_event = {
+    id = fex_core.2
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        is_fallen_empire = yes
+    }
+
+    immediate = {
+        # Rename colonies because not naming them is stupid.
+        every_owned_planet = {
+            limit = {
+                solar_system = {
+                    NOT = { is_same_value = root.capital_scope.solar_system }
+                }
+                # Flags to ignore
+                nor = {
+                    has_planet_flag = fe_the_preserve
+                }
+            }
+            set_name = random
+        }
+        # Set up "historical" spheres.
+        every_system = {
+            closest_system = {
+                max_steps = 5
+                limit = {
+                    exists = owner
+                    owner = {
+                        AND = {
+                            is_fallen_empire = yes
+                            is_fallen_empire_machine = no # The machine FEs are more isolationist.
+                        }
+                    }
+                }
+                prev = {
+                    set_star_flag = fex_historical_system
+                }
+                if = {
+                    limit = { owner = { is_fallen_empire_spiritualist = yes } }
+                    prev = { set_star_flag = fex_spiritualist_history}
+                }
+                if = {
+                    limit = { owner = { is_fallen_empire_materialist = yes } }
+                    prev = { set_star_flag = fex_materialist_history}
+                }
+                if = {
+                    limit = { owner = { is_fallen_empire_xenophile = yes } }
+                    prev = { set_star_flag = fex_xenophile_history}
+                }
+                if = {
+                    limit = { owner = { is_fallen_empire_xenophobe = yes } }
+                    prev = { set_star_flag = fex_xenophobe_history}
+                }
+            }
+        }
+
+        # Give them a hyper relay.
+        every_system_within_border  = {
+            spawn_megastructure = {
+				type = hyper_relay
+				random_pos = yes
+                graphical_culture = mammalian_01 # FEs dont have a model for these
+                #orbit_angle = 360
+			}
+        }
+    }
+}

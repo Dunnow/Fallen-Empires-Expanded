@@ -1,0 +1,29 @@
+fex_materialist_fe_exists = {
+    any_country = {
+        is_fallen_empire_materialist = yes
+    }
+}
+
+fex_spiritualist_fe_exists = {
+    any_country = {
+        is_fallen_empire_spiritualist = yes
+    }
+}
+
+fex_xenophobe_fe_exists = {
+    any_country = {
+        is_fallen_empire_xenophobe = yes
+    }
+}
+
+fex_xenophile_fe_exists = {
+    any_country = {
+        is_fallen_empire_xenophile = yes
+    }
+}
+
+fex_machine_fe_exists = {
+    any_country = {
+        is_fallen_empire_machine = yes
+    }
+}
