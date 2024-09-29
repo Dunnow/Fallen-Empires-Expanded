@@ -1,5 +1,10 @@
 ﻿l_english:
+ # Deposits
  d_fex_forgotten_archives: "Forgotten Archives"
  d_fex_forgotten_archives_desc: "The accumulated wisdom of countless ages, languishing in obscurity."
  d_fex_ruined_monuments: "Decaying Monuments"
  d_fex_ruined_monuments_desc: "Mighty deeds commemorated long ago. None now remembered."
+
+ # Planet Modifiers
+ fex_xenophobe_titanic_game: "Titanic Game"
+ fex_xenophobe_titanic_game_desc: "Enormous lifeforms, raised and hunted for sport."
