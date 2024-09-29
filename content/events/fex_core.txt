@@ -154,6 +154,7 @@ event = {
     }
 }
 
+# Follow on road building. Recursively runs until we reach the target.
 system_event = {
     id = fex_core.4
     is_triggered_only = yes
@@ -230,6 +231,77 @@ system_event = {
                 }
             }
         }
+    }
+}
+
+# Generic world flavour-ify gatekeeper
+planet_event = {
+    id = fex_core.10
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        if = {
+            limit = { owner = { is_fallen_empire_xenophobe = yes } }
+            planet_event = { id = fex_core.11 }
+        }
+        if = {
+            limit = { owner = { is_fallen_empire_xenophile = yes } }
+            planet_event = { id = fex_core.12 }
+        }
+        if = {
+            limit = { owner = { is_fallen_empire_materialist = yes } }
+            planet_event = { id = fex_core.13 }
+        }
+        if = {
+            limit = { owner = { is_fallen_empire_spiritualist = yes } }
+            planet_event = { id = fex_core.14 }
+        }
+        # Machine FE doesn't have any planets outside it's area
+    }
+}
+
+# Xenophobe generic world flavour
+planet_event = {
+    id = fex_core.11
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        random_list = {
+            10 = {}
+        }
+    }
+}
+
+# Xenophile generic world flavour
+planet_event = {
+    id = fex_core.12
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+
+    }
+}
+
+# Materialist generic world flavour
+planet_event = {
+    id = fex_core.13
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+
+    }
+}
+# Spiritualist generic world flavour
+planet_event = {
+    id = fex_core.14
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
 
     }
 }

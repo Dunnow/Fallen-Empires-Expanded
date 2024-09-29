@@ -35,3 +35,12 @@ fex_has_hyper_relay = {
         has_megastructure = hyper_relay_restored
     }
 }
+
+fex_is_bespoke_fe_world = {
+    OR = {
+        solar_system = {
+            is_capital_system = yes
+        }
+        has_star_flag = fe_xeno_zoo
+    }
+}
