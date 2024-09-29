@@ -57,18 +57,13 @@ country_event = {
     }
 
     immediate = {
-        # Rename colonies because not naming them is stupid.
+        # Rename colonies and add some flavour because not naming them is stupid.
         every_owned_planet = {
             limit = {
-                solar_system = {
-                    NOT = { is_same_value = root.capital_scope.solar_system }
-                }
-                # Flags to ignore
-                nor = {
-                    has_planet_flag = fe_the_preserve
-                }
+                fex_is_bespoke_fe_world = no
             }
             set_name = random
+            planet_event = { id = fex_core.10 }
         }
         # Set up "historical" spheres.
         every_system = {
@@ -269,7 +264,14 @@ planet_event = {
 
     immediate = {
         random_list = {
-            10 = {}
+            100 = {
+                fex_set_hunting_world = yes
+                modifier = {
+                    factor = 0
+                    owner = { any_owned_planet = {  has_planet_flag = fex_hunting_world } }
+                }
+            }
+            1 = { } # Small chance of nothing so we dont get stuck in an infinite loop
         }
     }
 }
