@@ -1,0 +1,39 @@
+building_fex_hunting_lodges= {
+	base_buildtime = @b1_time
+
+	category = amenity
+
+	base_cap_amount = 1
+
+	potential = {
+		exists = owner
+		owner = {
+			is_fallen_empire_xenophobe = yes
+		}
+		has_planet_flag = fex_hunting_world
+	}
+
+	destroy_trigger = {
+		# TODO: Should be destroyed if the owner no longer has the valid doctrine
+		exists = owner
+		owner = {
+            is_fallen_empire_xenophobe = no
+        }
+	}
+
+	planet_modifier = {
+		planet_housing_add = 3
+		planet_amenities_add = 5
+		job_fex_xeno_hunter_add = 3
+		job_clerk_add = 3
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			energy = 2
+		}
+	}

@@ -14,7 +14,8 @@ fex_hunting_world = {
     }
     else = {
         set_planet_flag = fex_hunting_world
-        add_modifier = { modifier = fex_xenophobe_titanic_sport }
+        add_modifier = { modifier = fex_xenophobe_titanic_game }
+        add_building = building_fex_hunting_lodges
 
         # Add primitive game
         while = {

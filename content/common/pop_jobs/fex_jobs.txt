@@ -14,12 +14,13 @@ fex_xeno_game = {
 
 	possible = {
 		owner = {
-			is_xenophobe = yes
+			is_fallen_empire_xenophobe = yes
 		}
 		planet = {
 			has_planet_flag = fex_hunting_world
 		}
 		NOT = { is_same_species = owner }
+		NOT = { has_trait = trait_nerve_stapled} # To avoid the slave species being put here.
 	}
 
 	resources = {
@@ -59,7 +60,7 @@ fex_xeno_hunter = {
 	category = precursor
 	icon = hunter
 	is_capped_by_modifier = yes
-	building_icon = building_fe_xeno_zoo
+	building_icon = building_fex_hunting_lodges
 	clothes_texture_index = 2
 
 	possible_pre_triggers = {
