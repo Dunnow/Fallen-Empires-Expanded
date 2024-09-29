@@ -8,3 +8,14 @@
  # Planet Modifiers
  fex_xenophobe_titanic_game: "Titanic Game"
  fex_xenophobe_titanic_game_desc: "Enormous lifeforms, raised and hunted for sport."
+
+ # Jobs
+ job_fex_xeno_game: "Alien Quarry"
+ job_fex_xeno_game_plural: "$job_fex_xeno_game$"
+ job_fex_xeno_game_desc: "The most dangerous game."
+ mod_job_fex_xeno_game_add: "$job_fex_xeno_game$ Jobs"
+
+ job_fex_xeno_hunter: "Xeno-Hunter"
+ job_fex_xeno_hunter_plural: "Xeno-Hunters"
+ job_fex_xeno_hunter_desc: "For these precursors the thrill of the hunt exceeds even the most sophisticated luxuries available on their homeworlds."
+ mod_job_fex_xeno_hunter_add: "$job_fex_xeno_hunter$ Jobs"
