@@ -1,0 +1,37 @@
+# All are planet scope
+
+# Hunting world, Xenophobe
+fex_hunting_world = {
+    if = {
+        limit = {
+            owner = {
+                any_owned_planet = {
+                    has_planet_flag = fex_hunting_world
+                }
+            }
+        }
+        planet_event = { id = fex_core.11 }
+    }
+    else = {
+        set_planet_flag = fex_hunting_world
+        add_modifier = { modifier = fex_xenophobe_titanic_sport }
+
+        # Add primitive game
+        while = {
+            count = 5
+            random_country = {
+                limit = {
+                    OR = {
+		                is_country_type = default
+                        is_primitive = yes
+                    }
+                    is_gestalt = no
+                }
+                species = {
+                    save_event_target_as = fex_hunting_target
+                }
+            }
+            create_pop = { species = event_target:fex_hunting_target }
+        }
+    }
+}
