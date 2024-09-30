@@ -41,6 +41,6 @@ fex_is_bespoke_fe_world = {
         solar_system = {
             is_capital_system = yes
         }
-        has_star_flag = fe_xeno_zoo
+        has_planet_flag = fe_the_preserve
     }
 }
