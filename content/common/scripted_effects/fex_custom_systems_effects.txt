@@ -41,7 +41,7 @@ fex_create_exodite_country = {
 	}
     last_created_country = {
 		set_graphical_culture = preindustrial_01
-        set_pre_ftl_age = stone_age
+        set_pre_ftl_age = fex_exodite_age
         change_government = {
             authority = random
             civics = {
@@ -65,4 +65,5 @@ fex_setup_exodite_planet = {
             species = event_target:fex_xenophile_fe.species
         }
     }
+	set_name = random
 }

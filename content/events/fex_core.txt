@@ -111,7 +111,8 @@ country_event = {
         }
 
         # Create hyper relay "roads" to points of interest
-        country_event = { id = fex_core.3}
+        # TODO: Refactor this. The recursion just doesnt work. I need a second look at this or it crashes the game
+        #country_event = { id = fex_core.3}
     }
 }
 

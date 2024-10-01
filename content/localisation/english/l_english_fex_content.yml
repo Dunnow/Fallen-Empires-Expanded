@@ -20,5 +20,12 @@
  job_fex_xeno_hunter_desc: "For these precursors the thrill of the hunt exceeds even the most sophisticated luxuries available on their homeworlds."
  mod_job_fex_xeno_hunter_add: "$job_fex_xeno_hunter$ Jobs"
 
+ # Buildings
  building_fex_hunting_lodges: "Hunting Lodges"
  building_fex_hunting_lodges_desc: "An anachronistic throwback to a more primitive age. Prospective thrill seekers are accommodated in sparse but comfortable conditions."
+
+ # Misc
+ fex_exodite_age: "Exodite Age"
+ fex_exodite_age_desc: "This civilization is currently at a pre-Industrial Age level of development. Despite this, they make use of several extremely advanced technologies. They appear to remain at their level of development by choice."
+ col_fex_exodite_age:0 "Exodite World"
+ col_fex_exodite_age_desc:0 "$col_primitive_desc$"

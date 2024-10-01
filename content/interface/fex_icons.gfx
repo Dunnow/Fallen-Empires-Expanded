@@ -1,0 +1,6 @@
+spriteTypes = {
+    spriteType = {
+        name = "GFX_fex_colony_type_exodite_world"
+        textureFile = "gfx/interface/icons/pre_ftl_ages/fex_exodite_world.dds"
+    }
+}
