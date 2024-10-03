@@ -126,7 +126,7 @@ building_fex_exodite_settlements = {
 			}
 			has_planet_flag = fex_exodite_planet
 		}
-		
+
 		planet_housing_add = 10
 		planet_amenities_add = 25
 		planet_crime_add = -20

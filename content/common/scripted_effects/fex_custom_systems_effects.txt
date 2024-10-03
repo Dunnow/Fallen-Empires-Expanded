@@ -7,6 +7,20 @@ fex_generate_exodites_on_planet = {
 	reroll_planet = yes
 	fex_create_exodite_country = yes
 	fex_setup_exodite_planet = yes
+
+	if = {
+		limit = { is_moon = yes }
+		orbit = {
+			random_list = {
+				1 = { set_name = fex_exodite_moon_1 }
+				1 = { set_name = fex_exodite_moon_2 }
+				1 = { set_name = fex_exodite_moon_3 }
+				1 = { set_name = fex_exodite_moon_4 }
+				1 = { set_name = fex_exodite_moon_5 }
+				1 = { set_name = fex_exodite_moon_6 }
+			}
+		}
+	}
 }
 
 fex_create_exodite_country = {

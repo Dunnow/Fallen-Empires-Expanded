@@ -51,6 +51,13 @@
  col_fex_exodite_age: "Exodite World"
  col_fex_exodite_age_desc: "$col_primitive_desc$"
 
-  pop_cat_fex_exodus_precursor: "Exodus Precursor"
-  pop_cat_fex_exodus_precursor_plural: "Exodus Precursors"
-  pop_cat_fex_exodus_precursor_desc: "These individuals have consciously chosen to reject the decadent luxuries of their homeworlds in favor of leading a simpler life on the fringes of civilization."
+ pop_cat_fex_exodus_precursor: "Exodus Precursor"
+ pop_cat_fex_exodus_precursor_plural: "Exodus Precursors"
+ pop_cat_fex_exodus_precursor_desc: "These individuals have consciously chosen to reject the decadent luxuries of their homeworlds in favor of leading a simpler life on the fringes of civilization."
+
+ fex_exodite_moon_1: "Haven"
+ fex_exodite_moon_2: "Shadow"
+ fex_exodite_moon_3: "Citadel"
+ fex_exodite_moon_4: "Goddess"
+ fex_exodite_moon_5: "Jewel"
+ fex_exodite_moon_6: "Sky Palace"
