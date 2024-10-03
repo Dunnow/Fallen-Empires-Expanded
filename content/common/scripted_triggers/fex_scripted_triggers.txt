@@ -44,3 +44,9 @@ fex_is_bespoke_fe_world = {
         has_planet_flag = fe_the_preserve
     }
 }
+
+fex_is_exodite_country = {
+    capital_scope = {
+        has_planet_flag = fex_exodite_planet
+    }
+}
