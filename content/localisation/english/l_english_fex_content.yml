@@ -20,12 +20,37 @@
  job_fex_xeno_hunter_desc: "For these precursors the thrill of the hunt exceeds even the most sophisticated luxuries available on their homeworlds."
  mod_job_fex_xeno_hunter_add: "$job_fex_xeno_hunter$ Jobs"
 
+ job_fex_exodite_druid: "Path of the Druid"
+ job_fex_exodite_druid_plural: "Paths of the Druid"
+ job_fex_exodite_druid_desc: "In the quiet paths among the idle groves wisdom may be found."
+ mod_job_fex_exodite_druid_add: "$job_fex_exodite_druid$ Jobs"
+
+ job_fex_exodite_smith: "Path of the Smith"
+ job_fex_exodite_smith_plural: "Path of the Smith"
+ job_fex_exodite_smith_desc: "Through the simple forging of crafts we shape the world around us."
+ mod_job_fex_exodite_smith_add: "$job_fex_exodite_smith$ Jobs"
+
+ job_fex_exodite_hunter: "Path of the Hunter"
+ job_fex_exodite_hunter_plural: "Paths of the Hunter"
+ job_fex_exodite_hunter_desc: "And so we give thanks to the beast that is slain, that we may honor its passing."
+ mod_job_fex_exodite_hunter_add: "$job_fex_exodite_hunter$ Jobs"
+
  # Buildings
  building_fex_hunting_lodges: "Hunting Lodges"
  building_fex_hunting_lodges_desc: "An anachronistic throwback to a more primitive age. Prospective thrill seekers are accommodated in sparse but comfortable conditions."
 
+ building_fex_runestones: "Elder Runestones"
+ building_fex_runestones_desc: "Ancient stones hum with esoteric power."
+
+ building_fex_exodite_settlements: "Exodite Settlements"
+ building_fex_exodite_settlements_desc: "Scattered settlements artfully incorporating the natural world are the only signs of civilization on this planet."
+
  # Misc
  fex_exodite_age: "Exodite Age"
- fex_exodite_age_desc: "This civilization is currently at a pre-Industrial Age level of development. Despite this, they make use of several extremely advanced technologies. They appear to remain at their level of development by choice."
- col_fex_exodite_age:0 "Exodite World"
- col_fex_exodite_age_desc:0 "$col_primitive_desc$"
+ fex_exodite_age_desc: "This civilization has a pre Industrial Age level of development. Despite this, they make use of several extremely advanced technologies. They appear to remain at their level of advancement by choice."
+ col_fex_exodite_age: "Exodite World"
+ col_fex_exodite_age_desc: "$col_primitive_desc$"
+
+  pop_cat_fex_exodus_precursor: "Exodus Precursor"
+  pop_cat_fex_exodus_precursor_plural: "Exodus Precursors"
+  pop_cat_fex_exodus_precursor_desc: "These individuals have consciously chosen to reject the decadent luxuries of their homeworlds in favor of leading a simpler life on the fringes of civilization."

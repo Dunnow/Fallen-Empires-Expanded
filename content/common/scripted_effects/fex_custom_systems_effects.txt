@@ -3,6 +3,8 @@ fex_generate_exodites_on_planet = {
 	optimize_memory
 	set_planet_flag = pre_ftl_default
     set_planet_flag = fex_exodite_planet
+	change_pc = pc_gaia
+	reroll_planet = yes
 	fex_create_exodite_country = yes
 	fex_setup_exodite_planet = yes
 }
@@ -57,10 +59,11 @@ fex_setup_exodite_planet = {
 	set_owner = last_created_country
 	set_capital = yes
 
-    add_building = building_crude_huts
+    add_building = building_fex_exodite_settlements
     remove_building = building_colony_shelter
+	add_building = building_fex_runestones
     while = {
-        count = @stone_age_pops
+        count = 9
         create_pop = {
             species = event_target:fex_xenophile_fe.species
         }
