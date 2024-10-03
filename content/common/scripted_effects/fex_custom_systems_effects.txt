@@ -73,8 +73,8 @@ fex_setup_exodite_planet = {
 	set_owner = last_created_country
 	set_capital = yes
 
-    add_building = building_fex_exodite_settlements
     remove_building = building_colony_shelter
+    add_building = building_fex_exodite_settlements
 	add_building = building_fex_runestones
     while = {
         count = 9
