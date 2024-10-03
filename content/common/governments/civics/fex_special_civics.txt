@@ -1,0 +1,21 @@
+fex_civic_natural_harmony = {
+	modification = no
+	icon = "gfx/interface/icons/governments/civics/civic_environmentalist.dds"
+	potential = {
+		country_type = { value = primitive }
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+	}
+	random_weight = { base = @civic_default_random_weight }
+	modifier = { }
+}
+
+fex_civic_archaeotech_legacy = {
+	modification = no
+	icon = "gfx/interface/icons/governments/civics/civic_ancient_caches_of_technology.dds"
+	potential = {
+		country_type = { value = primitive }
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+	}
+	random_weight = { base = @civic_default_random_weight }
+	modifier = { }
+}

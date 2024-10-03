@@ -61,8 +61,8 @@ fex_create_exodite_country = {
         change_government = {
             authority = random
             civics = {
-                civic = civic_secret_of_fire
-                civic = civic_the_wheel
+                civic = fex_civic_natural_harmony
+                civic = fex_civic_archaeotech_legacy
             }
         }
     }
