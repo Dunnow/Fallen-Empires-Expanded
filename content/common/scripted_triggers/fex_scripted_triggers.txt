@@ -42,6 +42,14 @@ fex_is_bespoke_fe_world = {
             is_capital_system = yes
         }
         has_planet_flag = fe_the_preserve
+        has_planet_flag = fex_the_archives
+        # The Archives dont have a flag in vanilla
+        AND = {
+            owner = {
+                is_fallen_empire_materialist = yes
+            }
+            is_planet_class = pc_gaia
+        }
     }
 }
 

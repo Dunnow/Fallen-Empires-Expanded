@@ -24,7 +24,6 @@ fex_generate_exodites_on_planet = {
 }
 
 fex_create_exodite_country = {
-    #create_pre_ftl_empire = yes
     create_country = {
 		name = random
 		authority = random
@@ -65,6 +64,7 @@ fex_create_exodite_country = {
                 civic = fex_civic_archaeotech_legacy
             }
         }
+		room_name_override = "fex_exodite_room"
     }
     set_pre_ftl_origin = yes
 }
