@@ -4,6 +4,7 @@ fex_exodite_army = {
     damage = 1.5
 	health = 2.0
 	morale = 2.5
+	use_armynames_from = defense_army
 	icon = GFX_army_type_primitive
 
 	potential_country = {

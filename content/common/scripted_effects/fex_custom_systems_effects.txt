@@ -83,13 +83,4 @@ fex_setup_exodite_planet = {
         }
     }
 	set_name = random
-	while = {
-		count = 9
-		create_army = {
-			name = fex_exodite_army_name
-			type = fex_exodite_army
-			species = event_target:fex_xenophile_fe.species
-			owner = last_created_country
-		}
-	}
 }
