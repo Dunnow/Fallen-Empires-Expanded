@@ -125,6 +125,12 @@ country_event = {
                             has_star_flag = fex_xenophile_history
                             NOT = { any_system_planet = { is_colonizable = yes } }
                             has_owner = no
+                            OR = {
+                                is_star_class = sc_f
+                                is_star_class = sc_g
+                                is_star_class = sc_k
+                                is_star_class = sc_m
+                            }
                         }
                         is_planet_class = pc_barren
                         not = { has_planet_flag = ancient_history_planet}

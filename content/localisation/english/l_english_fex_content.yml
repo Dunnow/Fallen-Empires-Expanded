@@ -21,7 +21,7 @@
  mod_job_fex_xeno_hunter_add: "$job_fex_xeno_hunter$ Jobs"
 
  job_fex_exodite_druid: "Path of the Druid"
- job_fex_exodite_druid_plural: "Paths of the Druid"
+ job_fex_exodite_druid_plural: "Path of the Druid"
  job_fex_exodite_druid_desc: "In the quiet paths among the idle groves wisdom may be found."
  mod_job_fex_exodite_druid_add: "$job_fex_exodite_druid$ Jobs"
 
@@ -31,7 +31,7 @@
  mod_job_fex_exodite_smith_add: "$job_fex_exodite_smith$ Jobs"
 
  job_fex_exodite_hunter: "Path of the Hunter"
- job_fex_exodite_hunter_plural: "Paths of the Hunter"
+ job_fex_exodite_hunter_plural: "Path of the Hunter"
  job_fex_exodite_hunter_desc: "And so we give thanks to the beast that is slain, that we may honor its passing."
  mod_job_fex_exodite_hunter_add: "$job_fex_exodite_hunter$ Jobs"
 

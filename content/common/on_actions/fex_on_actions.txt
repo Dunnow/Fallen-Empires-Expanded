@@ -9,3 +9,9 @@ on_game_start_country = {
         fex_core.2
     }
 }
+
+on_survey_planet = {
+    events = {
+        fex_flavour.10
+    }
+}

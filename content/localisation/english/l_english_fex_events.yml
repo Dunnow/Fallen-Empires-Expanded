@@ -1,0 +1,13 @@
+﻿l_english:
+ fex_flavour.10.title: "Anachronistic Aliens"
+ fex_flavour.10.desc: "The pre-FTL civilization on [From.GetName] appears to possess far more sophisticated technology than a species of their level should have. Our scans do not detect any signs of major urban settlements across the world that could produce them.\n\nThey appear to be aware of our presence and are attempting to communicate with us."
+ fex_flavour.10.a: "On screens."
+
+ fex_flavour.11.desc: "[This.species.GetNamePlural]. This is our world. Leave us undisturbed and we shall do the same."
+ fex_flavour.11.a: "Who are you?"
+ fex_flavour.11.a.response: "We are ancient. Our forefathers came to this world long before yours had raised themselves from the muck. Here we may pursue our paths in peace."
+ fex_flavour.11.b: "How do you have such advanced technology?"
+ fex_flavour.11.b.response: "We developed it of course."
+ fex_flavour.11.c: "What do you want from us?"
+ fex_flavour.11.c.response: "Nothing. [FromFrom.GetName] is our home. It provides for all our wants. Leave our world untouched and you may do as you please with the resources of this system."
+ fex_flavour.11.d: "End transmission."

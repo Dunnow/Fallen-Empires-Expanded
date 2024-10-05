@@ -1,0 +1,72 @@
+namespace = fex_flavour
+
+# Exodite world discovered
+ship_event = {
+    id = fex_flavour.10
+    title = fex_flavour.10.title
+    desc = fex_flavour.10.desc
+    picture = GFX_evt_animal_wildlife
+    is_triggered_only = yes
+    location = from
+
+    trigger = {
+        from = {
+            has_planet_flag = fex_exodite_planet
+        }
+        owner = {
+            not = {
+                has_country_flag = fex_has_encountered_exodite_world
+            }
+        }
+    }
+
+    immediate = {
+        owner = {
+            set_country_flag = fex_has_encountered_exodite_world
+        }
+    }
+
+    option = {
+        name = fex_flavour.10.a
+        owner = {
+            establish_communications = from.owner
+            country_event = { id = fex_flavour.11 }
+        }
+        from.owner = {
+            set_awareness = 100
+        }
+    }
+}
+
+
+country_event = {
+	id = fex_flavour.11
+	title = TRANSMISSION
+	desc = fex_flavour.11.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+    picture_event_data = {
+		room = fex_exodite_room
+		portrait = event_target:fex_xenophile_fe.species
+	}
+
+	option = {
+		name = fex_flavour.11.a
+		response_text = fex_flavour.11.a.response
+		is_dialog_only = yes
+	}
+    option = {
+		name = fex_flavour.11.b
+		response_text = fex_flavour.11.b.response
+		is_dialog_only = yes
+	}
+    option = {
+		name = fex_flavour.11.c
+		response_text = fex_flavour.11.c.response
+		is_dialog_only = yes
+	}
+    option = {
+		name = fex_flavour.11.d
+	}
+}
