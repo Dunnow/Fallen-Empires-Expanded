@@ -78,6 +78,7 @@ planet_event = {
 	is_triggered_only = yes
 
 	trigger = {
+		exists = fromfrom # For some reason the game triggers this all the time so this keeps the error log tidy
 		FromFrom = {
 			is_primitive = yes
 		}
@@ -178,7 +179,7 @@ planet_event = {
 				owner = {
 					fex_is_exodite_country = yes
 				}
-				count_owned_pops = {
+				count_owned_pop = {
 					limit = {
 						is_same_species = event_target:fex_xenophile_fe.species
 					}
