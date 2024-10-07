@@ -1,0 +1,11 @@
+opinion_fex_attacked_exodites = {
+	opinion = -300
+
+	accumulative = yes
+
+	min = -2000
+
+	decay = {
+		base = 1
+	}
+}

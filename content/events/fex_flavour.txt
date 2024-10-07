@@ -91,6 +91,7 @@ planet_event = {
 	immediate = {
 		event_target:fex_xenophile_fe = {
             establish_communications = from
+			add_opinion_modifier = { who = from modifier = opinion_fex_attacked_exodites}
         }
 		from = {
             country_event = { id = fex_flavour.13 }
@@ -124,12 +125,15 @@ country_event = {
     option = {
 		name = fex_flavour.13.b
 		custom_tooltip = fex_flavour.13.b.tooltip
+		hidden_effect = {
+			event_target:fex_xenophile_fe = {
+				add_opinion_modifier = { who = prev modifier = opinion_refused_fallen_empire_demand}
+			}
+		}
 	}
 }
 
-# Bounce from the planet gatekeeper
-# There's technically an edge case here where you could repeatedly invade and remove the pops via land appropriation.
-# Grow the pops back? Expel the settlers? Maybe have an event where the population grows back gradually
+# Bounce from the planet
 planet_event = {
     id = fex_flavour.14
 	hide_window = yes
