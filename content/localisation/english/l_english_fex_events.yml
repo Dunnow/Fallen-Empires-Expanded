@@ -1,6 +1,6 @@
 ﻿l_english:
  fex_flavour.10.title: "Anachronistic Aliens"
- fex_flavour.10.desc: "The pre-FTL civilization on [From.GetName] appears to possess far more sophisticated technology than a species of their level should have. Our scans do not detect any signs of major urban settlements across the world that could produce them.\n\nThey appear to be aware of our presence and are attempting to communicate with us."
+ fex_flavour.10.desc: "The pre-FTL civilization on [From.GetName] appears to possess far more sophisticated technology than a species of their level should have.\n\nAdditionally, our scans do not detect any signs of major urban settlements across the world, only minor outposts. It is not clear how they could have developed such advanced technology.\n\nThey appear to be aware of our presence and are attempting to communicate with us."
  fex_flavour.10.a: "On screens."
 
  fex_flavour.11.desc: "[This.species.GetNamePlural]. This is our world. Leave us undisturbed and we shall do the same."
@@ -11,3 +11,9 @@
  fex_flavour.11.c: "What do you want from us?"
  fex_flavour.11.c.response: "Nothing. [FromFrom.GetName] is our home. It provides for all our wants. Leave our world untouched and you may do as you please with the resources of this system."
  fex_flavour.11.d: "End transmission."
+
+ fex_flavour.13.desc: "You absolute fucking bozo. You colossal buffoon. You total fucking idiot. You fucked up now."
+ fex_flavour.13.a: "We will withdraw immediately."
+ fex_flavour.13.a.tooltip: "TODO"
+ fex_flavour.13.b: "We will not take orders from you."
+ fex_flavour.13.b.tooltip: "§H[event_target:fex_xenophile_fe.GetName]§! will be very angry, and are likely to attack us."

@@ -15,3 +15,12 @@ on_survey_planet = {
         fex_flavour.10
     }
 }
+
+# This = Planet scope
+# From = Country scope (new owner)
+# FromFrom = Former Owner
+on_planet_transfer = {
+    events = {
+        fex_flavour.12
+    }
+}
