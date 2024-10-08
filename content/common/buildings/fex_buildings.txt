@@ -38,7 +38,6 @@ building_fex_hunting_lodges= {
 	}
 }
 
-# It need more building slots
 building_fex_runestones= {
 	base_buildtime = @b1_time
 	category = amenity
@@ -133,5 +132,163 @@ building_fex_exodite_settlements = {
 
 		job_fex_exodite_hunter_add = 3
 		job_fex_exodite_smith_add = 3
+	}
+}
+
+building_fex_dark_palace = {
+	capital = yes
+	can_build = no
+	can_demolish = yes
+	can_be_ruined = no
+	position_priority = 0
+	icon = building_akx_worm_3
+
+	category = government
+
+	potential = {
+		exists = owner
+		owner = {
+			is_country_type = fex_exiles_country
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			NOT = {
+				is_country_type = fex_exiles_country
+			}
+		}
+	}
+
+	convert_to = {
+		building_machine_capital
+		building_capital
+		building_hive_capital
+		building_hab_capital
+		building_hab_fe_capital
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_country_type = fex_exiles_country
+			}
+		}
+
+		planet_housing_add = 10
+		planet_amenities_add = 25
+		planet_crime_add = -20
+
+		job_fex_exodite_hunter_add = 3
+		job_fex_exodite_smith_add = 3
+	}
+}
+
+building_fex_slave_pens = {
+	base_buildtime = @b1_time
+	category = amenity
+	base_cap_amount = 1
+	can_be_ruined = no
+	icon = building_organic_sanctuary
+
+	potential = {
+		exists = owner
+		owner = {
+			is_country_type = fex_exiles_country
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			NOT = { is_country_type = fex_exiles_country}
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 10
+		planet_amenities_add = 5
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+}
+
+building_fex_blood_arena = {
+	base_buildtime = @b1_time
+	category = amenity
+	base_cap_amount = 1
+	can_be_ruined = no
+
+	potential = {
+		exists = owner
+		owner = {
+			is_country_type = fex_exiles_country
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			NOT = { is_country_type = fex_exiles_country}
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 10
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+}
+
+building_fex_purity_temple = {
+	base_buildtime = @b1_time
+	category = amenity
+	base_cap_amount = 1
+	can_be_ruined = no
+
+	potential = {
+		exists = owner
+		owner = {
+			is_country_type = fex_exiles_country
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			NOT = { is_country_type = fex_exiles_country}
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 10
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			energy = 2
+		}
 	}
 }

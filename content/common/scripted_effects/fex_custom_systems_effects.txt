@@ -163,6 +163,10 @@ fex_create_exile_country = {
 		}
 	}
 
+	event_target:fex_xenophobe_fe = {
+		set_faction_hostility = { set_neutral = yes }
+	}
+
 	last_created_country = {
 		room_name_override = "personality_slaving_despots_room"
 	}
@@ -171,6 +175,12 @@ fex_create_exile_country = {
 fex_setup_exile_planet = {
 	set_owner = last_created_country
 	set_capital = yes
+
+	remove_building = building_colony_shelter
+	add_building = building_fex_dark_palace
+	add_building = building_fex_purity_temple
+	add_building = building_fex_blood_arena
+	add_building = building_fex_slave_pens
 
     while = {
         count = 18
