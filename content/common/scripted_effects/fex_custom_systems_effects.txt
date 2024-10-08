@@ -140,7 +140,7 @@ fex_generate_xenophobe_exile_habitat = {
 				entity = fex_fallen_empire_habitat_entity
 				picture = pc_fex_exile_hab
 			}
+			set_name = fex_exile_hab_name
 		}
-		set_name = fex_exile_hab_name
 	}
 }
