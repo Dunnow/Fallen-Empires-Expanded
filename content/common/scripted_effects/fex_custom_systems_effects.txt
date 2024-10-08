@@ -138,7 +138,9 @@ fex_generate_xenophobe_exile_habitat = {
 		init_effect = {
 			set_planet_entity = {
 				entity = fex_fallen_empire_habitat_entity
+				picture = pc_fex_exile_hab
 			}
 		}
+		set_name = fex_exile_hab_name
 	}
 }
