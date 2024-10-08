@@ -13,3 +13,18 @@ col_fex_exodite_age = {
 		base = 1000
 	}
 }
+
+col_fex_exile_hab = {
+	icon = GFX_colony_type_habitat
+
+	potential = {
+		exists = owner
+		owner = {
+			is_country_type = fex_exiles_country
+		}
+	}
+
+	weight_modifier = {
+		base = 1000
+	}
+}
