@@ -84,3 +84,61 @@ fex_setup_exodite_planet = {
     }
 	set_name = random
 }
+
+# System scope
+fex_generate_xenophobe_exiles = {
+	save_event_target_as = fex_xenophobe_exiles_gate_system
+	set_star_flag = fex_xenophobe_exiles_gate
+	spawn_system = {
+		initializer = fex_black_hole_init
+		hyperlane = no
+	}
+	last_created_system = {
+		save_global_event_target_as = fex_xenophobe_exiles_system
+		set_star_flag = fex_xenophobe_history
+		set_star_flag = fex_historical_system
+		set_star_flag = fex_xenophobe_exiles_system
+
+		fex_generate_xenophobe_exile_habitat = yes
+	}
+
+	event_target:fex_xenophobe_exiles_gate_system = {
+		event_target:fex_xenophobe_exiles_system = {
+			prev = {
+				spawn_natural_wormhole = {
+					bypass_type = wormhole
+					random_pos = no
+					orbit_angle = 360
+				}
+			}
+			spawn_natural_wormhole = {
+				bypass_type = wormhole
+				random_pos = no
+				orbit_angle = 270
+			}
+			link_wormholes = prev
+		}
+	}
+}
+
+fex_generate_xenophobe_exile_habitat = {
+	random_system_planet = {
+		limit = {
+			NOR = {
+				is_star = yes
+				is_moon = yes
+			}
+		}
+		save_event_target_as = fex_exile_habitat_root
+	}
+
+	spawn_planet = {
+		class = pc_habitat
+		location = event_target:fex_exile_habitat_root
+		init_effect = {
+			set_planet_entity = {
+				entity = fex_fallen_empire_habitat_entity
+			}
+		}
+	}
+}

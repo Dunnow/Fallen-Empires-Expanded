@@ -139,6 +139,17 @@ country_event = {
                 }
             }
         }
+
+        if = {
+            limit = { is_fallen_empire_xenophobe = yes }
+            random_system = {
+                limit = {
+                    has_star_flag = fex_xenophobe_history
+                    has_owner = no
+                }
+                fex_generate_xenophobe_exiles = yes
+            }
+        }
     }
 }
 

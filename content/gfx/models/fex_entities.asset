@@ -1,0 +1,17 @@
+entity = {
+	name = "fex_fallen_empire_habitat_entity"
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 270 0 0  } }
+	attach = { root = "fallen_empire_01_military_station_large_fallen_empire_entity" }
+
+	meshsettings = {
+		shader = "PdxMeshShip"
+	}
+
+	game_data = {
+		shader_type = ship
+		emissive_recolor_crunch = 5.0
+	}
+
+	scale = 1.5
+}
