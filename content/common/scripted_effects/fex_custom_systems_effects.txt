@@ -141,6 +141,41 @@ fex_generate_xenophobe_exile_habitat = {
 				picture = pc_fex_exile_hab
 			}
 			set_name = fex_exile_hab_name
+			save_global_event_target_as = fex_exile_habitat
 		}
 	}
+	event_target:fex_exile_habitat = {
+		fex_create_exile_country = yes
+		fex_setup_exile_planet = yes
+	}
+}
+
+fex_create_exile_country = {
+	create_country = {
+		type = fex_exiles_country
+		species = event_target:fex_xenophobe_fe.species
+		ethos = {
+			ethic = ethic_fanatic_xenophobe
+			ethic = ethic_militarist
+		}
+		civics = {
+			civic = fex_civic_blood_exiles
+		}
+	}
+
+	last_created_country = {
+		room_name_override = "personality_slaving_despots_room"
+	}
+}
+
+fex_setup_exile_planet = {
+	set_owner = last_created_country
+	set_capital = yes
+
+    while = {
+        count = 18
+        create_pop = {
+            species = event_target:fex_xenophobe_fe.species
+        }
+    }
 }
