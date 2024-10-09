@@ -35,6 +35,16 @@
  job_fex_exodite_hunter_desc: "And so we give thanks to the beast that is slain, that we may honor its passing."
  mod_job_fex_exodite_hunter_add: "$job_fex_exodite_hunter$ Jobs"
 
+ job_fex_arena_slave: "Arena Slave"
+ job_fex_arena_slave_plural: "Arena Slaves"
+ job_fex_arena_slave_desc: "The baying crowd calls for blood."
+ mod_job_fex_arena_slave_add: "$job_fex_arena_slave$ Jobs"
+
+ job_fex_blood_serf: "Blood Serf"
+ job_fex_blood_serf_plural: "Blood Serfs"
+ job_fex_blood_serf_desc: "Wretched souls trapped in bondage. Forced to toil for their masters."
+ mod_job_fex_blood_serf_add: "$job_fex_blood_serf$ Jobs"
+
  # Buildings
  building_fex_hunting_lodges: "Hunting Lodges"
  building_fex_hunting_lodges_desc: "An anachronistic throwback to a more primitive age. Prospective thrill seekers are accommodated in sparse but comfortable conditions."
@@ -44,6 +54,18 @@
 
  building_fex_exodite_settlements: "Exodite Settlements"
  building_fex_exodite_settlements_desc: "Scattered settlements artfully incorporating the natural world are the only signs of civilization on this planet."
+
+ building_fex_dark_palace: "Dark Palace"
+ building_fex_dark_palace_desc: "Ancient black walls house unspeakable luxuries and indescribable marvels. Even the greatest of its neighbors are squalid in comparison."
+
+ building_fex_slave_pens: "Slave Pens"
+ building_fex_slave_pens_desc: "Cramped uncomfortable quarters for throngs of enslaved sentients."
+
+ building_fex_blood_arena: "Blood Arena"
+ building_fex_blood_arena_desc: "Lesser beings come here to die for the entertainment of their betters."
+
+ building_fex_purity_temple: "Purity Temple"
+ building_fex_purity_temple_desc: "A monument to the greatness of the chosen species. Sections of the aged structure house unbelievably advanced technology."
 
  # Misc
  fex_exodite_age: "Exodite Age"

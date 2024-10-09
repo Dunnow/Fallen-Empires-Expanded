@@ -188,4 +188,20 @@ fex_setup_exile_planet = {
             species = event_target:fex_xenophobe_fe.species
         }
     }
+	while = {
+        count = 20
+        random_country = {
+            limit = {
+                OR = {
+                    is_country_type = default
+                    is_primitive = yes
+                }
+                is_gestalt = no
+            }
+            species = {
+                save_event_target_as = fex_slave_target
+            }
+        }
+        create_pop = { species = event_target:fex_slave_target }
+    }
 }
