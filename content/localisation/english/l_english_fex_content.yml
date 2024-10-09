@@ -56,6 +56,12 @@
  pop_cat_fex_exodus_precursor: "Exodus Precursor"
  pop_cat_fex_exodus_precursor_plural: "Exodus Precursors"
  pop_cat_fex_exodus_precursor_desc: "These individuals have consciously chosen to reject the decadent luxuries of their homeworlds in favor of leading a simpler life on the fringes of civilization."
+ pop_cat_fex_exile_precursor: "Exile Precursor"
+ pop_cat_fex_exile_precursor_plural: "Exile Precursors"
+ pop_cat_fex_exile_precursor_desc: "Cast out from their home society millennia ago, those precursors revel in unchecked barbarism."
+ pop_cat_fex_primitive_slave: "Primitive Slave"
+ pop_cat_fex_primitive_slave_plural: "Primitive Slaves"
+ pop_cat_fex_primitive_slave_desc: "Wretched masses cowering from their cruel masters."
 
  fex_exodite_moon_1: "Haven"
  fex_exodite_moon_2: "Shadow"
