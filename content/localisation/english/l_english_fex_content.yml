@@ -42,8 +42,28 @@
 
  job_fex_blood_serf: "Blood Serf"
  job_fex_blood_serf_plural: "Blood Serfs"
- job_fex_blood_serf_desc: "Wretched souls trapped in bondage. Forced to toil for their masters."
+ job_fex_blood_serf_desc: "Unfortunate souls trapped in bondage. Forced to toil for meagre rations."
  mod_job_fex_blood_serf_add: "$job_fex_blood_serf$ Jobs"
+
+ job_fex_exile_archon: "Archon"
+ job_fex_exile_archon_plural: "Archons"
+ job_fex_exile_archon_desc: "The ruling caste of a precursor society. Their hierarchy is precarious and ever-shifting."
+ mod_job_fex_exile_archon_add: "$job_fex_exile_archon$ Jobs"
+
+ job_fex_exile_chirurgeon: "Chirurgeon"
+ job_fex_exile_chirurgeon_plural: "Chirurgeons"
+ job_fex_exile_chirurgeon_desc: "Equal parts sage and scientist, these individuals wield ancient bio-arts to preserve and shape their charges."
+ mod_job_fex_exile_chirurgeon_add: "$job_fex_exile_chirurgeon$ Jobs"
+
+ job_fex_exile_overseer: "Taskmaster"
+ job_fex_exile_overseer_plural: "Taskmasters"
+ job_fex_exile_overseer_desc: "A strong hand is necessary to keep the menials in line."
+ mod_job_fex_exile_overseer_add: "$job_fex_exile_overseer$ Jobs"
+
+ job_fex_exile_priest: "Purity Priest"
+ job_fex_exile_priest_plural: "Purity Priests"
+ job_fex_exile_priest_desc: "These priests conduct cruel rituals to assert their species' divine superiority over all lesser, primitive beings"
+ mod_job_fex_exile_priest_add: "$job_fex_exile_priest$ Jobs"
 
  # Buildings
  building_fex_hunting_lodges: "Hunting Lodges"
