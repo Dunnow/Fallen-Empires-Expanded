@@ -181,8 +181,8 @@ building_fex_dark_palace = {
 		planet_amenities_add = 25
 		planet_crime_add = -20
 
-		job_fex_exodite_hunter_add = 3
-		job_fex_exodite_smith_add = 3
+		job_fex_exile_archon_add = 2
+		job_fex_exile_overseer_add = 4
 	}
 }
 
@@ -210,6 +210,8 @@ building_fex_slave_pens = {
 	planet_modifier = {
 		planet_housing_add = 10
 		planet_amenities_add = 5
+
+		job_fex_exile_chirurgeon_add = 4
 	}
 
 	resources = {
@@ -245,6 +247,7 @@ building_fex_blood_arena = {
 
 	planet_modifier = {
 		planet_housing_add = 10
+		job_fex_arena_slave_add = 2
 	}
 
 	resources = {
@@ -280,6 +283,7 @@ building_fex_purity_temple = {
 
 	planet_modifier = {
 		planet_housing_add = 10
+		job_fex_exile_priest_add = 4
 	}
 
 	resources = {

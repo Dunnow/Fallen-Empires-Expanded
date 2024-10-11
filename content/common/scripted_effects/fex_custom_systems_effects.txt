@@ -182,8 +182,10 @@ fex_setup_exile_planet = {
 	add_building = building_fex_blood_arena
 	add_building = building_fex_slave_pens
 
+	add_deposit = d_arcane_replicator
+
     while = {
-        count = 18
+        count = 14
         create_pop = {
             species = event_target:fex_xenophobe_fe.species
         }
