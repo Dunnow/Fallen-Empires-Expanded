@@ -169,6 +169,8 @@ fex_create_exile_country = {
 
 	last_created_country = {
 		room_name_override = "personality_slaving_despots_room"
+		set_graphical_culture = fallen_empire_04
+		save_global_event_target_as = fex_xenophobe_exiles_country
 	}
 }
 
@@ -192,6 +194,7 @@ fex_setup_exile_planet = {
     }
 	while = {
         count = 20
+        count = 8
         random_country = {
             limit = {
                 OR = {
