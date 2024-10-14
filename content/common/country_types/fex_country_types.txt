@@ -25,6 +25,6 @@ fex_exiles_country = {
 		basic_technology_module = {}
 		standard_event_module = {}
 		exclusive_diplomacy_module = { } # Nothing is allowed, but we need this for relationships.
-		#basic_technology_module = {}
+		standard_species_rights_module = {  }
 	}
 }

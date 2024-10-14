@@ -202,6 +202,7 @@ fex_setup_exile_planet = {
             }
             species = {
                 save_event_target_as = fex_slave_target
+				set_citizenship_type = { country = event_target:fex_xenophobe_exiles_country type = citizenship_slavery cooldown = yes }
             }
         }
         create_pop = { species = event_target:fex_slave_target }
