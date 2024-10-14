@@ -338,6 +338,9 @@ fex_blood_serf = {
 
 	possible = {
 		NOT = { is_same_species = owner }
+		owner = {
+			is_country_type = fex_exiles_country
+		}
 	}
 
 	resources = {
