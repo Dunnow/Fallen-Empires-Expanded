@@ -10,7 +10,6 @@ fex_exiles_country = {
 	has_complete_sensor = yes
 	can_have_their_comms_shared = yes
 	observable = no
-    custom_starbase = starbase_fe_outpost
 	ai = {
 		enabled = no
 	}

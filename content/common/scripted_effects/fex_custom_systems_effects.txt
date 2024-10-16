@@ -150,6 +150,11 @@ fex_generate_xenophobe_exile_habitat = {
 		fex_create_exile_country = yes
 		fex_setup_exile_planet = yes
 	}
+
+	create_starbase = {
+		size = starbase_outpost
+		owner = last_created_country
+	}
 }
 
 fex_create_exile_country = {
