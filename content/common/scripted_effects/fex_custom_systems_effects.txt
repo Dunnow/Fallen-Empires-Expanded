@@ -178,6 +178,10 @@ fex_create_exile_country = {
 		room_name_override = "personality_slaving_despots_room"
 		set_graphical_culture = fallen_empire_04
 		save_global_event_target_as = fex_xenophobe_exiles_country
+		set_name = {
+			key = fex_exile_country_name
+			variable_string = "\\[This.owner_main_species.GetAdj]"
+		}
 	}
 }
 
