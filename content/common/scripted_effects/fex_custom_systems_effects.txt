@@ -168,6 +168,22 @@ fex_create_exile_country = {
 		civics = {
 			civic = fex_civic_blood_exiles
 		}
+		flag = {
+			icon= {
+				category = "pirate"
+				file = "flag_pirate_6.dds"
+			}
+			background= {
+				category = "backgrounds"
+				file = "new_dawn.dds"
+			}
+			colors={
+				"black"
+				"black"
+				"null"
+				"null"
+			}
+		}
 	}
 
 	event_target:fex_xenophobe_fe = {
