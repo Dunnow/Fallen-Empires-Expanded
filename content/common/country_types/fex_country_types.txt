@@ -26,5 +26,6 @@ fex_exiles_country = {
 		standard_event_module = {}
 		exclusive_diplomacy_module = { } # Nothing is allowed, but we need this for relationships.
 		standard_species_rights_module = {  }
+		standard_leader_module = {}
 	}
 }

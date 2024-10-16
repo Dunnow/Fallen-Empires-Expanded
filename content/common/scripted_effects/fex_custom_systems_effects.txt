@@ -216,6 +216,7 @@ fex_setup_exile_planet = {
 # System scope
 fex_generate_xenophobe_exile_fleets = {
 	# Generate home fleet
+	fex_generate_exile_admiral = yes
 	create_fleet = {
 		name = "NAME_fex_exiles_home_fleet"
 		effect = {
@@ -246,6 +247,7 @@ fex_generate_xenophobe_exile_fleets = {
 			spawn_debris = no
 		}
 	}
+	last_created_fleet = { assign_leader = last_created_leader }
 	# Generate Raiding parties
 	fex_generate_exile_raiding_fleet = { NAME = NAME_fex_exiles_raiding_fleet_1 }
 	fex_generate_exile_raiding_fleet = { NAME = NAME_fex_exiles_raiding_fleet_2 }
@@ -253,6 +255,8 @@ fex_generate_xenophobe_exile_fleets = {
 }
 
 fex_generate_exile_raiding_fleet = {
+	fex_generate_exile_admiral = yes
+
 	create_fleet = {
 		name = $NAME$
 		effect = {
@@ -281,6 +285,20 @@ fex_generate_exile_raiding_fleet = {
 			can_change_leader = no
 			uses_naval_capacity = no
 			spawn_debris = no
+		}
+	}
+	last_created_fleet = { assign_leader = last_created_leader }
+}
+
+fex_generate_exile_admiral = {
+	event_target:fex_xenophobe_exiles_country = {
+		create_leader = {
+			class = commander
+			species = owner_main_species
+			name = random
+			skill = 7
+			leader_age_min = 25
+			leader_age_max = 45
 		}
 	}
 }
