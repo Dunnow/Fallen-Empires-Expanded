@@ -49,6 +49,9 @@ fex_is_bespoke_fe_world = {
                 is_fallen_empire_materialist = yes
             }
             is_planet_class = pc_gaia
+            NOT = {
+                has_planet_flag = fex_experiment_world
+            }
         }
     }
 }

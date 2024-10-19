@@ -24,3 +24,12 @@ fex_set_hunting_world = {
         create_pop = { species = event_target:fex_hunting_target }
     }
 }
+
+# Experiment world, Materialist
+fex_set_experiment_world = {
+    set_planet_flag = fex_experiment_world
+    set_name = fex_experiment_world_name
+    change_pc = pc_gaia
+    reroll_deposits = yes
+    set_planet_entity = { entity = fex_tainted_gaia_entity }
+}

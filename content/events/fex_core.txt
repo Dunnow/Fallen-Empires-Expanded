@@ -321,7 +321,16 @@ planet_event = {
     is_triggered_only = yes
 
     immediate = {
-
+        random_list = {
+            100 = {
+                fex_set_experiment_world = yes
+                modifier = {
+                    factor = 0
+                    owner = { any_owned_planet = {  has_planet_flag = fex_experiment_world } }
+                }
+            }
+            1 = { } # Small chance of nothing so we dont get stuck in an infinite loop
+        }
     }
 }
 # Spiritualist generic world flavour
