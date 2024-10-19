@@ -135,3 +135,41 @@ building_fex_exodite_settlements = {
 		job_fex_exodite_smith_add = 3
 	}
 }
+
+building_fex_scientific_outposts = {
+	base_buildtime = @b1_time
+	category = research
+	base_cap_amount = 1
+	icon = building_primitive_labs
+
+	potential = {
+		exists = owner
+		owner = {
+			is_fallen_empire_materialist = yes
+		}
+		has_planet_flag = fex_experiment_world
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			is_fallen_empire_materialist = no
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 3
+		planet_amenities_add = 5
+		job_fe_archivist_add = 3
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+}

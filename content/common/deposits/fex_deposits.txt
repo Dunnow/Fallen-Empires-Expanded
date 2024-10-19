@@ -1,3 +1,8 @@
+@blocker_high = 10
+@blocker_low = 5
+@ranger_small_production = 0.5
+@ranger_large_production = 1
+
 d_fex_forgotten_archives = {
     icon = d_fex_archives
 	is_for_colonizable = yes
@@ -34,4 +39,52 @@ d_fex_ruined_monuments = {
 	drop_weight = {
 		weight = 0
 	}
+}
+
+
+d_fex_ruined_wastes_blocker = {
+	time = 270
+	icon = d_radioactive_wasteland
+	is_for_colonizable = yes
+	category = deposit_cat_blockers_natural
+
+	can_be_cleared = {
+		custom_tooltip = {
+			fail_text = has_ranger_lodge
+			planet = {
+				NOT = { has_building = building_ranger_lodge }
+			}
+		}
+	}
+
+	resources = {
+		category = deposit_blockers_natural
+		cost = {
+			energy = 1000
+		}
+	}
+
+	planet_modifier = {
+		planet_max_districts_add = -2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_society_research_produces_add = @ranger_large_production
+	}
+
+	inline_script = deposits/environmental_architects_natural_blocker_modifier
+
+	on_cleared = {
+		planetscaper_pop_effect = yes
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+
+	prerequisites = { tech_climate_restoration }
 }

@@ -32,4 +32,11 @@ fex_set_experiment_world = {
     change_pc = pc_gaia
     reroll_deposits = yes
     set_planet_entity = { entity = fex_tainted_gaia_entity }
+
+    clear_blockers = yes
+    add_deposit = d_fex_ruined_wastes_blocker
+    add_deposit = d_fex_ruined_wastes_blocker
+    add_deposit = d_dangerous_wildlife_blocker
+
+    add_building = building_fex_scientific_outposts
 }
