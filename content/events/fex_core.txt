@@ -329,6 +329,13 @@ planet_event = {
                     owner = { any_owned_planet = {  has_planet_flag = fex_experiment_world } }
                 }
             }
+            100 = {
+                fex_set_ancilla_world = yes
+                modifier = {
+                    factor = 0
+                    owner = { any_owned_planet = {  has_planet_flag = fex_ancilla_world } }
+                }
+            }
             1 = { } # Small chance of nothing so we dont get stuck in an infinite loop
         }
     }

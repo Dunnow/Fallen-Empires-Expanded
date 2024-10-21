@@ -40,3 +40,20 @@ fex_set_experiment_world = {
 
     add_building = building_fex_scientific_outposts
 }
+
+# Ancilla world, Materialist
+fex_set_ancilla_world = {
+    set_planet_flag = fex_ancilla_world
+    change_pc = pc_relic
+    reroll_deposits = yes
+    clear_blockers = yes
+
+    add_deposit = d_fex_ancient_ai_core
+    add_deposit = d_fex_shattered_ai_core
+    add_modifier = { modifier = fex_materialist_ai_world }
+
+    while = {
+        count = 4
+        create_pop = { species = event_target:fex_materialist_fe.owner_species }
+    }
+}
