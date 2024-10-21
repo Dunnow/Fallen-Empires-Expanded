@@ -273,7 +273,7 @@ fex_monk = {
 	is_capped_by_modifier = yes
 	clothes_texture_index = 1
 	icon = high_priest
-	building_icon = building_fex_shrine
+	building_icon = building_fex_ancient_shrines
 
 	possible_pre_triggers = {
 		has_owner = yes
