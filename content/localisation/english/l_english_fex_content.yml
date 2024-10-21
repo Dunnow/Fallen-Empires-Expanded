@@ -18,6 +18,9 @@
  fex_materialist_ai_world: "Ancilla World"
  fex_materialist_ai_world_desc: "This planet houses a number of ancient artificial intelligences. Despite their age, many are still functional."
 
+ fex_spiritualist_shrine_world: "Shrine World"
+ fex_spiritualist_shrine_world_desc: "This world is dotted with ancient shrines that offer reverence to holy deities and spirits."
+
  # Jobs
  job_fex_xeno_game: "Alien Quarry"
  job_fex_xeno_game_plural: "$job_fex_xeno_game$"
@@ -44,6 +47,11 @@
  job_fex_exodite_hunter_desc: "And so we give thanks to the beast that is slain, that we may honor its passing."
  mod_job_fex_exodite_hunter_add: "$job_fex_exodite_hunter$ Jobs"
 
+ job_fex_monk: "Monk"
+ job_fex_monk_plural: "Monks"
+ job_fex_monk_desc: "A lifetime of quiet contemplation can uncover many deeper truths."
+ mod_job_fex_monk_add: "$job_fex_monk$ Jobs"
+
  # Buildings
  building_fex_hunting_lodges: "Hunting Lodges"
  building_fex_hunting_lodges_desc: "An anachronistic throwback to a more primitive age. Prospective thrill seekers are accommodated in sparse but comfortable conditions."
@@ -56,6 +64,9 @@
 
  building_fex_scientific_outposts: "Scientific Outposts"
  building_fex_scientific_outposts_desc: "An isolated facility far from civilization. Home to inscrutable experiments and advanced technologies."
+
+ building_fex_ancient_shrines: "Ancient Shrines"
+ building_fex_ancient_shrines_desc: "Simple structures that honor deities half-forgotten."
 
  # Misc
  fex_exodite_age: "Exodite Age"

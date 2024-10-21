@@ -57,3 +57,18 @@ fex_set_ancilla_world = {
         create_pop = { species = event_target:fex_materialist_fe.owner_species }
     }
 }
+
+# Shrine world, Spiritualist
+fex_set_shrine_world = {
+    set_planet_flag = fex_shrine_world
+
+    add_building = building_fe_temple_1
+    add_building = building_fex_ancient_shrines
+
+    add_modifier = { modifier = fex_spiritualist_shrine_world }
+
+    while = {
+        count = 9
+        create_pop = { species = event_target:fex_spiritualist_fe.owner_species }
+    }
+}

@@ -124,8 +124,6 @@ fex_exodite_hunter = {
 		is_sapient = yes
 	}
 
-	#possible_precalc = can_fill_precursor_job
-
 	resources = {
 		category = planet_jobs
 		produces = {
@@ -180,8 +178,6 @@ fex_exodite_smith = {
 		is_sapient = yes
 	}
 
-	#possible_precalc = can_fill_precursor_job
-
 	resources = {
 		category = planet_jobs
 		produces = {
@@ -233,8 +229,6 @@ fex_exodite_druid = {
 		is_sapient = yes
 	}
 
-	#possible_precalc = can_fill_precursor_job
-
 	resources = {
 		category = planet_jobs
 		produces = {
@@ -257,6 +251,59 @@ fex_exodite_druid = {
 
 	weight = {
 		weight = @specialist_job_weight
+
+		# crisis purge
+		modifier = {
+			factor = 0.01
+			exists = planet
+			exists = planet.controller
+			planet.controller = {
+				OR = {
+					is_country_type = swarm
+					is_country_type = ai_empire
+				}
+			}
+		}
+	}
+}
+
+
+fex_monk = {
+	category = precursor
+	is_capped_by_modifier = yes
+	clothes_texture_index = 1
+	icon = high_priest
+	building_icon = building_fex_shrine
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_precursor_job
+
+	possible = {
+		owner = { has_ethic = ethic_fanatic_spiritualist }
+		is_same_species = owner
+	}
+
+	resources = {
+		category = planet_jobs
+		produces = {
+			unity = 8
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_amenities_add = 2
+		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	weight = {
+		weight = @ruler_job_weight
 
 		# crisis purge
 		modifier = {

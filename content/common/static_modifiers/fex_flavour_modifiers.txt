@@ -13,3 +13,11 @@ fex_materialist_ai_world = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_engineering_research.dds"
 	icon_frame = 1
 }
+
+fex_spiritualist_shrine_world = {
+	planet_jobs_unity_produces_mult = 0.2
+	planet_amenities_mult = 0.1
+
+	icon = "gfx/interface/icons/planet_modifiers/pm_artist_monument_erected.dds"
+	icon_frame = 1
+}

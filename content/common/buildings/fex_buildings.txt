@@ -173,3 +173,39 @@ building_fex_scientific_outposts = {
 		}
 	}
 }
+
+building_fex_ancient_shrines = {
+	base_buildtime = @b1_time
+	category = research
+	base_cap_amount = 1
+
+	potential = {
+		exists = owner
+		owner = {
+			is_fallen_empire_spiritualist = yes
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			is_fallen_empire_materialist = no
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 3
+		planet_amenities_add = 5
+		job_fex_monk_add = 3
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+}
