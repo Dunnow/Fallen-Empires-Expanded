@@ -85,3 +85,31 @@ fex_set_leviathan_world = {
         create_pop = { species = event_target:fex_xenophile_fe.owner_species }
     }
 }
+
+# Martial Order World, Xenophobe
+fex_set_martial_order_world = {
+    set_planet_flag = fex_martial_order_world
+
+    add_modifier = { modifier = fex_martial_order }
+    add_deposit = d_fex_ancient_citadels
+
+    add_building = building_fe_stronghold
+    add_building = building_fe_fortress
+
+    while = {
+        count = 5
+        create_pop = { species = event_target:fex_xenophobe_fe.owner_species }
+    }
+
+    random_owned_pop = {
+        limit = { has_trait = trait_nerve_stapled }
+        species = {
+            save_event_target_as = fex_xenophobe_servile_species
+        }
+    }
+
+    while = {
+        count = 9
+        create_pop = { species = event_target:fex_xenophobe_servile_species }
+    }
+}

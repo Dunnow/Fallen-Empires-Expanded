@@ -21,3 +21,10 @@ fex_spiritualist_shrine_world = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_artist_monument_erected.dds"
 	icon_frame = 1
 }
+
+fex_martial_order = {
+	planet_jobs_unity_produces_mult = 0.1
+
+	icon = "gfx/interface/icons/planet_modifiers/pm_fex_martial_order.dds"
+	icon_frame = 1
+}

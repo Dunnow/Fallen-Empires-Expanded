@@ -298,6 +298,13 @@ planet_event = {
                     owner = { any_owned_planet = {  has_planet_flag = fex_hunting_world } }
                 }
             }
+            100 = {
+                fex_set_martial_order_world = yes
+                modifier = {
+                    factor = 0
+                    owner = { any_owned_planet = {  has_planet_flag = fex_martial_order_world } }
+                }
+            }
             1 = { } # Small chance of nothing so we dont get stuck in an infinite loop
         }
     }

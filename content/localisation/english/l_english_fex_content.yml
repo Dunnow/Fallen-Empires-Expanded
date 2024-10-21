@@ -12,6 +12,8 @@
  d_fex_shattered_ai_core_desc: "The remains of an ancient superintelligence. The ruins have been left for nature to reclaim."
  d_fex_leviathan_preserves: "Leviathan Preserves"
  d_fex_leviathan_preserves_desc: "Large swathes of the planet's ecosystems are dominated by enormous lifeforms. They do not appear to be native to this world."
+ d_fex_ancient_citadels: "Ancient Citadels"
+ d_fex_ancient_citadels_desc: "The ravages of time have done little to dull the potent strength of these fortifications and the warriors housed within."
 
  # Planet Modifiers
  fex_xenophobe_titanic_game: "Titanic Game"
@@ -22,6 +24,9 @@
 
  fex_spiritualist_shrine_world: "Shrine World"
  fex_spiritualist_shrine_world_desc: "This world is dotted with ancient shrines that offer reverence to holy deities and spirits."
+
+ fex_martial_order: "Martial Orders"
+ fex_martial_order_desc: "This planet has hosted mighty legions of valiant warriors for centuries. Their proud history is present on every part of this world."
 
  # Jobs
  job_fex_xeno_game: "Alien Quarry"
@@ -53,6 +58,11 @@
  job_fex_monk_plural: "Monks"
  job_fex_monk_desc: "A lifetime of quiet contemplation can uncover many deeper truths."
  mod_job_fex_monk_add: "$job_fex_monk$ Jobs"
+
+ job_fex_promethean_warrior: "Promethean Warrior"
+ job_fex_promethean_warrior_plural: "Promethean Warriors"
+ job_fex_promethean_warrior_desc: "Peerless warriors charged with protecting the empire and preserving their own ancient tradition."
+ mod_job_fex_promethean_warrior_add: "$job_fex_promethean_warrior$ Jobs"
 
  # Buildings
  building_fex_hunting_lodges: "Hunting Lodges"

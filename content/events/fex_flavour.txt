@@ -78,7 +78,8 @@ planet_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		FromFrom = {
+		exists = fromfrom
+		fromfrom = {
 			is_primitive = yes
 		}
 		has_planet_flag = fex_exodite_planet
