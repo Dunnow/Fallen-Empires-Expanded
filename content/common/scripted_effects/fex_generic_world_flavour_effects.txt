@@ -72,3 +72,16 @@ fex_set_shrine_world = {
         create_pop = { species = event_target:fex_spiritualist_fe.owner_species }
     }
 }
+
+# Leviathan World, Xenophile
+fex_set_leviathan_world = {
+    set_planet_flag = fex_leviathan_world
+
+    add_modifier = { modifier = titanic_life }
+    add_deposit = d_fex_leviathan_preserves
+
+    while = {
+        count = 4
+        create_pop = { species = event_target:fex_xenophile_fe.owner_species }
+    }
+}

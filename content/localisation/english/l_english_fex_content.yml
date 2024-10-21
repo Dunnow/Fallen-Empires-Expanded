@@ -10,6 +10,8 @@
  d_fex_ancient_ai_core_desc: "An immensely powerful AI, shackled deep within a fortified facility. It is difficult to tell just how old it is."
  d_fex_shattered_ai_core: "Shattered AI Core"
  d_fex_shattered_ai_core_desc: "The remains of an ancient superintelligence. The ruins have been left for nature to reclaim."
+ d_fex_leviathan_preserves: "Leviathan Preserves"
+ d_fex_leviathan_preserves_desc: "Large swathes of the planet's ecosystems are dominated by enormous lifeforms. They do not appear to be native to this world."
 
  # Planet Modifiers
  fex_xenophobe_titanic_game: "Titanic Game"
