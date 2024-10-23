@@ -239,3 +239,58 @@ d_fex_ancient_citadels = {
 		weight = 0
 	}
 }
+d_fex_crypt_monument = {
+	icon = d_monument
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+
+	category = deposit_cat_rare
+
+	resources = {
+		produces = {
+			unity = 40
+		}
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_fex_ancient_barrows = {
+	icon = d_fex_ruins
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+
+	category = deposit_cat_rare
+
+	resources = {
+		produces = {
+			unity = 30
+			society_research = 10
+		}
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_fex_imperial_tombs = {
+	icon = d_fex_tomb
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+
+	category = deposit_cat_rare
+
+	resources = {
+		produces = {
+			unity = 50
+			minor_artifacts = 10
+		}
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}

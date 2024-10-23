@@ -113,3 +113,13 @@ fex_set_martial_order_world = {
         create_pop = { species = event_target:fex_xenophobe_servile_species }
     }
 }
+
+# Mausoleum World, Xenophobe
+fex_set_mausoleum_world = {
+    set_planet_flag = fex_mausoleum_world
+
+    add_modifier = { modifier = fex_mausoleum_world }
+    add_deposit = d_fex_crypt_monument
+    add_deposit = d_fex_imperial_tombs
+    add_deposit = d_fex_ancient_barrows
+}

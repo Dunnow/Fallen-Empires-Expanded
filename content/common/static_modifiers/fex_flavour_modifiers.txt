@@ -28,3 +28,10 @@ fex_martial_order = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_fex_martial_order.dds"
 	icon_frame = 1
 }
+
+fex_mausoleum_world = {
+	planet_jobs_minor_artifacts_produces_mult = 0.1
+
+	icon = "gfx/interface/icons/planet_modifiers/pm_factory.dds"
+	icon_frame = 1
+}

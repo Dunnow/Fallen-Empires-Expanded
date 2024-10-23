@@ -14,6 +14,12 @@
  d_fex_leviathan_preserves_desc: "Large swathes of the planet's ecosystems are dominated by enormous lifeforms. They do not appear to be native to this world."
  d_fex_ancient_citadels: "Ancient Citadels"
  d_fex_ancient_citadels_desc: "The ravages of time have done little to dull the potent strength of these fortifications and the warriors housed within."
+ d_fex_crypt_monument: "Crypt Monuments"
+ d_fex_crypt_monument_desc: "Faded and weathered structures commemorate the burial of long-dead heroes."
+ d_fex_ancient_barrows: "Ancient Barrows"
+ d_fex_ancient_barrows_desc: "Ravaged by time, these ancient structures contain the remains of forgotten notables and their precious treasures."
+ d_fex_imperial_tombs: "Imperial Tomb Complex"
+ d_fex_imperial_tombs_desc: "Immense crumbling architectures attests to the power and wealth of the ancient rulers interred within."
 
  # Planet Modifiers
  fex_xenophobe_titanic_game: "Titanic Game"
@@ -27,6 +33,9 @@
 
  fex_martial_order: "Martial Orders"
  fex_martial_order_desc: "This planet has hosted mighty legions of valiant warriors for centuries. Their proud history is present on every part of this world."
+
+ fex_mausoleum_world: "Mausoleum World"
+ fex_mausoleum_world_desc: "This world hosts dozens of tombs, cairns and burial sites for notable figures from a Fallen Empire. The historic record stretches back millennia."
 
  # Jobs
  job_fex_xeno_game: "Alien Quarry"
