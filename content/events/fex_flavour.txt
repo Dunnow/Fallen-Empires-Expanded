@@ -94,6 +94,7 @@ planet_event = {
             establish_communications = from
 			add_opinion_modifier = { who = from modifier = opinion_fex_attacked_exodites}
         }
+		save_event_target_as = fex_invaded_exodite_planet
 		from = {
             country_event = { id = fex_flavour.13 }
 		}
@@ -163,7 +164,8 @@ planet_event = {
 		last_created_country = {
             set_awareness = 100
 		}
-		planet_event = { id = fex_flavour.15 }
+		planet_event = { id = fex_flavour.15 } # Regrow natives
+		planet_event = { id = fex_flavour.16 } # Get rid of colonists
 	}
 }
 
