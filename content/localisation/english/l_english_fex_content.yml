@@ -89,6 +89,13 @@
  building_fex_ancient_shrines: "Ancient Shrines"
  building_fex_ancient_shrines_desc: "Simple structures that honor deities half-forgotten."
 
+ # Decisions
+ fex_tomb_raiding: "Excavate Burial Complex"
+ fex_tomb_raiding_desc: "This world contains a number of ancient tombs constructed by an advanced alien civilization. We would benefit "
+ fex_tomb_raiding_tt: "[fex_tomb_raiding_tt_scripted]"
+ fex_tomb_raiding_tt_default: "Excavate a Fallen Empire tomb, potentially recovering valuable resources."
+ fex_tomb_raiding_tt_advantage: "$fex_tomb_raiding_tt_default$\n\n§YWe are more likely to be successful on this world.§!"
+
  # Misc
  fex_exodite_age: "Exodite Age"
  fex_exodite_age_desc: "This civilization has a pre Industrial Age level of development. Despite this, they make use of several extremely sophisticated technologies. They appear to remain at their level of advancement by choice."

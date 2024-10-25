@@ -1,0 +1,24 @@
+fex_tomb_raiding_reward = {
+    random_list = {
+        # Massive find
+        25 = {
+            planet_event = { id = fex_flavour.30 }
+        }
+        # Good Find
+        25 = {
+            planet_event = { id = fex_flavour.31 }
+        }
+        # A few trinkets
+        25 = {
+            planet_event = { id = fex_flavour.32 }
+        }
+        # Nothing there, already plundered.
+        25 = {
+            planet_event = { id = fex_flavour.33 }
+            modifier = {
+                factor = 0
+                has_planet_flag = fallen_empire_world # FE worlds won't have been plundered
+            }
+        }
+    }
+}

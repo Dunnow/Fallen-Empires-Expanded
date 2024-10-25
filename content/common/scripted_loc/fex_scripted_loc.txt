@@ -1,0 +1,12 @@
+defined_text = {
+	name = fex_tomb_raiding_tt_scripted
+	text = {
+		trigger = { has_planet_flag = fallen_empire_world }
+		localization_key = fex_tomb_raiding_tt_advantage
+	}
+	text = {
+		trigger = { NOT = { has_planet_flag = fallen_empire_world } }
+		#localization_key = RENAME_SPECIES
+		localization_key = fex_tomb_raiding_tt_default
+	}
+}

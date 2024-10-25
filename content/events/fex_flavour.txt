@@ -214,3 +214,215 @@ planet_event = {
 		}
 	}
 }
+
+# Jackpot loot
+planet_event = {
+    id = fex_flavour.30
+    title = fex_flavour.30.title
+    desc = fex_flavour.30.desc
+    picture = GFX_evt_excavation_team
+	location = this
+    is_triggered_only = yes
+
+	immediate = {
+		solar_system = {
+			switch = {
+				trigger = has_star_flag
+				fex_xenophobe_history = { event_target:fex_xenophobe_fe = { save_event_target_as = fex_burial_origin_country} }
+				fex_xenophile_history = { event_target:fex_xenophile_fe = { save_event_target_as = fex_burial_origin_country} }
+				fex_materialist_history = { event_target:fex_materialist_fe = { save_event_target_as = fex_burial_origin_country} }
+				fex_spiritualist_history = { event_target:fex_spiritualist_fe = { save_event_target_as = fex_burial_origin_country} }
+				default = {
+					random_country = {
+						limit = {
+							is_fallen_empire = yes
+							is_fallen_empire_machine = no
+						}
+						save_event_target_as = fex_burial_origin_country
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = fex_flavour.30.a
+		owner = {
+			add_resource = {
+				minor_artifacts = 100
+			}
+			# 60 months of society
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 60
+				min = 200
+				max = 9999
+			}
+			# 24 month of energy
+			add_monthly_resource_mult = {
+				resource = energy
+				value = 24
+				min = 200
+				max = 9999
+			}
+			# 1 year of other research types
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = 12
+				min = 200
+				max = 9999
+			}
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = 12
+				min = 200
+				max = 9999
+			}
+		}
+	}
+}
+
+# Mediocre loot
+planet_event = {
+    id = fex_flavour.31
+    title = fex_flavour.31.title
+    desc = fex_flavour.31.desc
+    picture = GFX_evt_ancient_records
+	location = this
+    is_triggered_only = yes
+
+	immediate = {
+		solar_system = {
+			switch = {
+				trigger = has_star_flag
+				fex_xenophobe_history = { event_target:fex_xenophobe_fe = { save_event_target_as = fex_burial_origin_country} }
+				fex_xenophile_history = { event_target:fex_xenophile_fe = { save_event_target_as = fex_burial_origin_country} }
+				fex_materialist_history = { event_target:fex_materialist_fe = { save_event_target_as = fex_burial_origin_country} }
+				fex_spiritualist_history = { event_target:fex_spiritualist_fe = { save_event_target_as = fex_burial_origin_country} }
+				default = {
+					random_country = {
+						limit = {
+							is_fallen_empire = yes
+							is_fallen_empire_machine = no
+						}
+						save_event_target_as = fex_burial_origin_country
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = fex_flavour.31.a
+		owner = {
+			add_resource = {
+				minor_artifacts = 50
+			}
+			# 24 months of society
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 24
+				min = 200
+				max = 9999
+			}
+			# 12 month of energy
+			add_monthly_resource_mult = {
+				resource = energy
+				value = 12
+				min = 200
+				max = 9999
+			}
+		}
+	}
+}
+
+# Minimal loot
+planet_event = {
+    id = fex_flavour.32
+    title = fex_flavour.32.title
+    desc = fex_flavour.32.desc
+    picture = GFX_evt_archaeology_camp
+	location = this
+    is_triggered_only = yes
+
+	immediate = {
+		solar_system = {
+			switch = {
+				trigger = has_star_flag
+				fex_xenophobe_history = { event_target:fex_xenophobe_fe = { save_event_target_as = fex_burial_origin_country} }
+				fex_xenophile_history = { event_target:fex_xenophile_fe = { save_event_target_as = fex_burial_origin_country} }
+				fex_materialist_history = { event_target:fex_materialist_fe = { save_event_target_as = fex_burial_origin_country} }
+				fex_spiritualist_history = { event_target:fex_spiritualist_fe = { save_event_target_as = fex_burial_origin_country} }
+				default = {
+					random_country = {
+						limit = {
+							is_fallen_empire = yes
+							is_fallen_empire_machine = no
+						}
+						save_event_target_as = fex_burial_origin_country
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = fex_flavour.32.a
+		owner = {
+			add_resource = {
+				minor_artifacts = 25
+			}
+			# 12 months of society
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 12
+				min = 200
+				max = 9999
+			}
+		}
+	}
+}
+
+# No loot
+planet_event = {
+    id = fex_flavour.33
+    title = fex_flavour.33.title
+    desc = fex_flavour.33.desc
+    picture = GFX_evt_archaeological_dig
+	location = this
+    is_triggered_only = yes
+
+	immediate = {
+		solar_system = {
+			switch = {
+				trigger = has_star_flag
+				fex_xenophobe_history = { event_target:fex_xenophobe_fe = { save_event_target_as = fex_burial_origin_country} }
+				fex_xenophile_history = { event_target:fex_xenophile_fe = { save_event_target_as = fex_burial_origin_country} }
+				fex_materialist_history = { event_target:fex_materialist_fe = { save_event_target_as = fex_burial_origin_country} }
+				fex_spiritualist_history = { event_target:fex_spiritualist_fe = { save_event_target_as = fex_burial_origin_country} }
+				default = {
+					random_country = {
+						limit = {
+							is_fallen_empire = yes
+							is_fallen_empire_machine = no
+						}
+						save_event_target_as = fex_burial_origin_country
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = fex_flavour.33.a
+		owner = {
+			# Give 3 month's society research so it doesn't feel totally bad
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 3
+				min = 200
+				max = 9999
+			}
+		}
+	}
+}

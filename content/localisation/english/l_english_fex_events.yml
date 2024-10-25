@@ -17,3 +17,20 @@
  fex_flavour.13.a.tooltip: "Our colony on [event_target:fex_invaded_exodite_planet.GetName] will be abandoned."
  fex_flavour.13.b: "We will not take orders from you."
  fex_flavour.13.b.tooltip: "§H[event_target:fex_xenophile_fe.GetName]§! will be very angry, and are likely to attack us."
+
+ # Note, try to write references to the FEs in a way that doesn't break the text too badly if there's no event target.
+ fex_flavour.30.title: "A Spectacular Find"
+ fex_flavour.30.desc: "Our dig team on [This.GetName] have been successful beyond anyone's wildest dreams. The burial chamber is extraordinarily well preserved.\n\nIt appears that our team may be the first sentients to enter the tomb since it was sealed. The sheer volume of artifacts found within has exciting implications for our understanding of the period of [event_target:fex_burial_origin_country.GetAdj] history that they originate from."
+ fex_flavour.30.a: "Wonderful"
+
+ fex_flavour.31.title: "[This.GetName] Excavations"
+ fex_flavour.31.desc: "Our archaeological team on [This.GetName] reports good news. Their efforts to excavate an ancient [event_target:fex_burial_origin_country.GetAdj] tomb has been successful.\n\nAlthough some of the outer chambers have been damaged by raiders or the passage of time, the inner chambers are largely intact and contain many of their original contents.\n\nThe treasures and technology held within are of great interest to the [this.owner.GetAdj] scientific community."
+ fex_flavour.31.a: "Excellent"
+
+ fex_flavour.32.title: "Digsite Blues"
+ fex_flavour.32.desc: "We have successfully managed to excavate the burial complex on [This.GetName]. Unfortunately it appears that our team is not the first to do so.\n\nPirates, raiders or perhaps the descendants of those buried inside seem to have forced their way into the tomb and recovered many of the treasures held within.\n\nThe tomb itself is still of great interest to our scientists and we have been able to salvage some artifacts, but the bulk of the burial goods appear to be gone for good."
+ fex_flavour.32.a: "Unfortunate"
+
+ fex_flavour.33.title: "Fruitless Endeavours"
+ fex_flavour.33.desc: "We do not seem to be the first to have explored the tombs of [This.GetName]. The complex bear the marks of being entered several times, centuries apart. The treasure rooms and burial chambers have been meticulously picked clean.\n\nAlthough we can develop our understanding of the [event_target:fex_burial_origin_country.GetAdj] culture that buried their dead here by examining the markings of the tomb, we have missed out on obtaining any of the artifacts that may have once been buried here."
+ fex_flavour.33.a: "Disappointing"

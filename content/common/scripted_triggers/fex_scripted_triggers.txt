@@ -61,3 +61,14 @@ fex_is_exodite_country = {
         has_planet_flag = fex_exodite_planet
     }
 }
+
+fex_can_raid_tombs = {
+    any_deposit = {
+        OR = {
+            is_deposit_type = d_fex_crypt_monument
+            is_deposit_type = d_fex_ancient_barrows
+            is_deposit_type = d_fex_imperial_tombs
+        }
+        NOT = { has_deposit_flag = fex_plundered}
+    }
+}

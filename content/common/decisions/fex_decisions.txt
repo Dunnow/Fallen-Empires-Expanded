@@ -1,0 +1,29 @@
+fex_tomb_raiding = {
+    icon = decision_archaeological_dig
+    owned_planets_only = yes
+
+    enactment_time = 180
+
+    potential = {
+        fex_can_raid_tombs = yes
+    }
+
+    effect = {
+        custom_tooltip = fex_tomb_raiding_tt
+        hidden_effect = {
+            fex_tomb_raiding_reward = yes
+
+            random_deposit = {
+                limit = {
+                    OR = {
+                        is_deposit_type = d_fex_crypt_monument
+                        is_deposit_type = d_fex_ancient_barrows
+                        is_deposit_type = d_fex_imperial_tombs
+                    }
+                    NOT = { has_deposit_flag = fex_plundered}
+                }
+                set_deposit_flag = fex_plundered
+            }
+        }
+    }
+}
