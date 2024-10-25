@@ -1,0 +1,15 @@
+col_fex_exodite_age = {
+	icon = GFX_fex_colony_type_exodite_world
+
+	potential = {
+		exists = owner
+		owner = {
+			is_country_type = primitive
+			has_pre_ftl_age = fex_exodite_age
+		}
+	}
+
+	weight_modifier = {
+		base = 1000
+	}
+}

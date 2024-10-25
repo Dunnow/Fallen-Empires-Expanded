@@ -1,0 +1,211 @@
+building_fex_hunting_lodges= {
+	base_buildtime = @b1_time
+
+	category = amenity
+
+	base_cap_amount = 1
+
+	potential = {
+		exists = owner
+		owner = {
+			is_fallen_empire_xenophobe = yes
+		}
+		has_planet_flag = fex_hunting_world
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			is_fallen_empire_xenophobe = no
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 3
+		planet_amenities_add = 5
+		job_fex_xeno_hunter_add = 3
+		job_clerk_add = 3
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+}
+
+# It need more building slots
+building_fex_runestones= {
+	base_buildtime = @b1_time
+	category = amenity
+	base_cap_amount = 1
+	can_be_ruined = no
+
+	potential = {
+		exists = owner
+		owner = {
+			is_country_type = primitive
+			has_pre_ftl_age = fex_exodite_age
+		}
+		has_planet_flag = fex_exodite_planet
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			NOR = {
+				is_country_type = primitive
+				has_pre_ftl_age = fex_exodite_age
+			}
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 3
+		planet_amenities_add = 5
+		job_fex_exodite_druid_add = 3
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+}
+
+building_fex_exodite_settlements = {
+	capital = yes
+	can_build = no
+	can_demolish = yes
+	can_be_ruined = no
+	position_priority = 0
+	icon = holding_tree_of_life_sapling
+
+	category = government
+
+	potential = {
+		exists = owner
+		owner = {
+			is_primitive = yes
+			is_hive_empire = no
+		}
+		has_planet_flag = fex_exodite_planet
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			OR = {
+				is_primitive = no
+				is_hive_empire = yes
+			}
+		}
+	}
+
+	convert_to = {
+		building_machine_capital
+		building_capital
+		building_hive_capital
+		building_hab_capital
+		building_hab_fe_capital
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_primitive = yes
+			}
+			has_planet_flag = fex_exodite_planet
+		}
+
+		planet_housing_add = 10
+		planet_amenities_add = 25
+		planet_crime_add = -20
+
+		job_fex_exodite_hunter_add = 3
+		job_fex_exodite_smith_add = 3
+	}
+}
+
+building_fex_scientific_outposts = {
+	base_buildtime = @b1_time
+	category = research
+	base_cap_amount = 1
+	icon = building_primitive_labs
+
+	potential = {
+		exists = owner
+		owner = {
+			is_fallen_empire_materialist = yes
+		}
+		has_planet_flag = fex_experiment_world
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			is_fallen_empire_materialist = no
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 3
+		planet_amenities_add = 5
+		job_fe_archivist_add = 3
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+}
+
+building_fex_ancient_shrines = {
+	base_buildtime = @b1_time
+	category = research
+	base_cap_amount = 1
+
+	potential = {
+		exists = owner
+		owner = {
+			is_fallen_empire_spiritualist = yes
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			is_fallen_empire_materialist = no
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 3
+		planet_amenities_add = 5
+		job_fex_monk_add = 3
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+}

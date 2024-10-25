@@ -1,0 +1,125 @@
+# All are planet scope
+
+# Hunting world, Xenophobe
+fex_set_hunting_world = {
+    set_planet_flag = fex_hunting_world
+    add_modifier = { modifier = fex_xenophobe_titanic_game }
+    add_building = building_fex_hunting_lodges
+
+    # Add primitive game
+    while = {
+        count = 5
+        random_country = {
+            limit = {
+                OR = {
+                    is_country_type = default
+                    is_primitive = yes
+                }
+                is_gestalt = no
+            }
+            species = {
+                save_event_target_as = fex_hunting_target
+            }
+        }
+        create_pop = { species = event_target:fex_hunting_target }
+    }
+}
+
+# Experiment world, Materialist
+fex_set_experiment_world = {
+    set_planet_flag = fex_experiment_world
+    set_name = fex_experiment_world_name
+    change_pc = pc_gaia
+    reroll_deposits = yes
+    set_planet_entity = { entity = fex_tainted_gaia_entity }
+
+    clear_blockers = yes
+    add_deposit = d_fex_ruined_wastes_blocker
+    add_deposit = d_fex_ruined_wastes_blocker
+    add_deposit = d_dangerous_wildlife_blocker
+
+    add_building = building_fex_scientific_outposts
+}
+
+# Ancilla world, Materialist
+fex_set_ancilla_world = {
+    set_planet_flag = fex_ancilla_world
+    change_pc = pc_relic
+    reroll_deposits = yes
+    clear_blockers = yes
+
+    add_deposit = d_fex_ancient_ai_core
+    add_deposit = d_fex_shattered_ai_core
+    add_modifier = { modifier = fex_materialist_ai_world }
+
+    while = {
+        count = 4
+        create_pop = { species = event_target:fex_materialist_fe.owner_species }
+    }
+}
+
+# Shrine world, Spiritualist
+fex_set_shrine_world = {
+    set_planet_flag = fex_shrine_world
+
+    add_building = building_fe_temple_1
+    add_building = building_fex_ancient_shrines
+
+    add_modifier = { modifier = fex_spiritualist_shrine_world }
+
+    while = {
+        count = 9
+        create_pop = { species = event_target:fex_spiritualist_fe.owner_species }
+    }
+}
+
+# Leviathan World, Xenophile
+fex_set_leviathan_world = {
+    set_planet_flag = fex_leviathan_world
+
+    add_modifier = { modifier = titanic_life }
+    add_deposit = d_fex_leviathan_preserves
+
+    while = {
+        count = 4
+        create_pop = { species = event_target:fex_xenophile_fe.owner_species }
+    }
+}
+
+# Martial Order World, Xenophobe
+fex_set_martial_order_world = {
+    set_planet_flag = fex_martial_order_world
+
+    add_modifier = { modifier = fex_martial_order }
+    add_deposit = d_fex_ancient_citadels
+
+    add_building = building_fe_stronghold
+    add_building = building_fe_fortress
+
+    while = {
+        count = 5
+        create_pop = { species = event_target:fex_xenophobe_fe.owner_species }
+    }
+
+    random_owned_pop = {
+        limit = { has_trait = trait_nerve_stapled }
+        species = {
+            save_event_target_as = fex_xenophobe_servile_species
+        }
+    }
+
+    while = {
+        count = 9
+        create_pop = { species = event_target:fex_xenophobe_servile_species }
+    }
+}
+
+# Mausoleum World, Generic
+fex_set_mausoleum_world = {
+    set_planet_flag = fex_mausoleum_world
+
+    add_modifier = { modifier = fex_mausoleum_world }
+    add_deposit = d_fex_crypt_monument
+    add_deposit = d_fex_imperial_tombs
+    add_deposit = d_fex_ancient_barrows
+}

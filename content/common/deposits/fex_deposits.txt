@@ -1,3 +1,8 @@
+@blocker_high = 10
+@blocker_low = 5
+@ranger_small_production = 0.5
+@ranger_large_production = 1
+
 d_fex_forgotten_archives = {
     icon = d_fex_archives
 	is_for_colonizable = yes
@@ -28,6 +33,260 @@ d_fex_ruined_monuments = {
 	resources = {
 		produces = {
 			unity = 100
+		}
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+
+d_fex_ruined_wastes_blocker = {
+	time = 270
+	icon = d_radioactive_wasteland
+	is_for_colonizable = yes
+	category = deposit_cat_blockers_natural
+
+	can_be_cleared = {
+		custom_tooltip = {
+			fail_text = has_ranger_lodge
+			planet = {
+				NOT = { has_building = building_ranger_lodge }
+			}
+		}
+	}
+
+	resources = {
+		category = deposit_blockers_natural
+		cost = {
+			energy = 1000
+		}
+	}
+
+	planet_modifier = {
+		planet_max_districts_add = -2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_society_research_produces_add = @ranger_large_production
+	}
+
+	inline_script = deposits/environmental_architects_natural_blocker_modifier
+
+	on_cleared = {
+		planetscaper_pop_effect = yes
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+
+	prerequisites = { tech_climate_restoration }
+}
+
+d_fex_ancient_ai_core = {
+	icon = d_fex_ai_core
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+
+	category = deposit_cat_rare
+
+	resources = {
+		produces = {
+			physics_research = 100
+			society_research = 100
+			engineering_research = 100
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_fallen_empire = yes }
+		}
+		job_fe_archivist_add = 4
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_fallen_empire = no
+				is_regular_empire = yes # Precludes gestalt
+			}
+		}
+		job_researcher_add = 4
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		job_brain_drone_add = 4
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		job_calculator_add = 4
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_fex_shattered_ai_core = {
+	icon = default_blocker
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+
+	category = deposit_cat_rare
+
+	resources = {
+		produces = {
+			minor_artifacts = 10
+		}
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_fex_leviathan_preserves = {
+	icon = d_titanic_life_blocker
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+
+	category = deposit_cat_rare
+
+	resources = {
+		produces = {
+			society_research = 120
+			unity = 40
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_fallen_empire = yes
+			}
+		}
+		job_fe_xeno_keeper_add = 4
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_fallen_empire = no
+				is_regular_empire = yes
+			}
+		}
+		job_ranger_add = 4
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_fex_ancient_citadels = {
+	icon = d_fex_mountain_building
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+
+	category = deposit_cat_rare
+
+
+	planet_modifier = {
+		planet_orbital_bombardment_damage = -0.1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_fallen_empire = yes
+			}
+		}
+		job_fex_promethean_warrior_add = 4
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_fallen_empire = no
+				is_regular_empire = yes
+			}
+		}
+		job_culture_worker_add = 4
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}
+d_fex_crypt_monument = {
+	icon = d_monument
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+
+	category = deposit_cat_rare
+
+	resources = {
+		produces = {
+			unity = 40
+		}
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_fex_ancient_barrows = {
+	icon = d_fex_ruins
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+
+	category = deposit_cat_rare
+
+	resources = {
+		produces = {
+			unity = 30
+			society_research = 10
+		}
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_fex_imperial_tombs = {
+	icon = d_fex_tomb
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+
+	category = deposit_cat_rare
+
+	resources = {
+		produces = {
+			unity = 50
+			minor_artifacts = 10
 		}
 	}
 

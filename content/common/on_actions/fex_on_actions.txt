@@ -9,3 +9,18 @@ on_game_start_country = {
         fex_core.2
     }
 }
+
+on_survey_planet = {
+    events = {
+        fex_flavour.10
+    }
+}
+
+# This = Planet scope
+# From = Country scope (new owner)
+# FromFrom = Former Owner
+on_planet_transfer = {
+    events = {
+        fex_flavour.12
+    }
+}

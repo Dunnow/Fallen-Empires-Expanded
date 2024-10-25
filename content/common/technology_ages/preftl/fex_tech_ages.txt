@@ -1,0 +1,3 @@
+fex_exodite_age = {
+	#next_age = fex_exodite_age
+}

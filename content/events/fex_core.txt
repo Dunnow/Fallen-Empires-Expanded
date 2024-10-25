@@ -57,18 +57,13 @@ country_event = {
     }
 
     immediate = {
-        # Rename colonies because not naming them is stupid.
+        # Rename colonies and add some flavour because not naming them is stupid.
         every_owned_planet = {
             limit = {
-                solar_system = {
-                    NOT = { is_same_value = root.capital_scope.solar_system }
-                }
-                # Flags to ignore
-                nor = {
-                    has_planet_flag = fe_the_preserve
-                }
+                fex_is_bespoke_fe_world = no
             }
             set_name = random
+            planet_event = { id = fex_core.10 }
         }
         # Set up "historical" spheres.
         every_system = {
@@ -116,7 +111,34 @@ country_event = {
         }
 
         # Create hyper relay "roads" to points of interest
-        country_event = { id = fex_core.3}
+        # TODO: Refactor this. The recursion just doesnt work. I need a second look at this or it crashes the game
+        #country_event = { id = fex_core.3}
+
+        # Add xenophile exodites
+        if = {
+            limit = { is_fallen_empire_xenophile = yes }
+            while = {
+                count = 3
+                random_galaxy_planet = {
+                    limit = {
+                        solar_system = {
+                            has_star_flag = fex_xenophile_history
+                            NOT = { any_system_planet = { is_colonizable = yes } }
+                            has_owner = no
+                            OR = {
+                                is_star_class = sc_f
+                                is_star_class = sc_g
+                                is_star_class = sc_k
+                                is_star_class = sc_m
+                            }
+                        }
+                        is_planet_class = pc_barren
+                        not = { has_planet_flag = ancient_history_planet}
+                    }
+                    fex_generate_exodites_on_planet = yes
+                }
+            }
+        }
     }
 }
 
@@ -154,6 +176,7 @@ event = {
     }
 }
 
+# Follow on road building. Recursively runs until we reach the target.
 system_event = {
     id = fex_core.4
     is_triggered_only = yes
@@ -230,6 +253,177 @@ system_event = {
                 }
             }
         }
+    }
+}
 
+# Generic world flavour-ify gatekeeper
+planet_event = {
+    id = fex_core.10
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        if = {
+            limit = { owner = { is_fallen_empire_xenophobe = yes } }
+            planet_event = { id = fex_core.11 }
+        }
+        if = {
+            limit = { owner = { is_fallen_empire_xenophile = yes } }
+            planet_event = { id = fex_core.12 }
+        }
+        if = {
+            limit = { owner = { is_fallen_empire_materialist = yes } }
+            planet_event = { id = fex_core.13 }
+        }
+        if = {
+            limit = { owner = { is_fallen_empire_spiritualist = yes } }
+            planet_event = { id = fex_core.14 }
+        }
+        # Machine FE doesn't have any planets outside it's area
+    }
+}
+
+# Xenophobe generic world flavour
+planet_event = {
+    id = fex_core.11
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        random_list = {
+            # Chance of being a unique planet
+            10 = {
+                random_list = {
+                    100 = {
+                        fex_set_hunting_world = yes
+                        modifier = {
+                            factor = 0
+                            owner = { any_owned_planet = { has_planet_flag = fex_hunting_world } }
+                        }
+                    }
+                    100 = {
+                        fex_set_martial_order_world = yes
+                        modifier = {
+                            factor = 0
+                            owner = { any_owned_planet = { has_planet_flag = fex_martial_order_world } }
+                        }
+                    }
+                    50 = { # Reduced chance because it's generic
+                        fex_set_mausoleum_world = yes
+                        modifier = {
+                            factor = 0
+                            owner = { any_owned_planet = { has_planet_flag = fex_mausoleum_world } }
+                        }
+                    }
+                    1 = { } # Small chance of nothing so we dont get stuck in an infinite loop
+                }
+            }
+            20 = { }
+        }
+    }
+}
+
+# Xenophile generic world flavour
+planet_event = {
+    id = fex_core.12
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        random_list = {
+            # Chance of being a unique planet
+            10 = {
+                random_list = {
+                    100 = {
+                        fex_set_leviathan_world = yes
+                        modifier = {
+                            factor = 0
+                            owner = { any_owned_planet = {  has_planet_flag = fex_leviathan_world } }
+                        }
+                    }
+                    50 = { # Reduced chance because it's generic
+                        fex_set_mausoleum_world = yes
+                        modifier = {
+                            factor = 0
+                            owner = { any_owned_planet = {  has_planet_flag = fex_mausoleum_world } }
+                        }
+                    }
+                    1 = {} # Small chance of nothing so we dont get stuck in an infinite loop
+                }
+            }
+            20 = { }
+        }
+    }
+}
+
+# Materialist generic world flavour
+planet_event = {
+    id = fex_core.13
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        random_list = {
+            # Chance of being a unique planet
+            10 = {
+                random_list = {
+                    100 = {
+                        fex_set_experiment_world = yes
+                        modifier = {
+                            factor = 0
+                            owner = { any_owned_planet = { has_planet_flag = fex_experiment_world } }
+                        }
+                    }
+                    100 = {
+                        fex_set_ancilla_world = yes
+                        modifier = {
+                            factor = 0
+                            owner = { any_owned_planet = { has_planet_flag = fex_ancilla_world } }
+                        }
+                    }
+                    50 = { # Reduced chance because it's generic
+                        fex_set_mausoleum_world = yes
+                        modifier = {
+                            factor = 0
+                            owner = { any_owned_planet = {  has_planet_flag = fex_mausoleum_world } }
+                        }
+                    }
+                    1 = {} # Small chance of nothing so we dont get stuck in an infinite loop
+                }
+            }
+            20 = { }
+        }
+    }
+}
+# Spiritualist generic world flavour
+planet_event = {
+    id = fex_core.14
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        random_list = {
+            # Chance of being a unique planet
+            10 = {
+                random_list = {
+                    100 = {
+                        fex_set_shrine_world = yes
+                        modifier = {
+                            factor = 0
+                            owner = { any_owned_planet = { has_planet_flag = fex_shrine_world } }
+                        }
+                    }
+                    50 = { # Reduced chance because it's generic
+                        fex_set_mausoleum_world = yes
+                        modifier = {
+                            factor = 0
+                            owner = { any_owned_planet = {  has_planet_flag = fex_mausoleum_world } }
+                        }
+                    }
+                    1 = {} # Small chance of nothing so we dont get stuck in an infinite loop
+                }
+            }
+            20 = { }
+        }
     }
 }

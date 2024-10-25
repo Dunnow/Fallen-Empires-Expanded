@@ -35,3 +35,40 @@ fex_has_hyper_relay = {
         has_megastructure = hyper_relay_restored
     }
 }
+
+fex_is_bespoke_fe_world = {
+    OR = {
+        solar_system = {
+            is_capital_system = yes
+        }
+        has_planet_flag = fe_the_preserve
+        has_planet_flag = fex_the_archives
+        # The Archives dont have a flag in vanilla
+        AND = {
+            owner = {
+                is_fallen_empire_materialist = yes
+            }
+            is_planet_class = pc_gaia
+            NOT = {
+                has_planet_flag = fex_experiment_world
+            }
+        }
+    }
+}
+
+fex_is_exodite_country = {
+    capital_scope = {
+        has_planet_flag = fex_exodite_planet
+    }
+}
+
+fex_can_raid_tombs = {
+    any_deposit = {
+        OR = {
+            is_deposit_type = d_fex_crypt_monument
+            is_deposit_type = d_fex_ancient_barrows
+            is_deposit_type = d_fex_imperial_tombs
+        }
+        NOT = { has_deposit_flag = fex_plundered}
+    }
+}

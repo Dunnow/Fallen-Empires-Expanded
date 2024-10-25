@@ -1,0 +1,37 @@
+fex_xenophobe_titanic_game = {
+	planet_amenities_mult = 0.1
+
+	icon = "gfx/interface/icons/planet_modifiers/pm_titanic_life.dds"
+	icon_frame = 1
+}
+
+fex_materialist_ai_world = {
+	planet_jobs_physics_research_produces_mult = 0.1
+	planet_jobs_society_research_produces_mult = 0.1
+	planet_jobs_engineering_research_produces_mult = 0.1
+
+	icon = "gfx/interface/icons/planet_modifiers/pm_engineering_research.dds"
+	icon_frame = 1
+}
+
+fex_spiritualist_shrine_world = {
+	planet_jobs_unity_produces_mult = 0.2
+	planet_amenities_mult = 0.1
+
+	icon = "gfx/interface/icons/planet_modifiers/pm_artist_monument_erected.dds"
+	icon_frame = 1
+}
+
+fex_martial_order = {
+	planet_jobs_unity_produces_mult = 0.1
+
+	icon = "gfx/interface/icons/planet_modifiers/pm_fex_martial_order.dds"
+	icon_frame = 1
+}
+
+fex_mausoleum_world = {
+	planet_jobs_minor_artifacts_produces_mult = 0.1
+
+	icon = "gfx/interface/icons/planet_modifiers/pm_factory.dds"
+	icon_frame = 1
+}

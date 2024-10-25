@@ -1,0 +1,14 @@
+fex_exodite_army = {
+	defensive = yes
+	is_pop_spawned = yes
+    damage = 1.5
+	health = 2.0
+	morale = 2.5
+	use_armynames_from = defense_army
+	icon = GFX_army_type_primitive
+
+	potential_country = {
+		is_primitive = yes
+		fex_is_exodite_country = yes
+	}
+}

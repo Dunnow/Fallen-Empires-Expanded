@@ -1,0 +1,20 @@
+room_selector = {
+	default = "default_room"	#point to textures that end with "_room.dds" but remove the file ending
+
+	game_setup = {
+		"fex_exodite_room" = { always = yes }
+	}
+
+	#leader scope
+	ruler = {
+		"fex_exodite_room" = {
+			always = yes
+			# I don't know why but the conditions break otherwise. This works.
+			#exists = owner
+			#owner = {
+			#	is_country_type = primitive
+			#	has_pre_ftl_age = fex_exodite_age
+			#}
+		}
+	}
+}

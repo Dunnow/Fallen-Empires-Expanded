@@ -1,5 +1,124 @@
 ﻿l_english:
+ # Deposits
  d_fex_forgotten_archives: "Forgotten Archives"
  d_fex_forgotten_archives_desc: "The accumulated wisdom of countless ages, languishing in obscurity."
  d_fex_ruined_monuments: "Decaying Monuments"
  d_fex_ruined_monuments_desc: "Mighty deeds commemorated long ago. None now remembered."
+ d_fex_ruined_wastes_blocker: "£blocker£ Ruined Wastes"
+ d_fex_ruined_wastes_blocker_desc: "Swathes of land, devoid of any life. The terrain is covered in scars from exotic weapons. Approach is treacherous."
+ d_fex_ancient_ai_core: "Ancient AI Core"
+ d_fex_ancient_ai_core_desc: "An immensely powerful AI, shackled deep within a fortified facility. It is difficult to tell just how old it is."
+ d_fex_shattered_ai_core: "Shattered AI Core"
+ d_fex_shattered_ai_core_desc: "The remains of an ancient superintelligence. The ruins have been left for nature to reclaim."
+ d_fex_leviathan_preserves: "Leviathan Preserves"
+ d_fex_leviathan_preserves_desc: "Large swathes of the planet's ecosystems are dominated by enormous lifeforms. They do not appear to be native to this world."
+ d_fex_ancient_citadels: "Ancient Citadels"
+ d_fex_ancient_citadels_desc: "The ravages of time have done little to dull the potent strength of these fortifications and the warriors housed within."
+ d_fex_crypt_monument: "Crypt Monuments"
+ d_fex_crypt_monument_desc: "Faded and weathered structures commemorate the burial of long-dead heroes."
+ d_fex_ancient_barrows: "Ancient Barrows"
+ d_fex_ancient_barrows_desc: "Ravaged by time, these ancient structures contain the remains of forgotten notables and their precious treasures."
+ d_fex_imperial_tombs: "Imperial Tomb Complex"
+ d_fex_imperial_tombs_desc: "Immense crumbling architecture attests to the power and wealth of the ancient rulers interred within."
+
+ # Planet Modifiers
+ fex_xenophobe_titanic_game: "Titanic Game"
+ fex_xenophobe_titanic_game_desc: "Enormous lifeforms, raised and hunted for sport."
+
+ fex_materialist_ai_world: "Ancilla World"
+ fex_materialist_ai_world_desc: "This planet houses a number of ancient artificial intelligences. Despite their age, many are still functional."
+
+ fex_spiritualist_shrine_world: "Shrine World"
+ fex_spiritualist_shrine_world_desc: "This world is dotted with ancient shrines that offer reverence to holy deities and spirits."
+
+ fex_martial_order: "Martial Orders"
+ fex_martial_order_desc: "This planet has hosted mighty legions of valiant warriors for centuries. Their proud history is present on every part of this world."
+
+ fex_mausoleum_world: "Mausoleum World"
+ fex_mausoleum_world_desc: "This world hosts dozens of tombs, cairns and burial sites for notable figures from a Fallen Empire. The historic record stretches back millennia."
+
+ # Jobs
+ job_fex_xeno_game: "Alien Quarry"
+ job_fex_xeno_game_plural: "$job_fex_xeno_game$"
+ job_fex_xeno_game_desc: "The most dangerous game."
+ mod_job_fex_xeno_game_add: "$job_fex_xeno_game$ Jobs"
+
+ job_fex_xeno_hunter: "Xeno-Hunter"
+ job_fex_xeno_hunter_plural: "Xeno-Hunters"
+ job_fex_xeno_hunter_desc: "For these precursors the thrill of the hunt exceeds even the most sophisticated luxuries available on their homeworlds."
+ mod_job_fex_xeno_hunter_add: "$job_fex_xeno_hunter$ Jobs"
+
+ job_fex_exodite_druid: "Path of the Druid"
+ job_fex_exodite_druid_plural: "Path of the Druid"
+ job_fex_exodite_druid_desc: "In the quiet paths among the idle groves wisdom may be found."
+ mod_job_fex_exodite_druid_add: "$job_fex_exodite_druid$ Jobs"
+
+ job_fex_exodite_smith: "Path of the Smith"
+ job_fex_exodite_smith_plural: "Path of the Smith"
+ job_fex_exodite_smith_desc: "Through the simple forging of crafts we shape the world around us."
+ mod_job_fex_exodite_smith_add: "$job_fex_exodite_smith$ Jobs"
+
+ job_fex_exodite_hunter: "Path of the Hunter"
+ job_fex_exodite_hunter_plural: "Path of the Hunter"
+ job_fex_exodite_hunter_desc: "And so we give thanks to the beast that is slain, that we may honor its passing."
+ mod_job_fex_exodite_hunter_add: "$job_fex_exodite_hunter$ Jobs"
+
+ job_fex_monk: "Monk"
+ job_fex_monk_plural: "Monks"
+ job_fex_monk_desc: "A lifetime of quiet contemplation can uncover many deeper truths."
+ mod_job_fex_monk_add: "$job_fex_monk$ Jobs"
+
+ job_fex_promethean_warrior: "Promethean Warrior"
+ job_fex_promethean_warrior_plural: "Promethean Warriors"
+ job_fex_promethean_warrior_desc: "Peerless warriors charged with protecting the empire and preserving their own ancient tradition."
+ mod_job_fex_promethean_warrior_add: "$job_fex_promethean_warrior$ Jobs"
+
+ # Buildings
+ building_fex_hunting_lodges: "Hunting Lodges"
+ building_fex_hunting_lodges_desc: "An anachronistic throwback to a more primitive age. Prospective thrill seekers are accommodated in sparse but comfortable conditions."
+
+ building_fex_runestones: "Elder Runestones"
+ building_fex_runestones_desc: "Ancient stones hum with esoteric power."
+
+ building_fex_exodite_settlements: "Exodite Settlements"
+ building_fex_exodite_settlements_desc: "Scattered settlements artfully incorporating the natural world are the only signs of civilization on this planet."
+
+ building_fex_scientific_outposts: "Scientific Outposts"
+ building_fex_scientific_outposts_desc: "An isolated facility far from civilization. Home to inscrutable experiments and advanced technologies."
+
+ building_fex_ancient_shrines: "Ancient Shrines"
+ building_fex_ancient_shrines_desc: "Simple structures that honor deities half-forgotten."
+
+ # Decisions
+ fex_tomb_raiding: "Excavate Burial Complex"
+ fex_tomb_raiding_desc: "This world contains a number of ancient tombs constructed by an advanced alien civilization. We would benefit "
+ fex_tomb_raiding_tt: "[fex_tomb_raiding_tt_scripted]"
+ fex_tomb_raiding_tt_default: "Excavate a Fallen Empire tomb, potentially recovering valuable resources."
+ fex_tomb_raiding_tt_advantage: "$fex_tomb_raiding_tt_default$\n\n§YWe are more likely to be successful on this world.§!"
+
+ # Misc
+ fex_exodite_age: "Exodite Age"
+ fex_exodite_age_desc: "This civilization has a pre Industrial Age level of development. Despite this, they make use of several extremely sophisticated technologies. They appear to remain at their level of advancement by choice."
+ col_fex_exodite_age: "Exodite World"
+ col_fex_exodite_age_desc: "$col_primitive_desc$"
+
+ pop_cat_fex_exodus_precursor: "Exodus Precursor"
+ pop_cat_fex_exodus_precursor_plural: "Exodus Precursors"
+ pop_cat_fex_exodus_precursor_desc: "These individuals have consciously chosen to reject the decadent luxuries of their homeworlds in favor of leading a simpler life on the fringes of civilization."
+
+ fex_exodite_moon_1: "Haven"
+ fex_exodite_moon_2: "Shadow"
+ fex_exodite_moon_3: "Citadel"
+ fex_exodite_moon_4: "Goddess"
+ fex_exodite_moon_5: "Jewel"
+ fex_exodite_moon_6: "Sky Palace"
+
+ fex_civic_natural_harmony: "Natural Harmony"
+ fex_civic_archaeotech_legacy: "Archaeotech Legacy"
+
+ fex_exodite_army: "Exodite Rangers"
+ fex_exodite_army_desc: "These Precursor Warriors possess a lethality that belies their archaic appearance."
+
+ opinion_fex_attacked_exodites: "Attacked our Pre-FTL Cousins"
+
+ fex_experiment_world_name: "The Crucible"
