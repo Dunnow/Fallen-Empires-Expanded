@@ -291,28 +291,34 @@ planet_event = {
 
     immediate = {
         random_list = {
-            100 = {
-                fex_set_hunting_world = yes
-                modifier = {
-                    factor = 0
-                    owner = { any_owned_planet = {  has_planet_flag = fex_hunting_world } }
+            # Chance of being a unique planet
+            10 = {
+                random_list = {
+                    100 = {
+                        fex_set_hunting_world = yes
+                        modifier = {
+                            factor = 0
+                            owner = { any_owned_planet = { has_planet_flag = fex_hunting_world } }
+                        }
+                    }
+                    100 = {
+                        fex_set_martial_order_world = yes
+                        modifier = {
+                            factor = 0
+                            owner = { any_owned_planet = { has_planet_flag = fex_martial_order_world } }
+                        }
+                    }
+                    50 = { # Reduced chance because it's generic
+                        fex_set_mausoleum_world = yes
+                        modifier = {
+                            factor = 0
+                            owner = { any_owned_planet = { has_planet_flag = fex_mausoleum_world } }
+                        }
+                    }
+                    1 = { } # Small chance of nothing so we dont get stuck in an infinite loop
                 }
             }
-            100 = {
-                fex_set_martial_order_world = yes
-                modifier = {
-                    factor = 0
-                    owner = { any_owned_planet = {  has_planet_flag = fex_martial_order_world } }
-                }
-            }
-            100 = {
-                fex_set_mausoleum_world = yes
-                modifier = {
-                    factor = 0
-                    owner = { any_owned_planet = {  has_planet_flag = fex_mausoleum_world } }
-                }
-            }
-            1 = { } # Small chance of nothing so we dont get stuck in an infinite loop
+            20 = { }
         }
     }
 }
@@ -325,14 +331,27 @@ planet_event = {
 
     immediate = {
         random_list = {
-            100 = {
-                fex_set_leviathan_world = yes
-                modifier = {
-                    factor = 0
-                    owner = { any_owned_planet = {  has_planet_flag = fex_leviathan_world } }
+            # Chance of being a unique planet
+            10 = {
+                random_list = {
+                    100 = {
+                        fex_set_leviathan_world = yes
+                        modifier = {
+                            factor = 0
+                            owner = { any_owned_planet = {  has_planet_flag = fex_leviathan_world } }
+                        }
+                    }
+                    50 = { # Reduced chance because it's generic
+                        fex_set_mausoleum_world = yes
+                        modifier = {
+                            factor = 0
+                            owner = { any_owned_planet = {  has_planet_flag = fex_mausoleum_world } }
+                        }
+                    }
+                    1 = {} # Small chance of nothing so we dont get stuck in an infinite loop
                 }
             }
-            1 = { } # Small chance of nothing so we dont get stuck in an infinite loop
+            20 = { }
         }
     }
 }
@@ -345,21 +364,34 @@ planet_event = {
 
     immediate = {
         random_list = {
-            100 = {
-                fex_set_experiment_world = yes
-                modifier = {
-                    factor = 0
-                    owner = { any_owned_planet = {  has_planet_flag = fex_experiment_world } }
+            # Chance of being a unique planet
+            10 = {
+                random_list = {
+                    100 = {
+                        fex_set_experiment_world = yes
+                        modifier = {
+                            factor = 0
+                            owner = { any_owned_planet = { has_planet_flag = fex_experiment_world } }
+                        }
+                    }
+                    100 = {
+                        fex_set_ancilla_world = yes
+                        modifier = {
+                            factor = 0
+                            owner = { any_owned_planet = { has_planet_flag = fex_ancilla_world } }
+                        }
+                    }
+                    50 = { # Reduced chance because it's generic
+                        fex_set_mausoleum_world = yes
+                        modifier = {
+                            factor = 0
+                            owner = { any_owned_planet = {  has_planet_flag = fex_mausoleum_world } }
+                        }
+                    }
+                    1 = {} # Small chance of nothing so we dont get stuck in an infinite loop
                 }
             }
-            100 = {
-                fex_set_ancilla_world = yes
-                modifier = {
-                    factor = 0
-                    owner = { any_owned_planet = {  has_planet_flag = fex_ancilla_world } }
-                }
-            }
-            1 = { } # Small chance of nothing so we dont get stuck in an infinite loop
+            20 = { }
         }
     }
 }
@@ -370,16 +402,28 @@ planet_event = {
     is_triggered_only = yes
 
     immediate = {
-
         random_list = {
-            100 = {
-                fex_set_shrine_world = yes
-                modifier = {
-                    factor = 0
-                    owner = { any_owned_planet = { has_planet_flag = fex_shrine_world } }
+            # Chance of being a unique planet
+            10 = {
+                random_list = {
+                    100 = {
+                        fex_set_shrine_world = yes
+                        modifier = {
+                            factor = 0
+                            owner = { any_owned_planet = { has_planet_flag = fex_shrine_world } }
+                        }
+                    }
+                    50 = { # Reduced chance because it's generic
+                        fex_set_mausoleum_world = yes
+                        modifier = {
+                            factor = 0
+                            owner = { any_owned_planet = {  has_planet_flag = fex_mausoleum_world } }
+                        }
+                    }
+                    1 = {} # Small chance of nothing so we dont get stuck in an infinite loop
                 }
             }
-            1 = { } # Small chance of nothing so we dont get stuck in an infinite loop
+            20 = { }
         }
     }
 }

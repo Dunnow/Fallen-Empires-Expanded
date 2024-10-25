@@ -114,7 +114,7 @@ fex_set_martial_order_world = {
     }
 }
 
-# Mausoleum World, Xenophobe
+# Mausoleum World, Generic
 fex_set_mausoleum_world = {
     set_planet_flag = fex_mausoleum_world
 
