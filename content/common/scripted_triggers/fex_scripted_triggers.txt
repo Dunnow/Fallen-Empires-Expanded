@@ -72,3 +72,32 @@ fex_can_raid_tombs = {
         NOT = { has_deposit_flag = fex_plundered}
     }
 }
+
+fex_is_historical_border_system = {
+    or = {
+        fex_is_historical_border_system_type = { FE_TYPE = materialist}
+        fex_is_historical_border_system_type = { FE_TYPE = spiritualist}
+        fex_is_historical_border_system_type = { FE_TYPE = xenophile}
+        fex_is_historical_border_system_type = { FE_TYPE = xenophobe}
+    }
+}
+
+fex_is_historical_border_system_type = {
+    AND = {
+        has_star_flag = fex_$FE_TYPE$_history
+        any_neighbor_system = {
+            AND = {
+                OR = {
+                    has_star_flag = fex_materialist_history
+                    has_star_flag = fex_spiritualist_history
+                    has_star_flag = fex_xenophile_history
+                    has_star_flag = fex_xenophobe_history
+                }
+                # This is to ensure that the neighbours are a different type
+                NOT = {
+                    has_star_flag = fex_$FE_TYPE$_history
+                }
+            }
+        }
+    }
+}
