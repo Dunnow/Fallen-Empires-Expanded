@@ -110,6 +110,9 @@ country_event = {
 			}
         }
 
+        # Spawn random historical systems
+        country_event = { id = fex_core.20 }
+
         # Create hyper relay "roads" to points of interest
         # TODO: Refactor this. The recursion just doesnt work. I need a second look at this or it crashes the game
         #country_event = { id = fex_core.3}
@@ -425,5 +428,74 @@ planet_event = {
             }
             20 = { }
         }
+    }
+}
+
+# Random history system gatekeeper
+country_event = {
+    id = fex_core.20
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        if = {
+            limit = {  is_fallen_empire_xenophile = yes }
+            country_event = { id = fex_core.21 }
+        }
+        if = {
+            limit = {  is_fallen_empire_xenophobe = yes }
+            country_event = { id = fex_core.22 }
+        }
+        if = {
+            limit = {  is_fallen_empire_materialist = yes }
+            country_event = { id = fex_core.23 }
+        }
+        if = {
+            limit = {  is_fallen_empire_spiritualist = yes }
+            country_event = { id = fex_core.24 }
+        }
+    }
+}
+
+# Xenophile random system spawn
+country_event = {
+    id = fex_core.21
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+
+    }
+}
+# Xenophobe random system spawn
+country_event = {
+    id = fex_core.22
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+
+    }
+}
+
+# Materialist random system spawn
+country_event = {
+    id = fex_core.23
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+
+    }
+}
+
+# Spiritualist random system spawn
+country_event = {
+    id = fex_core.24
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+
     }
 }
