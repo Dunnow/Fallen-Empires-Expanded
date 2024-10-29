@@ -37,6 +37,22 @@
  fex_mausoleum_world: "Mausoleum World"
  fex_mausoleum_world_desc: "This world hosts dozens of tombs, cairns and burial sites for notable figures from a Fallen Empire. The historic record stretches back millennia."
 
+ fex_fe_terraforming: "Precursor World"
+ fex_fe_terraforming_desc: "This world has been carefully shaped by an ancient and technologically advanced civilization. Every rock, plant and animal has its proper place."
+
+ fex_fe_terraforming_ringworld: "Precursor Ring Segment"
+ fex_fe_terraforming_ringworld_desc: "The biosphere of this ring is a careful work of art, shaped by ancient crafts. Every feature is deliberate."
+
+ fex_fe_terraforming_ecu: "Precursor Ecumenopolis"
+ fex_fe_terraforming_ecu_desc: "This world is a peerless monument to the long history and advanced technologies of the civilization that built it. It is filled with sophisticated precursor artifacts and ancient structures."
+
+ # We put this one on fe relic worlds too
+ fex_decayed_fe_terraforming: "Ancient Terraforming"
+ fex_decayed_fe_terraforming_desc: "This world's biosphere appears to have once been carefully sculpted by a precursor civilization. The deliberate order has given way to chaotic growth."
+
+ fex_fe_exodite_terraforming: "Vibrant Life"
+ fex_fe_exodite_terraforming_desc: "This world is perfectly suited to hosting life. Its thriving ecosystems are almost unnaturally robust. This could be the result of meddling by a forerunner civilization."
+
  # Jobs
  job_fex_xeno_game: "Alien Quarry"
  job_fex_xeno_game_plural: "$job_fex_xeno_game$"

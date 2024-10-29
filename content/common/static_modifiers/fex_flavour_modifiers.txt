@@ -35,3 +35,45 @@ fex_mausoleum_world = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_factory.dds"
 	icon_frame = 1
 }
+
+fex_fe_terraforming = {
+	pop_environment_tolerance = 0.2
+	pop_happiness = 0.2
+
+	icon = "gfx/interface/icons/planet_modifiers/pm_resort_planet.dds"
+	icon_frame = 1
+}
+
+fex_decayed_fe_terraforming = {
+	pop_environment_tolerance = 0.1
+	pop_happiness = 0.05
+	planet_jobs_society_research_produces_mult = 0.1
+	planet_building_build_speed_mult = -0.1
+
+	icon = "gfx/interface/icons/planet_modifiers/pm_overgrowth.dds"
+	icon_frame = 2
+}
+
+fex_fe_terraforming_ringworld = {
+	pop_environment_tolerance = 0.2
+	pop_happiness = 0.2
+
+	icon = "gfx/interface/icons/planet_modifiers/pm_resort_planet.dds"
+	icon_frame = 1
+}
+
+fex_fe_terraforming_ecu = {
+	pop_happiness = 0.2
+	pop_amenities_usage_mult = -0.2
+	pop_housing_usage_mult = -0.2
+
+	icon = "gfx/interface/icons/planet_modifiers/pm_arcology_project.dds"
+	icon_frame = 1
+}
+
+fex_fe_exodite_terraforming = {
+	pop_happiness = 0.1
+	pop_housing_usage_mult = -0.1
+
+	icon = "gfx/interface/icons/planet_modifiers/pm_lush.dds"
+}

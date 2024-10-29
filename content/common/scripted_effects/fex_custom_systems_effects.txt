@@ -5,6 +5,7 @@ fex_generate_exodites_on_planet = {
     set_planet_flag = fex_exodite_planet
 	change_pc = pc_gaia
 	reroll_planet = yes
+	add_modifier = { modifier = fex_fe_exodite_terraforming }
 	fex_create_exodite_country = yes
 	fex_setup_exodite_planet = yes
 

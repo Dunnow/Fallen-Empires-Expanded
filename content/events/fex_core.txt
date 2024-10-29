@@ -65,6 +65,49 @@ country_event = {
             set_name = random
             planet_event = { id = fex_core.10 }
         }
+        # Give all worlds the precursor environment
+        every_owned_planet = {
+            if = {
+                limit = { is_ringworld = yes }
+                add_modifier = { modifier = fex_fe_terraforming_ringworld }
+            }
+            else_if = {
+                limit = { is_planet_class = pc_relic}
+                add_modifier = { modifier = fex_decayed_fe_terraforming }
+            }
+            else_if = {
+                limit = { is_planet_class = pc_city}
+                add_modifier = { modifier = fex_fe_terraforming_ecu }
+            }
+            else = {
+                add_modifier = { modifier = fex_fe_terraforming }
+            }
+        }
+
+        # Give uninhabited worlds the ancient terraforming modifier
+        every_planet_within_border = {
+            limit = {
+                is_colonizable = yes
+                is_colony = no
+            }
+            add_modifier = { modifier = fex_decayed_fe_terraforming }
+        }
+
+        # Give holy worlds the fe terraforming modifier. Give any other worlds in the system some decayed ones
+        every_galaxy_planet = {
+            limit = { has_modifier = holy_planet }
+            add_modifier = { modifier = fex_fe_terraforming }
+            solar_system = {
+                every_system_planet = {
+                    limit = {
+                        is_colonizable = yes
+                        NOT = { has_modifier = holy_planet}
+                    }
+                    add_modifier = { modifier = fex_decayed_fe_terraforming }
+                }
+            }
+        }
+
         # Set up "historical" spheres.
         every_system = {
             closest_system = {
