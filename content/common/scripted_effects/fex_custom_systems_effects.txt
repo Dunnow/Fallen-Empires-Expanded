@@ -85,3 +85,22 @@ fex_setup_exodite_planet = {
     }
 	set_name = random
 }
+
+# System scope
+fex_set_up_old_gene_world = {
+	set_star_flag = fex_discoverable_system
+	set_star_flag = fex_overrun_gene_world_system
+	random_system_planet = {
+		limit = { fex_is_suitable_planet_for_special_discoverables = yes }
+
+		set_planet_flag = fex_discoverable_world
+		set_planet_flag = fex_overrun_gene_world
+		change_pc = pc_gaia
+		reroll_planet = yes
+		add_modifier = { modifier = fex_overgrown_world }
+		set_planet_entity = {
+			picture = pc_fex_overgrown
+		}
+		add_deposit = d_fex_ancient_gene_vault
+	}
+}

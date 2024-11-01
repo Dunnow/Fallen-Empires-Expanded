@@ -78,3 +78,13 @@ fex_fe_exodite_terraforming = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_lush.dds"
 	icon_frame = 1
 }
+
+fex_overgrown_world = {
+	planet_jobs_food_produces_mult = 0.25
+	planet_jobs_society_research_produces_mult = 0.1
+	planet_structures_upkeep_mult = 0.15
+	planet_building_build_speed_mult = -0.15
+
+	icon = "gfx/interface/icons/planet_modifiers/pm_overgrowth.dds"
+	icon_frame = 2
+}

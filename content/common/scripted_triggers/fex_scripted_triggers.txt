@@ -101,3 +101,38 @@ fex_is_historical_border_system_type = {
         }
     }
 }
+# System scope
+fex_is_suitable_system_for_special_discoverables = {
+    NOR = {
+        exists = owner
+        any_system_planet = { is_colony = yes }
+        has_any_megastructure = yes
+    }
+    system_star = {
+        nor = {
+            is_planet_class = pc_neutron_star
+            is_planet_class = pc_rift_star
+            is_planet_class = pc_black_hole
+            is_planet_class = pc_pulsar
+        }
+    }
+    any_system_planet = {
+        fex_is_suitable_planet_for_special_discoverables = yes
+    }
+}
+
+fex_is_suitable_planet_for_special_discoverables = {
+    OR = {
+        is_planet_class = pc_toxic
+        is_planet_class = pc_barren_cold
+        is_planet_class = pc_barren
+        is_planet_class = pc_molten
+    }
+    NOR = {
+        has_planet_flag = machine_lair
+        has_planet_flag = machine_world_1
+        has_planet_flag = machine_world_2
+        has_planet_flag = machine_world_3
+        has_planet_flag = machine_world_4
+    }
+}

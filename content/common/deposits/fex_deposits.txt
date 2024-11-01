@@ -294,3 +294,15 @@ d_fex_imperial_tombs = {
 		weight = 0
 	}
 }
+
+d_fex_ancient_gene_vault = {
+	icon = default_blocker
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+
+	category = deposit_cat_rare
+
+	drop_weight = {
+		weight = 0
+	}
+}

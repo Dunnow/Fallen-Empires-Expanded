@@ -507,7 +507,22 @@ country_event = {
     is_triggered_only = yes
 
     immediate = {
-
+        random_list = {
+            10 = {}
+            5 = {
+                random_system = {
+                    limit  = {
+                        has_star_flag = fex_xenophile_history
+                        fex_is_suitable_system_for_special_discoverables = yes
+                    }
+                    fex_set_up_old_gene_world = yes
+                }
+                modifier = {
+                    factor = 0
+                    any_system = { has_star_flag = fex_overrun_gene_world_system}
+                }
+            }
+        }
     }
 }
 # Xenophobe random system spawn

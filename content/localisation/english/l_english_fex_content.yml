@@ -20,6 +20,8 @@
  d_fex_ancient_barrows_desc: "Ravaged by time, these ancient structures contain the remains of forgotten notables and their precious treasures."
  d_fex_imperial_tombs: "Imperial Tomb Complex"
  d_fex_imperial_tombs_desc: "Immense crumbling architecture attests to the power and wealth of the ancient rulers interred within."
+ d_fex_ancient_gene_vault: "Ancient Gene Vault"
+ d_fex_ancient_gene_vault_desc: "This ruined facility appears to have once held a genetic repository containing many samples of alien life. Its degradation seems to have released many of its samples into the planet's environment."
 
  # Planet Modifiers
  fex_xenophobe_titanic_game: "Titanic Game"
@@ -52,6 +54,9 @@
 
  fex_fe_exodite_terraforming: "Vibrant Life"
  fex_fe_exodite_terraforming_desc: "This world is perfectly suited to hosting life. Its thriving ecosystems are almost unnaturally robust. This could be the result of meddling by a forerunner civilization."
+
+ fex_overgrown_world: "Overgrown World"
+ fex_overgrown_world_desc: "The flora of this world is unnaturally quick to grow, smothering all surfaces and taking mere days to grow from nothing to a considerable size."
 
  # Jobs
  job_fex_xeno_game: "Alien Quarry"
