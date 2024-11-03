@@ -543,7 +543,26 @@ country_event = {
     is_triggered_only = yes
 
     immediate = {
-
+        random_list = {
+            10 = {}
+            5 = {
+                random_system = {
+                    limit  = {
+                        has_star_flag = fex_materialist_history
+                        fex_is_suitable_system_for_special_discoverables = yes
+                        any_system_planet = {
+                            fex_is_suitable_planet_for_special_discoverables = yes
+                            is_moon = no # Breaks the picture for some reason
+                        }
+                    }
+                    fex_set_up_decaying_machine_world = yes
+                }
+                modifier = {
+                    factor = 0
+                    any_system = { has_star_flag = fex_decaying_machine_world_system}
+                }
+            }
+        }
     }
 }
 

@@ -6,7 +6,24 @@ defined_text = {
 	}
 	text = {
 		trigger = { NOT = { has_planet_flag = fallen_empire_world } }
-		#localization_key = RENAME_SPECIES
 		localization_key = fex_tomb_raiding_tt_default
 	}
+}
+
+
+defined_text = {
+	name = fex_buried_relic_scripted
+	text = {
+		trigger = { is_wet = yes }
+		localization_key = fex_buried_relic_wet
+	}
+	text = {
+		trigger = { is_dry = yes }
+		localization_key = fex_buried_relic_dry
+	}
+	text = {
+		trigger = { is_cold = yes }
+		localization_key = fex_buried_relic_cold
+	}
+	default = fex_buried_relic_default
 }

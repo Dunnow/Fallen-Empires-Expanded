@@ -58,6 +58,13 @@
  fex_overgrown_world: "Overgrown World"
  fex_overgrown_world_desc: "The flora of this world is unnaturally quick to grow, smothering all surfaces and taking mere days to grow from nothing to a considerable size."
 
+ fex_buried_relic_world: "Buried Ruins"
+ fex_buried_relic_world_desc: "[fex_buried_relic_scripted] of this world, the remains of enormous ancient cities can be found, decayed and worn by the passage of time."
+ fex_buried_relic_wet: "Deep within the jungles"
+ fex_buried_relic_dry: "Buried beneath the shifting sands"
+ fex_buried_relic_cold: "Smothered beneath the ice and snow"
+ fex_buried_relic_default: "Buried across the landscape"
+
  # Jobs
  job_fex_xeno_game: "Alien Quarry"
  job_fex_xeno_game_plural: "$job_fex_xeno_game$"

@@ -104,3 +104,28 @@ fex_set_up_old_gene_world = {
 		add_deposit = d_fex_ancient_gene_vault
 	}
 }
+
+# System scope
+fex_set_up_decaying_machine_world = {
+	set_star_flag = fex_discoverable_system
+	set_star_flag = fex_decaying_machine_world_system
+	random_system_planet = {
+		limit = {
+			fex_is_suitable_planet_for_special_discoverables = yes
+			is_moon = no # This seems to break the picture?
+		}
+
+		set_planet_flag = fex_discoverable_world
+		set_planet_flag = fex_decaying_machine_world
+
+		change_pc = pc_desert
+		reroll_deposits = yes
+		set_planet_entity = {
+			entity = fex_desert_relic_entity
+			picture = pc_fex_sandy_relic_world
+		}
+		add_modifier = { modifier = fex_buried_relic_world }
+		# We will give the owner the option to restore this at some point
+		add_deposit = d_fex_shattered_ai_core
+	}
+}

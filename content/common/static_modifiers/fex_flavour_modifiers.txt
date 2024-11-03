@@ -88,3 +88,10 @@ fex_overgrown_world = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_overgrowth.dds"
 	icon_frame = 2
 }
+
+fex_buried_relic_world = {
+	planet_jobs_society_research_produces_mult = 0.15
+
+	icon = "gfx/interface/icons/planet_modifiers/pm_archaeology.dds"
+	icon_frame = 1
+}
