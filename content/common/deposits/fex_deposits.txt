@@ -211,7 +211,7 @@ d_fex_ancient_citadels = {
 
 
 	planet_modifier = {
-		planet_orbital_bombardment_damage = -0.1
+		planet_orbital_bombardment_damage = -0.25
 	}
 
 	triggered_planet_modifier = {
