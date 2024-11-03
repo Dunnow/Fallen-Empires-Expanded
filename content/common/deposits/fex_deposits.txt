@@ -248,6 +248,9 @@ d_fex_crypt_monument = {
 
 	resources = {
 		produces = {
+			trigger = {
+				has_planet_flag = fallen_empire_world
+			}
 			unity = 40
 		}
 	}
@@ -266,6 +269,9 @@ d_fex_ancient_barrows = {
 
 	resources = {
 		produces = {
+			trigger = {
+				has_planet_flag = fallen_empire_world
+			}
 			unity = 30
 			society_research = 10
 		}
@@ -285,6 +291,9 @@ d_fex_imperial_tombs = {
 
 	resources = {
 		produces = {
+			trigger = {
+				has_planet_flag = fallen_empire_world
+			}
 			unity = 50
 			minor_artifacts = 10
 		}
