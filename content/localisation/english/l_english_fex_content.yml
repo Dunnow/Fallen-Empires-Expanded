@@ -65,6 +65,9 @@
  fex_buried_relic_cold: "Smothered beneath the ice and snow"
  fex_buried_relic_default: "Buried across the landscape"
 
+ fex_fe_burial_grounds: "Ancient Burial Grounds"
+ fex_fe_burial_grounds_desc: "This planet hosts a number of ancient tombs and burial complexes belonging to an ancient alien race."
+
  # Jobs
  job_fex_xeno_game: "Alien Quarry"
  job_fex_xeno_game_plural: "$job_fex_xeno_game$"

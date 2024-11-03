@@ -32,7 +32,7 @@ fex_martial_order = {
 fex_mausoleum_world = {
 	planet_jobs_minor_artifacts_produces_mult = 0.1
 
-	icon = "gfx/interface/icons/planet_modifiers/pm_factory.dds"
+	icon = "gfx/interface/icons/planet_modifiers/pm_fex_tomb_complex.dds"
 	icon_frame = 1
 }
 
@@ -93,5 +93,12 @@ fex_buried_relic_world = {
 	planet_jobs_society_research_produces_mult = 0.15
 
 	icon = "gfx/interface/icons/planet_modifiers/pm_archaeology.dds"
+	icon_frame = 1
+}
+
+fex_fe_burial_grounds = {
+	planet_jobs_minor_artifacts_produces_mult = 0.1
+
+	icon = "gfx/interface/icons/planet_modifiers/pm_fex_tomb_complex.dds"
 	icon_frame = 1
 }

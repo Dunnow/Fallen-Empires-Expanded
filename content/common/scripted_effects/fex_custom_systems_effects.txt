@@ -129,3 +129,62 @@ fex_set_up_decaying_machine_world = {
 		add_deposit = d_fex_shattered_ai_core
 	}
 }
+
+# System scope
+fex_set_up_burial_grounds_world = {
+	set_star_flag = fex_discoverable_system
+	set_star_flag = fex_ancient_tomb_system
+	random_system_planet = {
+		limit = {
+			is_colonizable = yes
+		}
+		set_planet_flag = fex_discoverable_world
+		set_planet_flag = fex_ancient_tomb_world
+
+		add_modifier = { modifier = fex_fe_burial_grounds }
+
+		random_list = {
+			1 = {
+				random_list = {
+					5 = { add_deposit = d_fex_imperial_tombs }
+					5 = { add_deposit = d_fex_ancient_barrows }
+					5 = { add_deposit = d_fex_crypt_monument }
+				}
+			}
+			1 = {
+				while = {
+					count = 2
+					random_list = {
+						5 = { add_deposit = d_fex_imperial_tombs }
+						5 = { add_deposit = d_fex_ancient_barrows }
+						5 = { add_deposit = d_fex_crypt_monument }
+					}
+				}
+			}
+			1 = {
+				while = {
+					count = 3
+					random_list = {
+						5 = { add_deposit = d_fex_imperial_tombs }
+						5 = { add_deposit = d_fex_ancient_barrows }
+						5 = { add_deposit = d_fex_crypt_monument }
+					}
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				OR = {
+					is_planet_class = pc_nuked
+					is_planet_class = pc_relic
+				}
+			}
+			random_list = {
+				5 = { add_deposit = d_fex_imperial_tombs }
+				5 = { add_deposit = d_fex_ancient_barrows }
+				5 = { add_deposit = d_fex_crypt_monument }
+			}
+		}
+	}
+}

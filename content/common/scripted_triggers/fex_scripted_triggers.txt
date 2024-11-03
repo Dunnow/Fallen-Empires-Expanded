@@ -136,3 +136,28 @@ fex_is_suitable_planet_for_special_discoverables = {
         has_planet_flag = machine_world_4
     }
 }
+# Root = Country, This = System
+fex_has_ethics_history_flag = {
+    OR = {
+        AND = {
+            Root = { is_fallen_empire_materialist = yes}
+            has_star_flag = fex_materialist_history
+        }
+        AND = {
+            Root = { is_fallen_empire_spiritualist = yes}
+            has_star_flag = fex_spiritualist_history
+        }
+        AND = {
+            Root = { is_fallen_empire_xenophile = yes}
+            has_star_flag = fex_xenophile_history
+        }
+        AND = {
+            Root = { is_fallen_empire_xenophobe = yes}
+            has_star_flag = fex_xenophobe_history
+        }
+        AND = {
+            Root = { is_fallen_empire_machine = yes}
+            has_star_flag = fex_machine_history
+        }
+    }
+}

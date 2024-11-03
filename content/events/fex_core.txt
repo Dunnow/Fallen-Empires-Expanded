@@ -154,7 +154,8 @@ country_event = {
         }
 
         # Spawn random historical systems
-        country_event = { id = fex_core.20 }
+        country_event = { id = fex_core.20 } # Ethics-based System gatekeeper
+        country_event = { id = fex_core.25 } # Generic Systems
 
         # Create hyper relay "roads" to points of interest
         # TODO: Refactor this. The recursion just doesnt work. I need a second look at this or it crashes the game
@@ -574,5 +575,30 @@ country_event = {
 
     immediate = {
 
+    }
+}
+
+# Generic random system spawn
+country_event = {
+    id = fex_core.25
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        random_list = {
+            10 = {}
+            5 = {
+                random_system = {
+                    limit  = {
+                        fex_has_ethics_history_flag = yes
+                        fex_is_suitable_system_for_special_discoverables = yes
+                        any_system_planet = {
+                            is_colonizable = yes
+                        }
+                    }
+                    fex_set_up_burial_grounds_world = yes
+                }
+            }
+        }
     }
 }
