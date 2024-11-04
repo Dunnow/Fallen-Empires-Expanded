@@ -99,6 +99,6 @@ fex_buried_relic_world = {
 fex_fe_burial_grounds = {
 	planet_jobs_minor_artifacts_produces_mult = 0.1
 
-	icon = "gfx/interface/icons/planet_modifiers/pm_fex_tomb_complex.dds"
+	icon = "gfx/interface/icons/planet_modifiers/pm_archaeological_dig.dds"
 	icon_frame = 1
 }
