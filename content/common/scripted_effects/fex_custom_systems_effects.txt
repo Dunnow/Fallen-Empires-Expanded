@@ -188,3 +188,11 @@ fex_set_up_burial_grounds_world = {
 		}
 	}
 }
+
+fex_set_up_shroud_tear_system = {
+	spawn_system = {
+		initializer = fex_shroud_tear
+		hyperlane = yes
+		max_jumps = 1
+	}
+}

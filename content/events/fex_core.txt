@@ -574,7 +574,14 @@ country_event = {
     is_triggered_only = yes
 
     immediate = {
-
+        random_system = {
+            limit = {
+                not = { exists = owner }
+                has_star_flag = fex_spiritualist_history
+                fex_is_suitable_system_for_special_discoverables = yes
+            }
+            fex_set_up_shroud_tear_system = yes
+        }
     }
 }
 
