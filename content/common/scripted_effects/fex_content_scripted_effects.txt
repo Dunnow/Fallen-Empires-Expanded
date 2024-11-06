@@ -22,3 +22,74 @@ fex_tomb_raiding_reward = {
         }
     }
 }
+
+fex_create_shroud_tear_defense_fleet = {
+    owner = {
+		create_leader = {
+			class = commander
+			species = owner_main_species
+			name = random
+			skill = 10
+			leader_age_min = 25
+			leader_age_max = 45
+		}
+	}
+	create_fleet = {
+		effect = {
+			set_owner = prev.owner
+			while = {
+				count = 8
+				create_ship = {
+                    name = random
+                    design = "NAME_fex_dreadnought"
+                    graphical_culture = owner
+                }
+			}
+			while = {
+				count = 18
+				create_ship = {
+                    name = random
+                    design = "NAME_fex_monitor"
+                    graphical_culture = owner
+                }
+			}
+			random_list = {
+				25 = {
+					set_location = {
+						target = prev
+						distance = 30
+						angle = random
+					}
+				}
+				25 = {
+					set_location = {
+						target = prev
+						distance = 45
+						angle = random
+					}
+				}
+				25 = {
+					set_location = {
+						target = prev
+						distance = 60
+						angle = random
+					}
+				}
+				25 = {
+					set_location = {
+						target = prev
+						distance = 75
+						angle = random
+					}
+				}
+			}
+		}
+	}
+	last_created_fleet = {
+        assign_leader = last_created_leader
+        set_name = {
+			key = fex_shroud_tear_defense_fleet_name
+			variable_string = "\\[This.solar_system.GetName]"
+		}
+    }
+}

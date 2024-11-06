@@ -153,3 +153,8 @@
  opinion_fex_attacked_exodites: "Attacked our Pre-FTL Cousins"
 
  fex_experiment_world_name: "The Crucible"
+
+ NAME_fex_monitor: "Monitor"
+ NAME_fex_dreadnought: "Dreadnought"
+ fex_shroud_tear_defense_fleet_name: "[This.solar_system.GetName] Bulwark"
+
