@@ -130,7 +130,6 @@ fex_is_suitable_planet_for_special_discoverables = {
     }
     NOR = {
         is_moon = yes # For some reason this breaks the custom image stuff.
-        has_planet_flag = toxic_terraforming_candidate
         has_planet_flag = machine_lair
         has_planet_flag = machine_world_1
         has_planet_flag = machine_world_2

@@ -119,7 +119,7 @@ fex_set_up_decaying_machine_world = {
 		set_planet_flag = fex_decaying_machine_world
 
 		change_pc = pc_desert
-		reroll_deposits = yes
+		reroll_planet = yes
 		set_planet_entity = {
 			entity = fex_desert_relic_entity
 			picture = pc_fex_sandy_relic_world
