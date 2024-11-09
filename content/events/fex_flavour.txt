@@ -426,3 +426,55 @@ planet_event = {
 		}
 	}
 }
+
+event = {
+	id = fex_flavour.40
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		exists = event_target:fex_shroud_tear_system
+		event_target:fex_shroud_tear_system = {
+			count_fleet_in_system = {
+				limit = {
+					any_owned_ship = {
+						is_ship_size = corrupted_avatar
+					}
+				}
+				count < 5
+			}
+		}
+	}
+
+	immediate = {
+		random_list = {
+			2 = {}
+			1 = {
+				event_target:fex_shroud_tear_system = {
+					fex_create_shroud_incursion_fleet = yes
+					random_list = {
+						20 = { }
+						10 = {
+							fex_create_shroud_incursion_fleet = yes
+						}
+						10 = {
+							fex_create_shroud_incursion_fleet = yes
+							fex_create_shroud_incursion_fleet = yes
+						}
+						2 = {
+							fex_create_shroud_incursion_fleet = yes
+							fex_create_shroud_incursion_fleet = yes
+							fex_create_shroud_incursion_fleet = yes
+						}
+					}
+					if = {
+						limit = { exists = owner}
+						country_event = { id = fex_flavour.41 }
+					}
+				}
+			}
+		}
+	}
+}
+
+}

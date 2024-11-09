@@ -93,3 +93,55 @@ fex_create_shroud_tear_defense_fleet = {
 		}
     }
 }
+
+fex_create_shroud_incursion_fleet = {
+	#Create Shroud Country
+	if = {
+		limit = { NOT = { exists = event_target:shroud_country } }
+		create_country = {
+			name = "NAME_Creatures_of_the_Shroud"
+			type = shroud_spirits
+			flag = {
+				icon = {
+					category = "special"
+					file = "the_shroud.dds"
+				}
+				background= {
+					category = "backgrounds"
+					file = "00_solid.dds"
+				}
+				colors = {
+					"dark_purple"
+					"black"
+					"null"
+					"null"
+				}
+			}
+		}
+		last_created_country = {
+			save_global_event_target_as = shroud_country
+		}
+	}
+	create_fleet = {
+		name = "NAME_Psionic_Entity"
+		settings = {
+			spawn_debris = no
+			is_boss = yes
+		}
+		effect = {
+			set_owner = event_target:shroud_country
+			create_ship = {
+				name = "NAME_Psionic_Entity"
+				design = "NAME_Corrupted_Avatar"
+			}
+			set_location = {
+				target = prev.star
+				distance = 100
+				angle = random
+			}
+			set_fleet_stance = aggressive
+			set_aggro_range_measure_from = return_point
+			set_aggro_range = 2000
+		}
+	}
+}

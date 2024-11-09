@@ -195,4 +195,7 @@ fex_set_up_shroud_tear_system = {
 		hyperlane = yes
 		max_jumps = 1
 	}
+	last_created_system = {
+		save_global_event_target_as = fex_shroud_tear_system
+	}
 }
