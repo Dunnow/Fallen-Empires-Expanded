@@ -146,11 +146,16 @@ country_event = {
         # Give them a hyper relay.
         every_system_within_border  = {
             spawn_megastructure = {
-				type = hyper_relay
+				type = hyper_relay_ruined
 				random_pos = yes
                 graphical_culture = mammalian_01 # FEs dont have a model for these
-                #orbit_angle = 360
 			}
+            random_system_megastructure = {
+                limit = { is_megastructure_type = hyper_relay_ruined }
+                upgrade_megastructure_to = hyper_relay_restored
+                finish_upgrade = yes
+                set_graphical_culture = mammalian_01
+            }
         }
 
         # Spawn random historical systems
