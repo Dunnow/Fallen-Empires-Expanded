@@ -41,6 +41,11 @@ fex_shroud_tear = {
 					angle = random
 				}
 			}
+			add_deposit = d_zro_deposit_5
+		}
+		create_fe_citadel = yes
+		starbase = {
+			fex_create_shroud_tear_defense_fleet = yes
 		}
 		every_system_planet = {
 			limit = {
@@ -55,15 +60,18 @@ fex_shroud_tear = {
 			}
 			change_pc = pc_shrouded
 			reroll_planet_modifiers = yes
+			random_list = {
+				1 = { add_deposit = d_zro_deposit_1 }
+				1 = { add_deposit = d_zro_deposit_2 }
+				1 = { add_deposit = d_zro_deposit_3 }
+				1 = { add_deposit = d_zro_deposit_4}
+				1 = { add_deposit = d_zro_deposit_5 }
+			}
 		}
-		create_fe_citadel = yes
-		starbase = {
-			# Two notes
-			# Giving the fleet to the FE unbalances things like the war in heaven
-			# How to stop the ai using the fleets? It wants to merge and move them.
-			# Maybe give the fleets to another country?
-			#create_fallen_empire_fleet = yes
-			fex_create_shroud_tear_defense_fleet = yes
+		# Create stations
+		every_system_planet = {
+			create_research_station = { owner = starbase.owner }
+			create_mining_station = { owner = starbase.owner }
 		}
 	}
 }
