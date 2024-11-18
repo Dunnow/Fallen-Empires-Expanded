@@ -1,0 +1,41 @@
+special_project = {
+	key = "FEX_SHROUD_RIFT_INVESTIGATION"
+	#cost = 0
+	days_to_research = 360
+	tech_department = society_technology
+	picture = GFX_evt_fex_shroud
+	icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		#skill = 3
+	}
+
+	on_success = {
+		ship_event = { id = fex_flavour.43 }
+	}
+}
+
+special_project = {
+	key = "FEX_CLOSE_THE_RIFT"
+	#cost = 0
+	days_to_research = 720
+	tech_department = society_technology
+	picture = GFX_evt_shroudwalker_enclave
+	icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		#skill = 3
+	}
+
+	on_success = {
+		ship_event = { id = fex_flavour.44 }
+	}
+}

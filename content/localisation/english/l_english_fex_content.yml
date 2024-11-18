@@ -158,3 +158,7 @@
  NAME_fex_dreadnought: "Dreadnought"
  fex_shroud_tear_defense_fleet_name: "[This.solar_system.GetName] Bulwark"
 
+ FEX_SHROUD_RIFT_INVESTIGATION: "Investigating the Rift"
+ FEX_SHROUD_RIFT_INVESTIGATION_DESC: "The mysterious Rift in the [event_target:fex_shroud_tear_system.GetName] system is host to a number of hostile entities. We cannot respond appropriately without a better understanding of the phenomena at play."
+ FEX_CLOSE_THE_RIFT: "Close the Rift"
+ FEX_CLOSE_THE_RIFT_DESC: "The Shroud Rift in the [event_target:fex_shroud_tear_system.GetName] system will continue allowing hostile Psionic Entities to manifest as long as we leave it open.\n\nBy carefully manipulating the Zro deposits in the system that help sustain the Rift, we believe we can induce it to close."

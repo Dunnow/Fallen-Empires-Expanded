@@ -30,3 +30,9 @@ on_yearly_pulse = {
         fex_flavour.40
     }
 }
+
+on_space_battle_won = {
+    events = {
+        fex_flavour.42
+    }
+}

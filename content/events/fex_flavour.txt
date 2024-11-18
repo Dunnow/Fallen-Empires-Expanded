@@ -469,7 +469,9 @@ event = {
 					}
 					if = {
 						limit = { exists = owner}
-						country_event = { id = fex_flavour.41 }
+						owner = {
+							country_event = { id = fex_flavour.41 }
+						}
 					}
 				}
 			}
@@ -477,4 +479,154 @@ event = {
 	}
 }
 
+# Shroud attack warning
+country_event = {
+	id = fex_flavour.41
+	title = fex_flavour.41.title
+	desc = fex_flavour.41.desc
+	picture = GFX_evt_fex_shroud
+	location = event_target:fex_shroud_tear_system
+	is_triggered_only = yes
+
+	option = {
+		name = fex_flavour.41.a
+	}
+}
+
+# Create special project to investigate
+country_event = {
+	id = fex_flavour.42
+	title = fex_flavour.42.title
+	desc = fex_flavour.42.desc
+	picture = GFX_evt_fex_shroud
+	location = fromfromfrom
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_flag = fex_has_had_shroud_rift_investigation}
+	}
+
+	immediate = {
+		set_country_flag = fex_has_had_shroud_rift_investigation
+	}
+
+
+	option = {
+		name = fex_flavour.42.a
+		enable_special_project = {
+			name = FEX_SHROUD_RIFT_INVESTIGATION
+			location = fromfromfrom.system_star
+		}
+	}
+}
+
+# Propose closing the rift
+ship_event = {
+	id = fex_flavour.43
+	title = fex_flavour.43.title
+	desc = fex_flavour.43.desc
+	picture = GFX_evt_fex_shroud
+	location = this
+	is_triggered_only = yes
+
+	option = {
+		name = fex_flavour.43.a
+		enable_special_project = {
+			name = FEX_CLOSE_THE_RIFT
+			location = system_star
+		}
+	}
+}
+
+# Closed the rift
+ship_event = {
+	id = fex_flavour.44
+	title = fex_flavour.44.title
+	desc = fex_flavour.44.desc
+	picture = GFX_evt_wormhole
+	location = this
+	is_triggered_only = yes
+
+	immediate = {
+		solar_system = { system_event = { id = fex_flavour.45 } }
+	}
+
+	option = {
+		name = fex_flavour.44.a
+		owner = {
+			if = {
+				limit = { NOT = { has_technology = tech_psionic_theory} }
+				give_technology = { tech = tech_psionic_theory }
+			}
+			else = {
+				add_monthly_resource_mult = {
+					resource = society_research
+					value = 36
+					max = 100000
+					min = 20000
+				}
+			}
+		}
+	}
+}
+
+system_event = {
+	id = fex_flavour.45
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		every_system_ambient_object = {
+			limit = {
+				is_ambient_object_type = extradimensional_2
+			}
+			destroy_ambient_object = this
+		}
+
+		every_fleet_in_system = {
+			limit = {
+				owner = { is_country_type = shroud_spirits}
+				any_owned_ship = {
+					is_ship_size = corrupted_avatar
+				}
+			}
+			delete_fleet = this
+		}
+
+		every_system_planet = {
+			switch = {
+				trigger = has_deposit
+				d_zro_deposit_1 = {
+					remove_deposit = d_zro_deposit_1
+				}
+				d_zro_deposit_2 = {
+					remove_deposit = d_zro_deposit_2
+				}
+				d_zro_deposit_3 = {
+					remove_deposit = d_zro_deposit_3
+					random_list = {
+						1 = {}
+						1 = { add_deposit = d_zro_deposit_1}
+					}
+				}
+				d_zro_deposit_4 = {
+					remove_deposit = d_zro_deposit_4
+					random_list = {
+						1 = {}
+						1 = { add_deposit = d_zro_deposit_1}
+						1 = { add_deposit = d_zro_deposit_2}
+					}
+				}
+				d_zro_deposit_5 = {
+					remove_deposit = d_zro_deposit_5
+					random_list = {
+						1 = {}
+						1 = { add_deposit = d_zro_deposit_1}
+						1 = { add_deposit = d_zro_deposit_2}
+						1 = { add_deposit = d_zro_deposit_3}
+					}
+				}
+			}
+		}
+	}
 }

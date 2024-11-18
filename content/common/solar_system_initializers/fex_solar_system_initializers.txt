@@ -13,7 +13,7 @@ fex_shroud_tear = {
 	change_orbit = 45
 
 	planet = {
-		count = { min = 2 max = 10 }
+		count = { min = 4 max = 10 }
 		orbit_distance = 20
 		orbit_angle = { min = 90 max = 270 }
 
@@ -61,8 +61,6 @@ fex_shroud_tear = {
 			change_pc = pc_shrouded
 			reroll_planet_modifiers = yes
 			random_list = {
-				1 = { add_deposit = d_zro_deposit_1 }
-				1 = { add_deposit = d_zro_deposit_2 }
 				1 = { add_deposit = d_zro_deposit_3 }
 				1 = { add_deposit = d_zro_deposit_4}
 				1 = { add_deposit = d_zro_deposit_5 }
