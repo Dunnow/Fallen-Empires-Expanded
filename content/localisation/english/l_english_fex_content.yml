@@ -132,6 +132,8 @@
  fex_exodite_age_desc: "This civilization has a pre Industrial Age level of development. Despite this, they make use of several extremely sophisticated technologies. They appear to remain at their level of advancement by choice."
  col_fex_exodite_age: "Exodite World"
  col_fex_exodite_age_desc: "$col_primitive_desc$"
+ col_fex_fe_frontier_world: "Fringe World"
+ col_fex_fe_frontier_world_desc: "This world exists at the periphery of an incredibly advanced ancient empire."
 
  pop_cat_fex_exodus_precursor: "Exodus Precursor"
  pop_cat_fex_exodus_precursor_plural: "Exodus Precursors"
