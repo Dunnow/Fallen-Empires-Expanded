@@ -19,15 +19,14 @@ col_fex_fe_frontier_world = {
 	icon = GFX_colony_type_normal_colony
 
 	potential = {
-		# This inits weirdly because the game doesn't seem to have loaded the pops yet when setting colony designations.
-		# It will resolve itself on the next month tick
-		count_owned_pop = {
-			count < 20
-		}
-		fex_is_bespoke_fe_world = no
 		is_capital = no
 		exists = owner
 		owner = { is_fallen_empire = yes }
+		fex_is_bespoke_fe_world = no
+		# This inits weirdly because the game doesn't seem to have loaded the pops yet when setting colony designations. It will resolve itself on the next month tick
+		count_owned_pop = {
+			count < 20
+		}
 	}
 
 	planet_modifier = {
