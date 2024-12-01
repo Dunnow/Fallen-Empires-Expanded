@@ -91,7 +91,10 @@ fex_set_up_old_gene_world = {
 	set_star_flag = fex_discoverable_system
 	set_star_flag = fex_overrun_gene_world_system
 	random_system_planet = {
-		limit = { fex_is_suitable_planet_for_special_discoverables = yes }
+		limit = {
+			fex_is_suitable_planet_for_special_discoverables = yes
+			is_moon = no # This seems to break the picture?
+		}
 
 		set_planet_flag = fex_discoverable_world
 		set_planet_flag = fex_overrun_gene_world
