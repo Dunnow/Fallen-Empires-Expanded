@@ -22,6 +22,8 @@
  d_fex_imperial_tombs_desc: "Immense crumbling architecture attests to the power and wealth of the ancient rulers interred within."
  d_fex_ancient_gene_vault: "Ancient Gene Vault"
  d_fex_ancient_gene_vault_desc: "This ruined facility appears to have once held a genetic repository containing many samples of alien life. Its degradation seems to have released many of its samples into the planet's environment."
+ d_fex_ruined_fe_cities: "Ruined Cities"
+ d_fex_ruined_fe_cities_desc: "The broken remains of ancient towns and cities, eroded to near dust by the passage of eons."
 
  # Planet Modifiers
  fex_xenophobe_titanic_game: "Titanic Game"
@@ -67,6 +69,9 @@
 
  fex_fe_burial_grounds: "Ancient Burial Grounds"
  fex_fe_burial_grounds_desc: "This planet hosts a number of ancient tombs and burial complexes belonging to an ancient alien race."
+
+ fex_fe_ancient_bombardment: "Ancient Bombardment"
+ fex_fe_ancient_bombardment_desc: "This world is covered in the faded scars of a massive orbital bombardment. The ground is unstable and pockmarked by the eroded remains of ancient craters."
 
  # Jobs
  job_fex_xeno_game: "Alien Quarry"
@@ -155,6 +160,7 @@
  opinion_fex_attacked_exodites: "Attacked our Pre-FTL Cousins"
 
  fex_experiment_world_name: "The Crucible"
+ NAME_fex_persene: "Persene"
 
  NAME_fex_monitor: "Monitor"
  NAME_fex_dreadnought: "Dreadnought"

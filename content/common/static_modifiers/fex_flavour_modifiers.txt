@@ -102,3 +102,11 @@ fex_fe_burial_grounds = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_archaeological_dig.dds"
 	icon_frame = 1
 }
+
+fex_fe_ancient_bombardment = {
+	planet_structures_cost_mult = 0.1
+	planet_building_build_speed_mult = -0.1
+
+	icon = "gfx/interface/icons/planet_modifiers/pm_asteroid_impacts.dds"
+	icon_frame = 3
+}

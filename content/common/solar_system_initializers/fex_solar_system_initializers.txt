@@ -73,3 +73,137 @@ fex_shroud_tear = {
 		}
 	}
 }
+
+fex_ancient_battlefields_system = {
+	name = "NAME_fex_persene"
+	class = "rl_standard_stars"
+	flags = { fex_discoverable_system fex_ancient_battlefields_system }
+	max_instances = 1
+
+	planet = {
+		name = "NAME_fex_persene"
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 30
+		has_ring = no
+	}
+
+	change_orbit = 30
+
+	planet = {
+		class = pc_molten
+		orbit_angle = { min = 90 max = 270 }
+		size = 12
+
+		change_orbit = 2
+
+		moon = {
+			size = { min = 6 max = 9 }
+			class = pc_molten
+			orbit_angle = { min = 90 max = 270 }
+		}
+	}
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 95
+	}
+
+	change_orbit = 20
+
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 30
+		orbit_angle = -210
+		size = 5
+		has_ring = no
+	}
+
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = -95
+		size = 5
+		has_ring = no
+	}
+
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = 285
+		size = 5
+		has_ring = no
+	}
+
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = -80
+		size = 5
+		has_ring = no
+	}
+
+	change_orbit = { min = 30 max = 40 }
+
+	planet = {
+		class = pc_tropical
+		orbit_angle = { min = 90 max = 270 }
+		size = { min = 15 max = 18 }
+		flags = { fex_discoverable_world fex_ancient_battlefields_world }
+
+		init_effect = {
+			clear_deposits = yes
+			prevent_anomaly = yes
+
+			add_deposit = d_fex_ruined_fe_cities
+			add_deposit = d_metal_boneyard
+
+			add_deposit = random
+			add_deposit = random
+			add_deposit = random
+			add_deposit = random
+			add_deposit = random_blocker
+			add_deposit = random_blocker
+			add_deposit = random_blocker
+
+			add_modifier = {
+				modifier = fex_fe_ancient_bombardment
+				days = -1
+			}
+			add_modifier = {
+				modifier = unstable_tectonics
+				days = -1
+			}
+
+			create_ambient_object = {
+				type = "large_debris_object"
+				use_3d_location = yes
+				entity_offset = { min = -7 max = 7 }
+				location = this
+			}
+			create_ambient_object = {
+				type = "ancient_battlefield_02_object"
+				use_3d_location = yes
+				entity_offset = { min = -7 max = 7 }
+				location = this
+			}
+		}
+	}
+
+	change_orbit = 20
+
+	planet = {
+		class = pc_gas_giant
+		orbit_angle = { min = 90 max = 270 }
+		size = { min = 36 max = 48 }
+
+		change_orbit = @base_moon_distance
+
+		moon = {
+			size = { min = 10 max = 12 }
+			class = random_non_colonizable
+			orbit_angle = { min = 90 max = 270 }
+		}
+	}
+}
