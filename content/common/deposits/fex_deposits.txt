@@ -311,6 +311,12 @@ d_fex_ancient_gene_vault = {
 
 	category = deposit_cat_rare
 
+	resources = {
+		produces = {
+			society_research = 20
+		}
+	}
+
 	drop_weight = {
 		weight = 0
 	}
