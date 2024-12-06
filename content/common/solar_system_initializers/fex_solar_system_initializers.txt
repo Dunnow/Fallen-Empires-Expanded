@@ -80,6 +80,23 @@ fex_ancient_battlefields_system = {
 	flags = { fex_discoverable_system fex_ancient_battlefields_system }
 	max_instances = 1
 
+	usage = misc_system_init
+	max_instances = 1
+	usage_odds = {
+		base = 0
+		modifier = {
+			add = 25
+			# Proxy for if FEs exist
+			any_system = {
+				is_fe_cluster = yes
+			}
+		}
+		modifier = {
+			factor = 0
+			has_star_flag = empire_cluster
+		}
+	}
+
 	planet = {
 		name = "NAME_fex_persene"
 		class = star
