@@ -107,6 +107,7 @@ fex_is_suitable_system_for_special_discoverables = {
         exists = owner
         any_system_planet = { is_colony = yes }
         has_any_megastructure = yes
+        has_star_flag = fex_discoverable_system # No doubling up
     }
     system_star = {
         nor = {
