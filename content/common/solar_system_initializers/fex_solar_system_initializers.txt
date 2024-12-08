@@ -74,10 +74,10 @@ fex_shroud_tear = {
 	}
 }
 
-fex_ancient_battlefields_system = {
+fex_forgotten_vault_system = {
 	name = "NAME_fex_persene"
 	class = "rl_standard_stars"
-	flags = { fex_discoverable_system fex_ancient_battlefields_system }
+	flags = { fex_discoverable_system fex_forgotten_vault_system }
 
 	usage = misc_system_init
 	max_instances = 1
@@ -166,7 +166,7 @@ fex_ancient_battlefields_system = {
 		class = pc_tropical
 		orbit_angle = { min = 90 max = 270 }
 		size = { min = 15 max = 18 }
-		flags = { fex_discoverable_world fex_ancient_battlefields_world }
+		flags = { fex_discoverable_world fex_forgotten_vault_world }
 
 		init_effect = {
 			clear_deposits = yes
@@ -192,17 +192,16 @@ fex_ancient_battlefields_system = {
 				days = -1
 			}
 
-			create_ambient_object = {
-				type = "large_debris_object"
-				use_3d_location = yes
-				entity_offset = { min = -7 max = 7 }
-				location = this
-			}
-			create_ambient_object = {
-				type = "ancient_battlefield_02_object"
-				use_3d_location = yes
-				entity_offset = { min = -7 max = 7 }
-				location = this
+		}
+		moon = {
+			size = { min = 6 max = 9 }
+			class = pc_barren
+			orbit_angle = { min = 90 max = 270 }
+			init_effect = {
+				add_modifier = {
+					modifier = terraforming_candidate
+					days = -1
+				}
 			}
 		}
 	}
