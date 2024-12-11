@@ -8,4 +8,4 @@ tags={
 	"Buildings"
 }
 name="Fallen Empires Expanded"
-supported_version="v3.13.*"
+supported_version="v3.14.*"
