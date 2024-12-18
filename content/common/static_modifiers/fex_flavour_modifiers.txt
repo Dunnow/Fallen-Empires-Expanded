@@ -110,3 +110,8 @@ fex_fe_ancient_bombardment = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_asteroid_impacts.dds"
 	icon_frame = 3
 }
+
+fex_ancient_holocron_triumph = {
+	damage_vs_country_type_fallen_empire_mult = 0.25
+	damage_vs_country_type_awakened_fallen_empire_mult = 0.25
+}
