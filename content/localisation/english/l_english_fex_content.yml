@@ -162,6 +162,10 @@
  fex_experiment_world_name: "The Crucible"
  NAME_fex_persene: "Persene"
 
+ fex_r_ancient_holocron: "Ancient Holocron"
+ fex_r_ancient_holocron_desc: "This relic holds an ancient recording of a Fallen Empire bombarding a defiant world. Analysis of its contents offers valuable insights into the tactics and strategy used by Forerunner fleets."
+ fex_ancient_holocron_triumph: "Recovered Forerunner Battle Plans"
+
  NAME_fex_monitor: "Monitor"
  NAME_fex_dreadnought: "Dreadnought"
  fex_shroud_tear_defense_fleet_name: "[This.solar_system.GetName] Bulwark"
