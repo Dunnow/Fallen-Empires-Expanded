@@ -75,7 +75,7 @@ fex_shroud_tear = {
 }
 
 fex_forgotten_vault_system = {
-	name = "NAME_fex_persene"
+	name = NAME_fex_sarvenno
 	class = "rl_standard_stars"
 	flags = { fex_discoverable_system fex_forgotten_vault_system }
 
@@ -97,7 +97,7 @@ fex_forgotten_vault_system = {
 	}
 
 	planet = {
-		name = "NAME_fex_persene"
+		name = NAME_fex_sarvenno
 		class = star
 		orbit_distance = 0
 		orbit_angle = 1
