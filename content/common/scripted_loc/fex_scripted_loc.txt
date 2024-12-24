@@ -27,3 +27,12 @@ defined_text = {
 	}
 	default = fex_buried_relic_default
 }
+
+defined_text = {
+	name = fex_forgotten_cities_perpetrator_scripted
+	text = {
+		trigger = { exists = event_target:fex_forgotten_cities_perpetrator }
+		localization_key = fex_forgotten_cities_perpetrator_evt_tgt
+	}
+	default = fex_forgotten_cities_perpetrator_unknown
+}

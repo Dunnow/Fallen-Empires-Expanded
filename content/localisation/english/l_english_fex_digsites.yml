@@ -1,0 +1,18 @@
+﻿l_english:
+ fex_forgotten_cities_archaeology_site: "Forgotten Cities"
+ fex_forgotten_cities_archaeology_site_desc: "This planet is covered in the decayed remnants of ancient cities. Some sort of catastrophe seems to have struck the world and wiped out its native inhabitants."
+
+ fex_digsites.1.name: "Traces in the Dust"
+ fex_digsites.1.desc: "The ruins that dot [From.Planet.GetName]'s surface appear to be the surviving remnants of a sophisticated, technologically advanced ancient civilization.\n\nIt appears that many of the larger settlements on this planet were subjected to a heavy orbital bombardment, with large craters clustered around the most significant locations."
+ fex_digsites.1.a: "We must investigate further."
+
+ fex_digsites.2.name: "Fragments in the Ruins"
+ fex_digsites.2.desc: "Further excavation into one of the better preserved ruins has uncovered a repository filled with data shards and fragments of ancient texts.\n\nAlthough our initial translation attempts have yielded little information, the science team is confident that the data is recoverable. With some additional work, we ought to be able to decipher the fate of this world."
+ fex_digsites.2.a: "Continue attempts to decipher the texts."
+
+ fex_digsites.3.name: "Memories of Doomsday"
+ fex_digsites.3.desc: "After determined efforts, our science team aboard the [This.GetName] have successfully pieced together the recovered fragments to uncover the final days of [From.Planet.GetName].\n\nThe recording appears to show a fleet of [fex_forgotten_cities_perpetrator_scripted] positioning in orbit above the world. The bombardment that follows is ruthless and relentless.\n\nThe fleet in orbit does not seem to heed any requests for parley or surrender, intent on blasting the cities down to bedrock.\n\nIt is not clear what may have motivated this atrocity, but it is discomfiting nonetheless."
+ fex_digsites.3.a: "Disturbing."
+
+ fex_forgotten_cities_perpetrator_evt_tgt: "the [event_target:fex_forgotten_cities_perpetrator.GetName]"
+ fex_forgotten_cities_perpetrator_unknown: "an unknown, advanced empire"

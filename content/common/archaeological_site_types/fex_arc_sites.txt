@@ -1,0 +1,36 @@
+fex_forgotten_cities_archaeology_site = {
+    desc = fex_forgotten_cities_archaeology_site_desc
+    picture = GFX_evt_dead_city
+    stages = 3
+    max_instances = 1
+    allow = {
+        is_ship_class = shipclass_science_ship
+        exists = leader
+    }
+    visible = {
+		default_site_visible_trigger = yes
+	}
+	on_visible = {
+		country_event = { id = story.5 days = 30 }
+	}
+    stage = {
+        difficulty = 1
+        icon = GFX_archaeology_runes_F1
+        event = fex_digsites.1
+    }
+    stage = {
+        difficulty = 1
+        icon = GFX_archaeology_runes_F2
+        event = fex_digsites.2
+    }
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_F3
+        event = fex_digsites.3
+    }
+    on_roll_failed = {
+        from = {
+            standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+        }
+    }
+}

@@ -74,10 +74,10 @@ fex_shroud_tear = {
 	}
 }
 
-fex_forgotten_vault_system = {
+fex_forgotten_cities_system = {
 	name = NAME_fex_sarvenno
 	class = "rl_standard_stars"
-	flags = { fex_discoverable_system fex_forgotten_vault_system }
+	flags = { fex_discoverable_system fex_forgotten_cities_system }
 
 	usage = misc_system_init
 	max_instances = 1
@@ -166,7 +166,7 @@ fex_forgotten_vault_system = {
 		class = pc_tropical
 		orbit_angle = { min = 90 max = 270 }
 		size = { min = 15 max = 18 }
-		flags = { fex_discoverable_world fex_forgotten_vault_world }
+		flags = { fex_discoverable_world fex_forgotten_cities_world }
 
 		init_effect = {
 			clear_deposits = yes
@@ -191,7 +191,7 @@ fex_forgotten_vault_system = {
 				modifier = unstable_tectonics
 				days = -1
 			}
-
+			create_archaeological_site = fex_forgotten_cities_archaeology_site
 		}
 		moon = {
 			size = { min = 6 max = 9 }
