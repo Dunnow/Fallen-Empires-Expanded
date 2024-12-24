@@ -11,7 +11,7 @@
  fex_digsites.2.a: "Continue attempts to decipher the texts."
 
  fex_digsites.3.name: "Memories of Doomsday"
- fex_digsites.3.desc: "After determined efforts, our science team aboard the [This.GetName] have successfully pieced together the recovered fragments to uncover the final days of [From.Planet.GetName].\n\nThe recording appears to show a fleet of [fex_forgotten_cities_perpetrator_scripted] positioning in orbit above the world. The bombardment that follows is ruthless and relentless.\n\nThe fleet in orbit does not seem to heed any requests for parley or surrender, intent on blasting the cities down to bedrock.\n\nIt is not clear what may have motivated this atrocity, but it is discomfiting nonetheless."
+ fex_digsites.3.desc: "After determined efforts, our science team aboard the [This.GetName] have successfully pieced together the recovered fragments to uncover the final days of [From.Planet.GetName].\n\nThe recording appears to show a fleet of [fex_forgotten_cities_perpetrator_scripted] positioning in orbit above the world. The bombardment that follows is ruthless and relentless. The fleet in orbit does not seem to heed any requests for parley or surrender, intent on blasting the cities down to bedrock.\n\nIt is not clear what may have motivated this atrocity, but it is discomfiting nonetheless."
  fex_digsites.3.a: "Disturbing."
 
  fex_forgotten_cities_perpetrator_evt_tgt: "the [event_target:fex_forgotten_cities_perpetrator.GetName]"

@@ -41,7 +41,7 @@ fleet_event = {
 	title = "fex_digsites.3.name"
 	desc = fex_digsites.3.desc
 	picture = GFX_evt_fleet_from_surface
-	show_sound = event_wind_ruins
+	show_sound = event_burning_city
 	location = from
 
 	archaeology = yes
