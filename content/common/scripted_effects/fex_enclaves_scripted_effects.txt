@@ -3,7 +3,7 @@ fex_create_archaeology_enclave_country = {
 	solar_system.system_star = {
 		if = {
 			limit = {
-				#NOT = { exists = event_target:fex_archaeology_enclave_country }
+				#NOT = { exists = event_target:fex_scavenger_enclave_country }
 				always = yes
 			}
 			random_playable_country = {
@@ -14,11 +14,11 @@ fex_create_archaeology_enclave_country = {
 					}
 				}
 				species = {
-					save_event_target_as = fex_archaeology_enclave_species
+					save_event_target_as = fex_scavenger_enclave_species
 				}
 			}
 
-			save_global_event_target_as = fex_archaeology_enclave_system
+			save_global_event_target_as = fex_scavenger_enclave_system
 
 			create_country = {
 				name = random
@@ -28,7 +28,7 @@ fex_create_archaeology_enclave_country = {
 					civic = civic_salvager_enclave
 				}
 				origin = "origin_default"
-				species = event_target:fex_archaeology_enclave_species
+				species = event_target:fex_scavenger_enclave_species
 				flag = {
 					icon = {
 						category = "human"
@@ -51,18 +51,18 @@ fex_create_archaeology_enclave_country = {
 				}
 				ignore_initial_colony_error = yes
 				effect = {
-					save_global_event_target_as = fex_archaeology_enclave_country
-					set_country_flag = fex_archaeology_enclave_country
+					save_global_event_target_as = fex_scavenger_enclave_country
+					set_country_flag = fex_scavenger_enclave_country
 					set_graphical_culture = mammalian_01
 					#Create capital starbase
 					create_fleet = {
-						name = "NAME_fex_archaeology_enclave_ship"
+						name = "NAME_fex_scavenger_enclave_ship"
 						settings = { spawn_debris = no }
 						effect = {
 							set_owner = prev
 							create_ship = {
-								name = "NAME_fex_archaeology_enclave_ship"
-								design = "NAME_fex_archaeology_enclave_station"
+								name = "NAME_fex_scavenger_enclave_ship"
+								design = "NAME_fex_scavenger_enclave_station"
 								graphical_culture = prev
 							}
 							set_location = {
@@ -70,7 +70,7 @@ fex_create_archaeology_enclave_country = {
 								distance = 50
 								angle = 70
 							}
-							save_global_event_target_as = fex_archaeology_enclave_starbase
+							save_global_event_target_as = fex_scavenger_enclave_starbase
 						}
 					}
 					create_ambient_object = {
@@ -83,14 +83,14 @@ fex_create_archaeology_enclave_country = {
 							distance = 50
 							angle = 70
 						}
-						set_ambient_object_flag = fex_archaeology_enclave_debris_field
+						set_ambient_object_flag = fex_scavenger_enclave_debris_field
 					}
 					set_custom_capital_location = prev
 					#Create ruler
 					create_leader = {
 						name = random
 						class = random_ruler
-						species = event_target:fex_archaeology_enclave_species
+						species = event_target:fex_scavenger_enclave_species
 						skill = 5
 						traits = {
 							trait = leader_trait_spark_of_genius

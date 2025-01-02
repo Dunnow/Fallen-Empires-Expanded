@@ -206,9 +206,9 @@ ship_design = {
 	allow_buildable_trigger = is_fallen_empire_spiritualist
 }
 
-# Archaeology Enclave Station
+# Scavenger Enclave Station
 ship_design = {
-	name = "NAME_fex_archaeology_enclave_station"
+	name = "NAME_fex_scavenger_enclave_station"
 	ship_size = enclave_station
 
 	section = {
