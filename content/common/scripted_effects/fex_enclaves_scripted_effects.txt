@@ -1,0 +1,115 @@
+# Solar system Scope
+fex_create_archaeology_enclave_country = {
+	solar_system.system_star = {
+		if = {
+			limit = {
+				#NOT = { exists = event_target:fex_archaeology_enclave_country }
+				always = yes
+			}
+			random_playable_country = {
+				limit = {
+					owner_main_species = {
+						NOT = { has_trait = trait_machine_unit}
+						is_hive_species = no
+					}
+				}
+				species = {
+					save_event_target_as = fex_archaeology_enclave_species
+				}
+			}
+
+			save_global_event_target_as = fex_archaeology_enclave_system
+
+			create_country = {
+				name = random
+				type = enclave
+				authority = "auth_oligarchic"
+				civics = {
+					civic = civic_salvager_enclave
+				}
+				origin = "origin_default"
+				species = event_target:fex_archaeology_enclave_species
+				flag = {
+					icon = {
+						category = "human"
+						file = "flag_human_15.dds"
+					}
+					background = {
+						category = "backgrounds"
+						file = "double_triangles.dds"
+					}
+					colors = {
+						"red_orange"
+						"brown"
+						"null"
+						"null"
+					}
+				}
+				ethos = {
+					ethic = ethic_fanatic_materialist
+					ethic = ethic_pacifist
+				}
+				ignore_initial_colony_error = yes
+				effect = {
+					save_global_event_target_as = fex_archaeology_enclave_country
+					set_country_flag = fex_archaeology_enclave_country
+					set_graphical_culture = mammalian_01
+					#Create capital starbase
+					create_fleet = {
+						name = "NAME_fex_archaeology_enclave_ship"
+						settings = { spawn_debris = no }
+						effect = {
+							set_owner = prev
+							create_ship = {
+								name = "NAME_fex_archaeology_enclave_ship"
+								design = "NAME_fex_archaeology_enclave_station"
+								graphical_culture = prev
+							}
+							set_location = {
+								target = prevprev
+								distance = 50
+								angle = 70
+							}
+							save_global_event_target_as = fex_archaeology_enclave_starbase
+						}
+					}
+					create_ambient_object = {
+						type = large_debris_object
+						location = prev
+					}
+					last_created_ambient_object = {
+						set_location = {
+							target = prevprev
+							distance = 50
+							angle = 70
+						}
+						set_ambient_object_flag = fex_archaeology_enclave_debris_field
+					}
+					set_custom_capital_location = prev
+					#Create ruler
+					create_leader = {
+						name = random
+						class = random_ruler
+						species = event_target:fex_archaeology_enclave_species
+						skill = 5
+						traits = {
+							trait = leader_trait_spark_of_genius
+							trait = leader_trait_expertise_voidcraft
+						}
+					}
+					set_leader = last_created_leader
+					room_name_override = "fex_scavenger_enclave_room"
+
+					# Create comms
+					every_playable_country = {
+						limit = {
+							always = yes
+							#intel_level = { level > low system = prevprevprev }
+						}
+						establish_communications = last_created_country
+					}
+				}
+			}
+		}
+	}
+}

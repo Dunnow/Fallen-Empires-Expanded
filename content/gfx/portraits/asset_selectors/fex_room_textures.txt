@@ -3,6 +3,7 @@ room_selector = {
 
 	game_setup = {
 		"fex_exodite_room" = { always = yes }
+		"fex_scavenger_enclave_room" = { always = yes }
 	}
 
 	#leader scope
@@ -15,6 +16,9 @@ room_selector = {
 			#	is_country_type = primitive
 			#	has_pre_ftl_age = fex_exodite_age
 			#}
+		}
+		"fex_scavenger_enclave_room" = {
+			always = yes
 		}
 	}
 }
