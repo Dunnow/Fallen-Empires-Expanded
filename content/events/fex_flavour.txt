@@ -630,3 +630,37 @@ system_event = {
 		}
 	}
 }
+
+# Scavenger Enclave Contact
+country_event = {
+	id = fex_flavour.50
+	title = TRANSMISSION
+	desc = fex_flavour.50.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	trigger = {
+		from = {
+			is_same_value = event_target:fex_scavenger_enclave_country
+		}
+	}
+
+    picture_event_data = {
+		room = fex_scavenger_enclave_room
+		portrait = event_target:fex_scavenger_enclave_country.species
+	}
+
+	option = {
+		name = fex_flavour.50.a
+		response_text = fex_flavour.50.a.response
+		is_dialog_only = yes
+	}
+    option = {
+		name = fex_flavour.50.b
+		response_text = fex_flavour.50.b.response
+		is_dialog_only = yes
+	}
+    option = {
+		name = fex_flavour.50.c
+	}
+}

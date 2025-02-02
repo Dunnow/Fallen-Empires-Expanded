@@ -50,3 +50,12 @@
  fex_flavour.44.title: "Sealing the Rift"
  fex_flavour.44.desc: "After months of careful preparations, our science teams have finally managed to destabilise the Shroud Rift in the [event_target:fex_shroud_tear_system.GetName] system.\n\nWithout sufficient Zro to maintain the link to realspace, the Rift has collapsed, sealing the hostile psionic entities within their home dimension once more.\n\nThe impact on Zro mining within the system is an unfortunate outcome, but necessary to seal the tear in space for good."
  fex_flavour.44.a: "Good."
+
+ fex_flavour.50.desc: "Greetings valued customer! We are the [From.GetName]. Proudly bringing you the treasures of yesterday - today!"
+ fex_flavour.50.a: "Who are you?"
+ fex_flavour.50.a.response: "We are a collection of likeminded galactic citizens, eager to uncover the lost technologies of forgotten worlds.\n\nTo fund our operations we sell our... legitimately acquired goods at a reasonable price."
+ fex_flavour.50.b: "What 'treasures' are you offering?"
+ fex_flavour.50.b.response: "Our brave salvage teams have recovered many valuable relics, technologies and more from the systems of the [fex_machine_fe_name_scripted]."
+ fex_flavour.50.c: "End transmission."
+ fex_machine_fe_name_specific: "[event_target:fex_machine_fe.GetName]"
+ fex_machine_fe_name_generic: "ruins of ancient civilizations"

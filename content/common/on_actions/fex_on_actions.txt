@@ -36,3 +36,9 @@ on_space_battle_won = {
         fex_flavour.42
     }
 }
+
+on_post_communications_established = {
+    events = {
+        fex_flavour.50
+    }
+}

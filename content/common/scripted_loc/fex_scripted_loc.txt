@@ -36,3 +36,15 @@ defined_text = {
 	}
 	default = fex_forgotten_cities_perpetrator_unknown
 }
+
+defined_text = {
+	name = fex_machine_fe_name_scripted
+	text = {
+		trigger = {
+			exists = event_target:fex_machine_fe
+			has_communications = event_target:fex_machine_fe
+		}
+		localization_key = fex_machine_fe_name_specific
+	}
+	default = fex_machine_fe_name_generic
+}
