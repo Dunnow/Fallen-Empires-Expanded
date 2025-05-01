@@ -1,13 +1,17 @@
 fex_xeno_game = {
 	category = xeno_ward
-    icon = fe_xeno_ward
 	is_capped_by_modifier = no
-	clothes_texture_index = 2
+
+	swappable_data = {
+		default = {
+			building_icon = building_crude_huts
+    		icon = fe_xeno_ward
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
 		is_sapient = yes
-		is_robot_pop = no
 	}
 
 	possible_precalc = can_fill_precursor_job
@@ -21,6 +25,7 @@ fex_xeno_game = {
 		}
 		NOT = { is_same_species = owner }
 		NOT = { has_trait = trait_nerve_stapled} # To avoid the slave species being put here.
+		is_robot_pop = no
 	}
 
 	resources = {
@@ -58,10 +63,14 @@ fex_xeno_game = {
 
 fex_xeno_hunter = {
 	category = precursor
-	icon = hunter
 	is_capped_by_modifier = yes
-	building_icon = building_fex_hunting_lodges
-	clothes_texture_index = 2
+
+	swappable_data = {
+		default = {
+			building_icon = building_fex_hunting_lodges
+    		icon = hunter
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -81,8 +90,8 @@ fex_xeno_hunter = {
 		is_same_species = owner
 	}
 
-	pop_modifier = {
-		pop_defense_armies_add = 2
+	planet_modifier = {
+		planet_defense_armies_add = 2
 	}
 
 	triggered_planet_modifier = {
@@ -114,10 +123,14 @@ fex_xeno_hunter = {
 
 fex_exodite_hunter = {
 	category = fex_exodus_precursor
-	icon = hunter
 	is_capped_by_modifier = yes
-	building_icon = building_crude_huts
-	clothes_texture_index = 2
+
+	swappable_data = {
+		default = {
+			building_icon = building_crude_huts
+    		icon = hunter
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -135,8 +148,8 @@ fex_exodite_hunter = {
 		is_same_species = owner
 	}
 
-	pop_modifier = {
-		pop_defense_armies_add = 3
+	planet_modifier = {
+		planet_defense_armies_add = 3
 	}
 
 	triggered_planet_modifier = {
@@ -168,10 +181,14 @@ fex_exodite_hunter = {
 
 fex_exodite_smith = {
 	category = fex_exodus_precursor
-	icon = artificer
 	is_capped_by_modifier = yes
-	building_icon = building_crude_huts
-	clothes_texture_index = 2
+
+	swappable_data = {
+		default = {
+			building_icon = building_crude_huts
+    		icon = artificer
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -219,10 +236,14 @@ fex_exodite_smith = {
 
 fex_exodite_druid = {
 	category = fex_exodus_precursor
-	icon = ranger
 	is_capped_by_modifier = yes
-	building_icon = building_fex_runestones
-	clothes_texture_index = 2
+
+	swappable_data = {
+		default = {
+			building_icon = building_fex_runestones
+    		icon = ranger
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -271,9 +292,13 @@ fex_exodite_druid = {
 fex_monk = {
 	category = precursor
 	is_capped_by_modifier = yes
-	clothes_texture_index = 1
-	icon = high_priest
-	building_icon = building_fex_ancient_shrines
+
+	swappable_data = {
+		default = {
+			building_icon = building_fex_ancient_shrines
+    		icon = high_priest
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -323,9 +348,13 @@ fex_monk = {
 fex_promethean_warrior = {
 	category = precursor
 	is_capped_by_modifier = yes
-	clothes_texture_index = 1
-	icon = knight
-	building_icon = building_fe_fortress
+
+	swappable_data = {
+		default = {
+			building_icon = building_fe_fortress
+    		icon = knight
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -346,8 +375,8 @@ fex_promethean_warrior = {
 		}
 	}
 
-	pop_modifier = {
-		pop_defense_armies_add = 6
+	planet_modifier = {
+		planet_defense_armies_add = 6
 	}
 
 
