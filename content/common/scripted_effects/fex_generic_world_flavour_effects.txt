@@ -101,7 +101,7 @@ fex_set_martial_order_world = {
         create_pop = { species = event_target:fex_xenophobe_fe.owner_species }
     }
 
-    random_owned_pop = {
+    random_owned_pop_group = {
         limit = { has_trait = trait_nerve_stapled }
         species = {
             save_event_target_as = fex_xenophobe_servile_species
