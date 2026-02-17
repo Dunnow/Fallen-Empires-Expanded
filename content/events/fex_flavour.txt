@@ -190,6 +190,7 @@ planet_event = {
 			}
 			create_pop = {
 				species = event_target:fex_xenophile_fe.species
+				size = 100
 			}
 			planet_event = { id = fex_flavour.15 days = 360 }
 		}

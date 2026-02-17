@@ -77,11 +77,9 @@ fex_setup_exodite_planet = {
     remove_building = building_colony_shelter
     add_building = building_fex_exodite_settlements
 	add_building = building_fex_runestones
-    while = {
-        count = 9
-        create_pop = {
-            species = event_target:fex_xenophile_fe.species
-        }
+    create_pop = {
+        species = event_target:fex_xenophile_fe.species
+        size = 900
     }
 	set_name = random
 }

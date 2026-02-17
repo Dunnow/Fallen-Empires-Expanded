@@ -21,7 +21,10 @@ fex_set_hunting_world = {
                 save_event_target_as = fex_hunting_target
             }
         }
-        create_pop = { species = event_target:fex_hunting_target }
+        create_pop = {
+            species = event_target:fex_hunting_target
+            size = 100
+        }
     }
 }
 
@@ -52,9 +55,9 @@ fex_set_ancilla_world = {
     add_deposit = d_fex_shattered_ai_core
     add_modifier = { modifier = fex_materialist_ai_world }
 
-    while = {
-        count = 4
-        create_pop = { species = event_target:fex_materialist_fe.owner_species }
+    create_pop = {
+        species = event_target:fex_materialist_fe.owner_species
+        size = 400
     }
 }
 
@@ -67,9 +70,9 @@ fex_set_shrine_world = {
 
     add_modifier = { modifier = fex_spiritualist_shrine_world }
 
-    while = {
-        count = 9
-        create_pop = { species = event_target:fex_spiritualist_fe.owner_species }
+    create_pop = {
+        species = event_target:fex_spiritualist_fe.owner_species
+        size = 900
     }
 }
 
@@ -80,9 +83,9 @@ fex_set_leviathan_world = {
     add_modifier = { modifier = titanic_life }
     add_deposit = d_fex_leviathan_preserves
 
-    while = {
-        count = 4
-        create_pop = { species = event_target:fex_xenophile_fe.owner_species }
+    create_pop = {
+        species = event_target:fex_xenophile_fe.owner_species
+        size = 400
     }
 }
 
@@ -96,9 +99,9 @@ fex_set_martial_order_world = {
     add_building = building_fe_stronghold
     add_building = building_fe_fortress
 
-    while = {
-        count = 5
-        create_pop = { species = event_target:fex_xenophobe_fe.owner_species }
+    create_pop = {
+        species = event_target:fex_xenophobe_fe.owner_species
+        size = 500
     }
 
     random_owned_pop_group = {
@@ -108,9 +111,9 @@ fex_set_martial_order_world = {
         }
     }
 
-    while = {
-        count = 9
-        create_pop = { species = event_target:fex_xenophobe_servile_species }
+    create_pop = {
+        species = event_target:fex_xenophobe_servile_species
+        size = 900
     }
 }
 
