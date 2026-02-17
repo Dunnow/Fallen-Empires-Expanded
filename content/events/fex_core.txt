@@ -337,7 +337,7 @@ planet_event = {
             limit = { owner = { is_fallen_empire_spiritualist = yes } }
             planet_event = { id = fex_core.14 }
         }
-        # Machine FE doesn't have any planets outside it's area
+        # Machine FE doesn't have any planets outside its area
     }
 }
 
@@ -380,7 +380,7 @@ planet_event = {
                     }
                 }
             }
-            20 = { set_planet_flag = fex_generic_world }
+            10 = { set_planet_flag = fex_generic_world }
         }
     }
 }
@@ -417,7 +417,7 @@ planet_event = {
                     }
                 }
             }
-            20 = { set_planet_flag = fex_generic_world }
+            10 = { set_planet_flag = fex_generic_world }
         }
     }
 }
@@ -461,7 +461,7 @@ planet_event = {
                     }
                 }
             }
-            20 = { set_planet_flag = fex_generic_world}
+            10 = { set_planet_flag = fex_generic_world}
         }
     }
 }
@@ -497,7 +497,7 @@ planet_event = {
                     }
                 }
             }
-            20 = { set_planet_flag = fex_generic_world }
+            10 = { set_planet_flag = fex_generic_world }
         }
     }
 }

@@ -5,6 +5,10 @@ building_fex_hunting_lodges= {
 
 	base_cap_amount = 1
 
+	building_sets = {
+		fallen_empire
+	}
+
 	potential = {
 		exists = owner
 		owner = {
@@ -21,10 +25,10 @@ building_fex_hunting_lodges= {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 3
-		planet_amenities_add = 5
-		job_fex_xeno_hunter_add = 3
-		job_clerk_add = 3
+		planet_housing_add = 300
+		planet_amenities_add = 500
+		job_fex_xeno_hunter_add = 300
+		job_clerk_add = 300
 	}
 
 	resources = {
@@ -44,6 +48,10 @@ building_fex_runestones= {
 	category = amenity
 	base_cap_amount = 1
 	can_be_ruined = no
+
+	building_sets = {
+		pre_ftl
+	}
 
 	potential = {
 		exists = owner
@@ -65,9 +73,9 @@ building_fex_runestones= {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 3
-		planet_amenities_add = 5
-		job_fex_exodite_druid_add = 3
+		planet_housing_add = 300
+		planet_amenities_add = 500
+		job_fex_exodite_druid_add = 300
 	}
 
 	resources = {
@@ -88,6 +96,10 @@ building_fex_exodite_settlements = {
 	can_be_ruined = no
 	position_priority = 0
 	icon = holding_tree_of_life_sapling
+
+	building_sets = {
+		pre_ftl
+	}
 
 	category = government
 
@@ -127,12 +139,12 @@ building_fex_exodite_settlements = {
 			has_planet_flag = fex_exodite_planet
 		}
 
-		planet_housing_add = 10
-		planet_amenities_add = 25
+		planet_housing_add = 1000
+		planet_amenities_add = 2500
 		planet_crime_add = -20
 
-		job_fex_exodite_hunter_add = 3
-		job_fex_exodite_smith_add = 3
+		job_fex_exodite_hunter_add = 300
+		job_fex_exodite_smith_add = 300
 	}
 }
 
@@ -141,6 +153,10 @@ building_fex_scientific_outposts = {
 	category = research
 	base_cap_amount = 1
 	icon = building_primitive_labs
+
+	building_sets = {
+		fallen_empire
+	}
 
 	potential = {
 		exists = owner
@@ -158,9 +174,9 @@ building_fex_scientific_outposts = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 3
-		planet_amenities_add = 5
-		job_fe_archivist_add = 3
+		planet_housing_add = 300
+		planet_amenities_add = 500
+		job_fe_archivist_add = 300
 	}
 
 	resources = {
@@ -179,6 +195,10 @@ building_fex_ancient_shrines = {
 	category = research
 	base_cap_amount = 1
 
+	building_sets = {
+		fallen_empire
+	}
+
 	potential = {
 		exists = owner
 		owner = {
@@ -194,9 +214,9 @@ building_fex_ancient_shrines = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 3
-		planet_amenities_add = 5
-		job_fex_monk_add = 3
+		planet_housing_add = 300
+		planet_amenities_add = 500
+		job_fex_monk_add = 300
 	}
 
 	resources = {
