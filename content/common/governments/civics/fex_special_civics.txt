@@ -19,3 +19,13 @@ fex_civic_archaeotech_legacy = {
 	random_weight = { base = @civic_default_random_weight }
 	modifier = { }
 }
+
+fex_civic_blood_exiles = {
+	modification = no
+	icon = "gfx/interface/icons/governments/civics/civic_warrior_culture.dds"
+	potential = {
+		country_type = { value = fex_exiles_country }
+	}
+	random_weight = { base = @civic_default_random_weight }
+	modifier = { }
+}

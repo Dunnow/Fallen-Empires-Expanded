@@ -78,8 +78,8 @@ planet_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		exists = fromfrom
-		fromfrom = {
+		exists = fromfrom # For some reason the game triggers this all the time so this keeps the error log tidy
+		FromFrom = {
 			is_primitive = yes
 		}
 		has_planet_flag = fex_exodite_planet

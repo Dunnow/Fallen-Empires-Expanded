@@ -200,3 +200,245 @@ fex_set_up_shroud_tear_system = {
 		save_global_event_target_as = fex_shroud_tear_system
 	}
 }
+
+
+# System scope
+fex_generate_xenophobe_exiles = {
+	save_event_target_as = fex_xenophobe_exiles_gate_system
+	set_star_flag = fex_xenophobe_exiles_gate
+	spawn_system = {
+		initializer = fex_black_hole_init
+		hyperlane = no
+	}
+	last_created_system = {
+		save_global_event_target_as = fex_xenophobe_exiles_system
+		set_star_flag = fex_xenophobe_history
+		set_star_flag = fex_historical_system
+		set_star_flag = fex_xenophobe_exiles_system
+
+		fex_generate_xenophobe_exile_habitat = yes
+		fex_generate_xenophobe_exile_fleets = yes
+	}
+
+	event_target:fex_xenophobe_exiles_gate_system = {
+		event_target:fex_xenophobe_exiles_system = {
+			prev = {
+				spawn_natural_wormhole = {
+					bypass_type = wormhole
+					random_pos = no
+					orbit_angle = 360
+				}
+			}
+			spawn_natural_wormhole = {
+				bypass_type = wormhole
+				random_pos = no
+				orbit_angle = 270
+			}
+			link_wormholes = prev
+		}
+	}
+}
+
+# System scope
+fex_generate_xenophobe_exile_habitat = {
+	random_system_planet = {
+		limit = {
+			NOR = {
+				is_star = yes
+				is_moon = yes
+			}
+		}
+		save_event_target_as = fex_exile_habitat_root
+	}
+
+	spawn_planet = {
+		class = pc_habitat
+		location = event_target:fex_exile_habitat_root
+		init_effect = {
+			set_planet_entity = {
+				entity = fex_fallen_empire_habitat_entity
+				picture = pc_fex_exile_hab
+			}
+			set_name = fex_exile_hab_name
+			save_global_event_target_as = fex_exile_habitat
+		}
+	}
+	event_target:fex_exile_habitat = {
+		fex_create_exile_country = yes
+		fex_setup_exile_planet = yes
+	}
+
+	create_starbase = {
+		size = starbase_outpost
+		owner = last_created_country
+	}
+}
+
+fex_create_exile_country = {
+	create_country = {
+		type = fex_exiles_country
+		species = event_target:fex_xenophobe_fe.species
+		ethos = {
+			ethic = ethic_fanatic_xenophobe
+			ethic = ethic_militarist
+		}
+		civics = {
+			civic = fex_civic_blood_exiles
+		}
+		flag = {
+			icon= {
+				category = "pirate"
+				file = "flag_pirate_6.dds"
+			}
+			background= {
+				category = "backgrounds"
+				file = "new_dawn.dds"
+			}
+			colors={
+				"black"
+				"black"
+				"null"
+				"null"
+			}
+		}
+	}
+
+	event_target:fex_xenophobe_fe = {
+		set_faction_hostility = { set_neutral = yes }
+	}
+
+	last_created_country = {
+		room_name_override = "personality_slaving_despots_room"
+		set_graphical_culture = fallen_empire_04
+		save_global_event_target_as = fex_xenophobe_exiles_country
+		set_name = {
+			key = fex_exile_country_name
+			variable_string = "\\[This.owner_main_species.GetAdj]"
+		}
+	}
+}
+
+fex_setup_exile_planet = {
+	set_owner = last_created_country
+	set_capital = yes
+
+	remove_building = building_colony_shelter
+	add_building = building_fex_dark_palace
+	add_building = building_fex_purity_temple
+	add_building = building_fex_blood_arena
+	add_building = building_fex_slave_pens
+
+	add_deposit = d_arcane_replicator
+
+	create_pop = {
+		species = event_target:fex_xenophobe_fe.species
+		size = 1400
+	}
+	while = {
+        count = 8
+        random_country = {
+            limit = {
+                OR = {
+                    is_country_type = default
+                    is_primitive = yes
+                }
+                is_gestalt = no
+            }
+            species = {
+                save_event_target_as = fex_slave_target
+				set_citizenship_type = { country = event_target:fex_xenophobe_exiles_country type = citizenship_slavery cooldown = yes }
+            }
+        }
+        create_pop = { species = event_target:fex_slave_target }
+    }
+}
+
+# System scope
+fex_generate_xenophobe_exile_fleets = {
+	# Generate home fleet
+	fex_generate_exile_admiral = yes
+	create_fleet = {
+		name = "NAME_fex_exiles_home_fleet"
+		effect = {
+			set_owner = event_target:fex_xenophobe_exiles_country
+			set_location = event_target:fex_xenophobe_exiles_country.capital_star
+			set_fleet_flag = fex_exile_home_fleet
+
+			while = {
+				count = 4
+				create_ship = {
+					name = random
+					design = NAME_Supremacy
+				}
+			}
+			while = {
+				count = 20
+				create_ship = {
+					name = random
+					design = NAME_Glory
+				}
+			}
+		}
+		settings = {
+			can_upgrade = no
+			can_change_composition = no
+			can_change_leader = no
+			uses_naval_capacity = no
+			spawn_debris = no
+		}
+	}
+	last_created_fleet = { assign_leader = last_created_leader }
+	# Generate Raiding parties
+	fex_generate_exile_raiding_fleet = { NAME = NAME_fex_exiles_raiding_fleet_1 }
+	fex_generate_exile_raiding_fleet = { NAME = NAME_fex_exiles_raiding_fleet_2 }
+	fex_generate_exile_raiding_fleet = { NAME = NAME_fex_exiles_raiding_fleet_3 }
+}
+
+fex_generate_exile_raiding_fleet = {
+	fex_generate_exile_admiral = yes
+
+	create_fleet = {
+		name = $NAME$
+		effect = {
+			set_owner = event_target:fex_xenophobe_exiles_country
+			set_location = event_target:fex_xenophobe_exiles_country.capital_star
+			set_fleet_flag = fex_exile_raiding_fleet
+
+			while = {
+				count = 4
+				create_ship = {
+					name = random
+					design = NAME_Faded_Supremacy
+				}
+			}
+			while = {
+				count = 20
+				create_ship = {
+					name = random
+					design = NAME_Rusted_Glory
+				}
+			}
+		}
+		settings = {
+			can_upgrade = no
+			can_change_composition = no
+			can_change_leader = no
+			uses_naval_capacity = no
+			spawn_debris = no
+		}
+	}
+	last_created_fleet = { assign_leader = last_created_leader }
+}
+
+fex_generate_exile_admiral = {
+	event_target:fex_xenophobe_exiles_country = {
+		create_leader = {
+			class = commander
+			species = owner_main_species
+			name = random
+			skill = 7
+			leader_age_min = 25
+			leader_age_max = 45
+		}
+	}
+}

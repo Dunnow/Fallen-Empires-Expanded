@@ -109,6 +109,36 @@
  job_fex_promethean_warrior_desc: "Peerless warriors charged with protecting the empire and preserving their own ancient tradition."
  mod_job_fex_promethean_warrior_add: "$job_fex_promethean_warrior$ Jobs"
 
+ job_fex_arena_slave: "Arena Slave"
+ job_fex_arena_slave_plural: "Arena Slaves"
+ job_fex_arena_slave_desc: "The baying crowd calls for blood."
+ mod_job_fex_arena_slave_add: "$job_fex_arena_slave$ Jobs"
+
+ job_fex_blood_serf: "Blood Serf"
+ job_fex_blood_serf_plural: "Blood Serfs"
+ job_fex_blood_serf_desc: "Unfortunate souls trapped in bondage. Forced to toil for meagre rations."
+ mod_job_fex_blood_serf_add: "$job_fex_blood_serf$ Jobs"
+
+ job_fex_exile_archon: "Archon"
+ job_fex_exile_archon_plural: "Archons"
+ job_fex_exile_archon_desc: "The ruling caste of a precursor society. Their hierarchy is precarious and ever-shifting."
+ mod_job_fex_exile_archon_add: "$job_fex_exile_archon$ Jobs"
+
+ job_fex_exile_chirurgeon: "Chirurgeon"
+ job_fex_exile_chirurgeon_plural: "Chirurgeons"
+ job_fex_exile_chirurgeon_desc: "Equal parts sage and scientist, these individuals wield ancient bio-arts to preserve and shape their charges."
+ mod_job_fex_exile_chirurgeon_add: "$job_fex_exile_chirurgeon$ Jobs"
+
+ job_fex_exile_overseer: "Taskmaster"
+ job_fex_exile_overseer_plural: "Taskmasters"
+ job_fex_exile_overseer_desc: "A strong hand is necessary to keep the menials in line."
+ mod_job_fex_exile_overseer_add: "$job_fex_exile_overseer$ Jobs"
+
+ job_fex_exile_priest: "Purity Priest"
+ job_fex_exile_priest_plural: "Purity Priests"
+ job_fex_exile_priest_desc: "These priests conduct cruel rituals to assert their species' divine superiority over all lesser, primitive beings"
+ mod_job_fex_exile_priest_add: "$job_fex_exile_priest$ Jobs"
+
  # Buildings
  building_fex_hunting_lodges: "Hunting Lodges"
  building_fex_hunting_lodges_desc: "An anachronistic throwback to a more primitive age. Prospective thrill seekers are accommodated in sparse but comfortable conditions."
@@ -124,6 +154,19 @@
 
  building_fex_ancient_shrines: "Ancient Shrines"
  building_fex_ancient_shrines_desc: "Simple structures that honor deities half-forgotten."
+
+ building_fex_dark_palace: "Dark Palace"
+ building_fex_dark_palace_desc: "Ancient black walls house unspeakable luxuries and indescribable marvels. Even the greatest of its neighbors are squalid in comparison."
+
+ building_fex_slave_pens: "Slave Pens"
+ building_fex_slave_pens_desc: "Cramped uncomfortable quarters for throngs of enslaved sentients."
+
+ building_fex_blood_arena: "Blood Arena"
+ building_fex_blood_arena_desc: "Lesser beings come here to die for the entertainment of their betters."
+
+ building_fex_purity_temple: "Purity Temple"
+ building_fex_purity_temple_desc: "A monument to the greatness of the chosen species. Sections of the aged structure house unbelievably advanced technology."
+
 
  # Decisions
  fex_tomb_raiding: "Excavate Burial Complex"
@@ -143,6 +186,12 @@
  pop_cat_fex_exodus_precursor: "Exodus Precursor"
  pop_cat_fex_exodus_precursor_plural: "Exodus Precursors"
  pop_cat_fex_exodus_precursor_desc: "These individuals have consciously chosen to reject the decadent luxuries of their homeworlds in favor of leading a simpler life on the fringes of civilization."
+ pop_cat_fex_exile_precursor: "Exile Precursor"
+ pop_cat_fex_exile_precursor_plural: "Exile Precursors"
+ pop_cat_fex_exile_precursor_desc: "Cast out from their home society millennia ago, those precursors revel in unchecked barbarism."
+ pop_cat_fex_primitive_slave: "Primitive Slave"
+ pop_cat_fex_primitive_slave_plural: "Primitive Slaves"
+ pop_cat_fex_primitive_slave_desc: "Wretched masses cowering from their cruel masters."
 
  fex_exodite_moon_1: "Haven"
  fex_exodite_moon_2: "Shadow"
@@ -155,12 +204,15 @@
  fex_civic_natural_harmony_desc: "Life in balance with nature."
  fex_civic_archaeotech_legacy: "Archaeotech Legacy"
  fex_civic_archaeotech_legacy_desc: "The powerful tools of a bygone age."
+ fex_civic_blood_exiles: "Blood Exiles"
+ fex_civic_blood_exiles_desc: "$empty_space_SC$"
 
  fex_exodite_army: "Exodite Rangers"
  fex_exodite_army_desc: "These Precursor Warriors possess a lethality that belies their archaic appearance."
 
  opinion_fex_attacked_exodites: "Attacked our Pre-FTL Cousins"
 
+ fex_exile_hab_name: "Tyrant's Throne"
  fex_experiment_world_name: "The Crucible"
  NAME_fex_sarvenno: "Sarvenno"
 
@@ -173,6 +225,14 @@
  NAME_fex_monitor: "Monitor"
  NAME_fex_dreadnought: "Dreadnought"
  fex_shroud_tear_defense_fleet_name: "[This.solar_system.GetName] Bulwark"
+
+ fex_exile_country_name: "[This.owner_main_species.GetAdj] Cabals"
+ NAME_fex_exiles_home_fleet: "Cabal of Unyielding Valor"
+ NAME_fex_exiles_raiding_fleet_1: "Cabal of Bountiful Plunder"
+ NAME_fex_exiles_raiding_fleet_2: "Black Secrets Cabal"
+ NAME_fex_exiles_raiding_fleet_3: "Cabal of the Merciless Tide"
+ NAME_Faded_Supremacy: "Faded Supremacy"
+ NAME_Rusted_Glory: "Rusted Glory"
 
  FEX_SHROUD_RIFT_INVESTIGATION: "Investigating the Rift"
  FEX_SHROUD_RIFT_INVESTIGATION_DESC: "The mysterious Rift in the [event_target:fex_shroud_tear_system.GetName] system is host to a number of hostile entities. We cannot respond appropriately without a better understanding of the phenomena at play."
