@@ -182,6 +182,8 @@
  col_fex_exodite_age_desc: "$col_primitive_desc$"
  col_fex_fe_frontier_world: "Fringe World"
  col_fex_fe_frontier_world_desc: "This world exists at the periphery of an incredibly advanced ancient empire."
+ col_fex_exile_hab: "Exile Habitat"
+ col_fex_exile_hab_desc: "This habitat is home to a civilization of technologically advanced raiders and plunderers."
 
  pop_cat_fex_exodus_precursor: "Exodus Precursor"
  pop_cat_fex_exodus_precursor_plural: "Exodus Precursors"
