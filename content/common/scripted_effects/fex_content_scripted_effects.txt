@@ -95,7 +95,7 @@ fex_create_shroud_tear_defense_fleet = {
 }
 
 fex_create_shroud_incursion_fleet = {
-	#Create Shroud Country
+	# Create Shroud Country
 	if = {
 		limit = { NOT = { exists = event_target:shroud_country } }
 		create_country = {

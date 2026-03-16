@@ -32,7 +32,7 @@
  fex_flavour.32.a: "Unfortunate."
 
  fex_flavour.33.title: "Fruitless Endeavours"
- fex_flavour.33.desc: "We do not seem to be the first to have explored the tombs of [This.GetName]. The complex bear the marks of being entered several times, centuries apart. The treasure rooms and burial chambers have been meticulously picked clean.\n\nAlthough we can develop our understanding of the [event_target:fex_burial_origin_country.GetAdj] culture that buried their dead here by examining the markings of the tomb, we have missed out on obtaining any of the artifacts that may have once been buried here."
+ fex_flavour.33.desc: "We do not seem to be the first to have explored the tombs of [This.GetName]. The complex bears the marks of having been entered several times, centuries apart. The treasure rooms and burial chambers have been meticulously picked clean.\n\nAlthough we can develop our understanding of the [event_target:fex_burial_origin_country.GetAdj] culture that buried their dead here by examining the markings of the tomb, we have missed out on obtaining any of the artifacts that may have once been buried here."
  fex_flavour.33.a: "Disappointing."
 
  fex_flavour.41.title: "Voidspawn Incursion"
@@ -40,7 +40,7 @@
  fex_flavour.41.a: "$BATTLESTATIONS$"
 
  fex_flavour.42.title: "Unwelcome Visitors"
- fex_flavour.42.desc: "The [event_target:fex_shroud_tear_system.GetName] system has come under attack by some sort of extradimensional entities that emerged from the System's rift.\n\nAlthough the entities have been dispelled, some spacetime anomalies and odd sensor readings remain.\n\nWe have an opportunity to investigate further and learn more about these creatures."
+ fex_flavour.42.desc: "The [event_target:fex_shroud_tear_system.GetName] system has come under attack by some sort of extradimensional entities that emerged from the system's rift.\n\nAlthough the entities have been dispelled, some spacetime anomalies and odd sensor readings remain.\n\nWe have an opportunity to investigate further and learn more about these creatures."
  fex_flavour.42.a: "Make it so."
 
  fex_flavour.43.title: "Peeking Beyond the Veil"
