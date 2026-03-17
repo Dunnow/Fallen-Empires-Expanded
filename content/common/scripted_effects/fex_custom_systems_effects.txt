@@ -440,5 +440,8 @@ fex_generate_exile_admiral = {
 			leader_age_min = 25
 			leader_age_max = 45
 		}
+		last_created_leader = {
+			fex_clear_job_adding_traits = yes
+		}
 	}
 }
