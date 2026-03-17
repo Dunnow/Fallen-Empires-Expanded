@@ -1,5 +1,5 @@
 fex_exodus_precursor = {
-	rank = 1
+	rank = 4
 	change_job_threshold = 2
 
 	weight = {
@@ -63,7 +63,7 @@ fex_exodus_precursor = {
 
 
 fex_exile_precursor = {
-    rank = 1
+    rank = 4
     change_job_threshold = 2
 
     triggered_planet_modifier = {
