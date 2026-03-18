@@ -343,6 +343,8 @@ fex_setup_exile_planet = {
                     is_primitive = yes
                 }
                 is_gestalt = no
+				is_robotic_species = no
+				is_machine_species = no
             }
             species = {
                 save_event_target_as = fex_slave_target
