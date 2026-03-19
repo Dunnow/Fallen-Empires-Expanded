@@ -666,3 +666,108 @@ country_event = {
 		name = fex_flavour.50.c
 	}
 }
+
+# Contact with Exiles
+
+# Exile raiding fleet spotted in our territory
+# Triggered via on_entering_system_fleet (Scope = Fleet, From = System)
+fleet_event = {
+	id = fex_flavour.61
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_fleet_flag = fex_exile_raiding_fleet
+		from = {
+			exists = owner
+			owner = {
+				NOT = { is_country_type = fex_exiles_country }
+				is_country_type = default
+				NOT = { has_country_flag = fex_exile_raid_sighted }
+			}
+		}
+	}
+
+	immediate = {
+		from = {
+			save_event_target_as = fex_raider_spotted_system
+			owner = {
+				set_timed_country_flag = { flag = fex_exile_raid_sighted days = 1080 }
+				country_event = { id = fex_flavour.62 }
+			}
+		}
+	}
+}
+
+# Notification to player: exile raiding fleet spotted
+country_event = {
+	id = fex_flavour.62
+	title = fex_flavour.62.title
+	desc = fex_flavour.62.desc
+	picture = GFX_evt_pirate_armada
+	show_sound = event_radio_chatter
+	location = event_target:fex_raider_spotted_system
+
+	is_triggered_only = yes
+
+	option = {
+		name = fex_flavour.62.a
+	}
+}
+
+# Exile raiding fleet is targeting the player
+country_event = {
+	id = fex_flavour.63
+	title = fex_flavour.63.title
+	desc = fex_flavour.63.desc
+	picture = GFX_evt_pirate_armada
+	show_sound = event_red_alert
+	location = event_target:fex_exile_raid_target_system
+
+	is_triggered_only = yes
+
+	option = {
+		name = fex_flavour.63.a
+	}
+}
+
+# Player fleet enters exile home system
+# Triggered via on_entering_system_fleet (Scope = Fleet, From = System)
+fleet_event = {
+	id = fex_flavour.64
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		owner = {
+			is_country_type = default
+			NOT = { has_country_flag = fex_exile_system_entered }
+		}
+		from = {
+			has_star_flag = fex_xenophobe_exiles_system
+		}
+	}
+
+	immediate = {
+		owner = {
+			set_country_flag = fex_exile_system_entered
+		}
+		fleet_event = { id = fex_flavour.65 }
+	}
+}
+
+# Notification to player: entered exile home system
+fleet_event = {
+	id = fex_flavour.65
+	title = fex_flavour.65.title
+	desc = fex_flavour.65.desc
+	picture = GFX_evt_pirate_armada
+	show_sound = event_red_alert
+	location = event_target:fex_xenophobe_exiles_system
+
+	is_triggered_only = yes
+
+	option = {
+		name = fex_flavour.65.a
+	}
+}

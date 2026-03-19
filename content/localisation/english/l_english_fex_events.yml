@@ -59,3 +59,15 @@
  fex_flavour.50.c: "End transmission."
  fex_machine_fe_name_specific: "[event_target:fex_machine_fe.GetName]"
  fex_machine_fe_name_generic: "ruins of ancient civilizations"
+
+ fex_flavour.62.title: "Raiding Party Sighted"
+ fex_flavour.62.desc: "Our sensors have detected a hostile fleet moving through the [event_target:fex_raider_spotted_system.GetName] system. The vessel signatures match those of the [event_target:fex_xenophobe_exiles_country.GetName].\n\nThe fleet appears to be a raiding party of some kind. Several of the ships bear visible battle damage and what appear to be crude trophies affixed to their hulls.\n\nTheir intentions are unclear, but unmistakeably hostile."
+ fex_flavour.62.a: "Noted."
+
+ fex_flavour.63.title: "Exile Raiding Fleet Inbound"
+ fex_flavour.63.desc: "A large [event_target:fex_xenophobe_exiles_country.GetAdj] fleet has been detected on a direct course for the [event_target:fex_exile_raid_target_system.GetName] system.\n\nThe fleet composition and heading suggest this is a deliberate raiding expedition rather than a chance encounter. Our outlying sensor stations are tracking their advance.\n\nAt their current speed, they will reach our borders shortly."
+ fex_flavour.63.a: "$BATTLESTATIONS$"
+
+ fex_flavour.65.title: "A Dark Haven"
+ fex_flavour.65.desc: "The [This.GetName] has entered the [event_target:fex_xenophobe_exiles_system.GetName] system. Scans have detected a large habitat in orbit around one of the inner planets, heavily fortified and bristling with weaponry.\n\nThe station appears to be of ancient precursor construction, though it has been extensively modified over the millennia. Its hull bears the scars of countless battles and crude expansions.\n\nWe are also detecting a significant number of alien life signs aboard the station, many of which do not match the dominant species. It is unclear what purpose they serve."
+ fex_flavour.65.a: "Noted."

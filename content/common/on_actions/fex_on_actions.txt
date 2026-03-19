@@ -42,3 +42,11 @@ on_post_communications_established = {
         fex_flavour.50 # First contact with scavenger enclave
     }
 }
+
+# Scope = Fleet, From = System
+on_entering_system_fleet = {
+    events = {
+        fex_flavour.61 # Exile raiding fleet spotted passing through player territory
+        fex_flavour.64 # Player fleet enters exile home system
+    }
+}
