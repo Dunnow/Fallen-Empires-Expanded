@@ -71,3 +71,7 @@
  fex_flavour.65.title: "A Dark Haven"
  fex_flavour.65.desc: "The [This.GetName] has entered the [event_target:fex_xenophobe_exiles_system.GetName] system. Scans have detected a large habitat in orbit around one of the inner planets, heavily fortified and bristling with weaponry.\n\nThe station appears to be of ancient precursor construction, though it has been extensively modified over the millennia. Its hull bears the scars of countless battles and crude expansions.\n\nWe are also detecting a significant number of alien life signs aboard the station, many of which do not match the dominant species. It is unclear what purpose they serve."
  fex_flavour.65.a: "Noted."
+
+ fex_flavour.73.title: "[event_target:fex_exile_raided_planet.GetName] Raided"
+ fex_flavour.73.desc: "The [event_target:fex_xenophobe_exiles_country.GetAdj] raiding fleet has completed its assault on [event_target:fex_exile_raided_planet.GetName]. Reports from the surface indicate that the raiders seized a number of our citizens before withdrawing.\n\nThe abductees were loaded onto transport vessels and carried off. Their fate is uncertain, though given what we know of the exiles, it is unlikely to be a merciful one.\n\nThe raiding fleet has now departed the system."
+ fex_flavour.73.a: "Grim news."

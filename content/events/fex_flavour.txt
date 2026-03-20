@@ -896,7 +896,11 @@ planet_event = {
 			days = 600
 		}
 
-		# TODO: Raid effects (steal pops, resources, etc.)
+		# Notify the planet owner and apply raid effects
+		save_event_target_as = fex_exile_raided_planet
+		owner = {
+			country_event = { id = fex_flavour.73 }
+		}
 
 		# Send the fleet home
 		from = {
@@ -905,5 +909,45 @@ planet_event = {
 				fex_end_exile_raid = yes
 			}
 		}
+	}
+}
+
+# Notification to player: planet raided by exiles, apply raid effects
+country_event = {
+	id = fex_flavour.73
+	title = fex_flavour.73.title
+	desc = fex_flavour.73.desc
+	picture = GFX_evt_burning_settlement
+	show_sound = event_ground_battle
+	location = event_target:fex_exile_raided_planet
+
+	is_triggered_only = yes
+
+	immediate = {
+		# Steal pops - take up to 3 pops (100 each) and move them to the exile habitat
+		event_target:fex_exile_raided_planet = {
+			while = {
+				count = 3
+				random_owned_pop_group = {
+					limit = {
+						NOT = { is_same_species = owner }
+						is_robotic_species = no
+						pop_group_size >= 100
+					}
+					save_event_target_as = fex_stolen_pop_group
+					remove_pop_amount = 100
+				}
+				event_target:fex_xenophobe_exiles_country.capital_scope = {
+					create_pop = {
+						species = event_target:fex_stolen_pop_group.species
+						size = 100
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = fex_flavour.73.a
 	}
 }
