@@ -67,6 +67,11 @@
  fex_flavour.60.b.response: "From you? Nothing you would willingly give. We do not trade. We do not negotiate. We do not ask.\n\nIf we come to your worlds, you will know what we want."
  fex_flavour.60.c: "End transmission."
 
+ fex_flavour.67.desc: "TODO"
+ fex_flavour.67.a: "TODO"
+ fex_flavour.67.a.response: "TODO"
+ fex_flavour.67.b: "End transmission."
+
  fex_flavour.62.title: "Raiding Party Sighted"
  fex_flavour.62.desc: "Our sensors have detected a hostile fleet moving through the [event_target:fex_raider_spotted_system.GetName] system. The vessel signatures match those of the [event_target:fex_xenophobe_exiles_country.GetName].\n\nThe fleet appears to be a raiding party of some kind. Several of the ships bear visible battle damage and what appear to be crude trophies affixed to their hulls.\n\nTheir intentions are unclear, but unmistakeably hostile."
  fex_flavour.62.a: "Noted."

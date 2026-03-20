@@ -810,6 +810,49 @@ fleet_event = {
 	}
 }
 
+# Exile diplomacy gatekeeper - routes to custom diplo screen
+# Triggered via on_custom_diplomacy (This = player, From = exile country)
+country_event = {
+	id = fex_flavour.66
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		exists = event_target:fex_xenophobe_exiles_country
+		from = {
+			is_same_value = event_target:fex_xenophobe_exiles_country
+		}
+	}
+
+	immediate = {
+		country_event = { id = fex_flavour.67 }
+	}
+}
+
+# Exile generic diplomacy screen
+country_event = {
+	id = fex_flavour.67
+	title = TRANSMISSION
+	desc = fex_flavour.67.desc
+	diplomatic = yes
+	force_open = yes
+	is_triggered_only = yes
+
+	picture_event_data = {
+		room = personality_slaving_despots_room
+		portrait = event_target:fex_xenophobe_exiles_country.species
+	}
+
+	option = {
+		name = fex_flavour.67.a
+		response_text = fex_flavour.67.a.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = fex_flavour.67.b
+	}
+}
+
 # Exile raid roll - fired yearly
 # Scope = global event
 event = {

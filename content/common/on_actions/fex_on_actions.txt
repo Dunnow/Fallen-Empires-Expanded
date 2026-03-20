@@ -53,6 +53,13 @@ on_entering_system_fleet = {
     }
 }
 
+# This = Country (player), From = Country (target)
+on_custom_diplomacy = {
+    events = {
+        fex_flavour.66 # Exile diplomacy gatekeeper
+    }
+}
+
 # This = Planet, From = Bombarder (country)
 on_planet_bombarded = {
     events = {
