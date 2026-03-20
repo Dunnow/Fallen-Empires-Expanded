@@ -64,8 +64,8 @@
  fex_flavour.62.desc: "Our sensors have detected a hostile fleet moving through the [event_target:fex_raider_spotted_system.GetName] system. The vessel signatures match those of the [event_target:fex_xenophobe_exiles_country.GetName].\n\nThe fleet appears to be a raiding party of some kind. Several of the ships bear visible battle damage and what appear to be crude trophies affixed to their hulls.\n\nTheir intentions are unclear, but unmistakeably hostile."
  fex_flavour.62.a: "Noted."
 
- fex_flavour.63.title: "Exile Raiding Fleet Inbound"
- fex_flavour.63.desc: "A large [event_target:fex_xenophobe_exiles_country.GetAdj] fleet has been detected on a direct course for the [event_target:fex_exile_raid_target_system.GetName] system.\n\nThe fleet composition and heading suggest this is a deliberate raiding expedition rather than a chance encounter. Our outlying sensor stations are tracking their advance.\n\nAt their current speed, they will reach our borders shortly."
+ fex_flavour.63.title: "[event_target:fex_xenophobe_exiles_country.GetName] Raiding Expedition"
+ fex_flavour.63.desc: "Our long range sensor teams have detected a [event_target:fex_xenophobe_exiles_country.GetName] fleet on a direct course for the [event_target:fex_exile_raid_target_system.GetName] system.\n\nThe fleet composition and heading suggest this is a deliberate raiding expedition rather than a chance encounter.\n\nAt their current speed, they will reach our borders shortly. We have limited time to prepare."
  fex_flavour.63.a: "$BATTLESTATIONS$"
 
  fex_flavour.65.title: "A Dark Haven"

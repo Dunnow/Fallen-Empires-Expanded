@@ -447,3 +447,17 @@ fex_generate_exile_admiral = {
 		}
 	}
 }
+
+# Fleet scope - send raiding fleet back to exile home system and clean up
+fex_end_exile_raid = {
+	remove_fleet_flag = fex_exile_raid_active
+	clear_fleet_actions = this
+	auto_move_to_planet = {
+		target = event_target:fex_xenophobe_exiles_country.capital_star
+		clear_auto_move_on_arrival = yes
+	}
+	owner = {
+		remove_country_flag = fex_exile_raid_ongoing
+		set_timed_country_flag = { flag = fex_exile_raid_cooldown days = 1800 }
+	}
+}

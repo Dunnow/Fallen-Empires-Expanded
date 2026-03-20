@@ -771,3 +771,139 @@ fleet_event = {
 		name = fex_flavour.65.a
 	}
 }
+
+# Exile raid roll - fired yearly
+# Scope = global event
+event = {
+	id = fex_flavour.70
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		years_passed >= 50
+		exists = event_target:fex_xenophobe_exiles_country
+		event_target:fex_xenophobe_exiles_country = {
+			NOR = {
+				has_country_flag = fex_exile_raid_ongoing
+				has_country_flag = fex_exile_raid_cooldown
+			}
+			any_controlled_fleet = {
+				has_fleet_flag = fex_exile_raiding_fleet
+				is_in_combat = no
+				solar_system = { has_star_flag = fex_xenophobe_exiles_system }
+			}
+		}
+		any_country = {
+			is_country_type = default
+			any_owned_planet = {
+				pop_amount > 0
+			}
+		}
+	}
+
+	immediate = {
+		random_list = {
+			10 = {
+				event_target:fex_xenophobe_exiles_country = {
+					country_event = { id = fex_flavour.71 days = 1 random = 30 }
+				}
+			}
+			90 = {} # No raid this year
+		}
+	}
+}
+
+# Exile raid dispatch - select target and send fleet
+# Scope = fex_xenophobe_exiles_country
+country_event = {
+	id = fex_flavour.71
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = fex_exile_raid_ongoing
+
+		# Select a target empire
+		random_country = {
+			limit = {
+				is_country_type = default
+				any_owned_planet = {
+					pop_amount > 0
+				}
+			}
+			save_event_target_as = fex_exile_raid_target
+
+			# Select a target planet
+			random_owned_planet = {
+				limit = { pop_amount > 0 }
+				save_event_target_as = fex_exile_raid_planet
+				solar_system = {
+					save_event_target_as = fex_exile_raid_target_system
+				}
+			}
+
+			# Establish communications if needed
+			if = {
+				limit = {
+					NOT = { has_communications = root }
+				}
+				establish_communications_no_message = root
+			}
+
+			# Notify the target
+			country_event = { id = fex_flavour.63 }
+		}
+
+		# Dispatch the fleet
+		random_controlled_fleet = {
+			limit = {
+				has_fleet_flag = fex_exile_raiding_fleet
+				is_in_combat = no
+				solar_system = { has_star_flag = fex_xenophobe_exiles_system }
+			}
+			set_fleet_flag = fex_exile_raid_active
+			set_fleet_stance = aggressive
+			set_fleet_bombardment_stance = indiscriminate
+			set_aggro_range_measure_from = self
+			set_aggro_range = 150
+			auto_move_to_planet = {
+				target = event_target:fex_exile_raid_planet
+				clear_auto_move_on_arrival = no
+			}
+		}
+	}
+}
+
+# Exile raid bombardment - fired via on_planet_bombarded
+# Scope = Planet, From = Bombarder (country)
+planet_event = {
+	id = fex_flavour.72
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		planet_devastation >= 50
+		from = { is_country_type = fex_exiles_country }
+		owner = {
+			is_country_type = default
+		}
+		NOT = { has_planet_flag = fex_exile_planet_raided }
+	}
+
+	immediate = {
+		set_timed_planet_flag = {
+			flag = fex_exile_planet_raided
+			days = 600
+		}
+
+		# TODO: Raid effects (steal pops, resources, etc.)
+
+		# Send the fleet home
+		from = {
+			random_controlled_fleet = {
+				limit = { has_fleet_flag = fex_exile_raid_active }
+				fex_end_exile_raid = yes
+			}
+		}
+	}
+}
