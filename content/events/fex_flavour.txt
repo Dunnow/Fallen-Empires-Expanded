@@ -667,7 +667,45 @@ country_event = {
 	}
 }
 
-# Contact with Exiles
+# First contact with exiles
+country_event = {
+	id = fex_flavour.60
+	title = TRANSMISSION
+	desc = fex_flavour.60.desc
+	diplomatic = yes
+	is_triggered_only = yes
+
+	trigger = {
+		exists = event_target:fex_xenophobe_exiles_country
+		NOT = { has_country_flag = fex_exile_first_contact }
+		from = {
+			is_same_value = event_target:fex_xenophobe_exiles_country
+		}
+	}
+
+	immediate = {
+		set_country_flag = fex_exile_first_contact
+	}
+
+	picture_event_data = {
+		room = personality_slaving_despots_room
+		portrait = event_target:fex_xenophobe_exiles_country.species
+	}
+
+	option = {
+		name = fex_flavour.60.a
+		response_text = fex_flavour.60.a.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = fex_flavour.60.b
+		response_text = fex_flavour.60.b.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = fex_flavour.60.c
+	}
+}
 
 # Exile raiding fleet spotted in our territory
 # Triggered via on_entering_system_fleet (Scope = Fleet, From = System)
@@ -842,12 +880,13 @@ country_event = {
 				}
 			}
 
-			# Establish communications if needed
+			# Establish communications if needed and send first contact event
 			if = {
 				limit = {
 					NOT = { has_communications = root }
 				}
 				establish_communications_no_message = root
+				country_event = { id = fex_flavour.60 }
 			}
 
 			# Notify the target
@@ -930,7 +969,6 @@ country_event = {
 				count = 3
 				random_owned_pop_group = {
 					limit = {
-						NOT = { is_same_species = owner }
 						is_robotic_species = no
 						pop_group_size >= 100
 					}

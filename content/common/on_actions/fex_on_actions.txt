@@ -41,6 +41,7 @@ on_space_battle_won = {
 on_post_communications_established = {
     events = {
         fex_flavour.50 # First contact with scavenger enclave
+        fex_flavour.60 # First contact with exiles
     }
 }
 
