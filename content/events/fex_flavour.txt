@@ -666,3 +666,374 @@ country_event = {
 		name = fex_flavour.50.c
 	}
 }
+
+# First contact with exiles
+country_event = {
+	id = fex_flavour.60
+	title = TRANSMISSION
+	desc = fex_flavour.60.desc
+	diplomatic = yes
+	is_triggered_only = yes
+
+	trigger = {
+		exists = event_target:fex_xenophobe_exiles_country
+		NOT = { has_country_flag = fex_exile_first_contact }
+		from = {
+			is_same_value = event_target:fex_xenophobe_exiles_country
+		}
+	}
+
+	immediate = {
+		set_country_flag = fex_exile_first_contact
+	}
+
+	picture_event_data = {
+		room = personality_slaving_despots_room
+		portrait = event_target:fex_xenophobe_exiles_country.species
+	}
+
+	option = {
+		name = fex_flavour.60.a
+		response_text = fex_flavour.60.a.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = fex_flavour.60.b
+		response_text = fex_flavour.60.b.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = fex_flavour.60.c
+	}
+}
+
+# Exile raiding fleet spotted in our territory
+# Triggered via on_entering_system_fleet (Scope = Fleet, From = System)
+fleet_event = {
+	id = fex_flavour.61
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_fleet_flag = fex_exile_raiding_fleet
+		from = {
+			exists = owner
+			owner = {
+				NOT = { is_country_type = fex_exiles_country }
+				is_country_type = default
+				NOT = { has_country_flag = fex_exile_raid_sighted }
+			}
+		}
+	}
+
+	immediate = {
+		from = {
+			save_event_target_as = fex_raider_spotted_system
+			owner = {
+				set_timed_country_flag = { flag = fex_exile_raid_sighted days = 1080 }
+				country_event = { id = fex_flavour.62 }
+			}
+		}
+	}
+}
+
+# Notification to player: exile raiding fleet spotted
+country_event = {
+	id = fex_flavour.62
+	title = fex_flavour.62.title
+	desc = fex_flavour.62.desc
+	picture = GFX_evt_pirate_armada
+	show_sound = event_radio_chatter
+	location = event_target:fex_raider_spotted_system
+
+	is_triggered_only = yes
+
+	option = {
+		name = fex_flavour.62.a
+	}
+}
+
+# Exile raiding fleet is targeting the player
+country_event = {
+	id = fex_flavour.63
+	title = fex_flavour.63.title
+	desc = fex_flavour.63.desc
+	picture = GFX_evt_pirate_armada
+	show_sound = event_red_alert
+	location = event_target:fex_exile_raid_target_system
+
+	is_triggered_only = yes
+
+	option = {
+		name = fex_flavour.63.a
+	}
+}
+
+# Player fleet enters exile home system
+# Triggered via on_entering_system_fleet (Scope = Fleet, From = System)
+fleet_event = {
+	id = fex_flavour.64
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		owner = {
+			is_country_type = default
+			NOT = { has_country_flag = fex_exile_system_entered }
+		}
+		from = {
+			has_star_flag = fex_xenophobe_exiles_system
+		}
+	}
+
+	immediate = {
+		owner = {
+			set_country_flag = fex_exile_system_entered
+		}
+		fleet_event = { id = fex_flavour.65 }
+	}
+}
+
+# Notification to player: entered exile home system
+fleet_event = {
+	id = fex_flavour.65
+	title = fex_flavour.65.title
+	desc = fex_flavour.65.desc
+	picture = GFX_evt_pirate_armada
+	show_sound = event_red_alert
+	location = event_target:fex_xenophobe_exiles_system
+
+	is_triggered_only = yes
+
+	option = {
+		name = fex_flavour.65.a
+	}
+}
+
+# Exile diplomacy gatekeeper - routes to custom diplo screen
+# Triggered via on_custom_diplomacy (This = player, From = exile country)
+country_event = {
+	id = fex_flavour.66
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		exists = event_target:fex_xenophobe_exiles_country
+		from = {
+			is_same_value = event_target:fex_xenophobe_exiles_country
+		}
+	}
+
+	immediate = {
+		country_event = { id = fex_flavour.67 }
+	}
+}
+
+# Exile generic diplomacy screen
+country_event = {
+	id = fex_flavour.67
+	title = TRANSMISSION
+	desc = fex_flavour.67.desc
+	diplomatic = yes
+	force_open = yes
+	is_triggered_only = yes
+
+	picture_event_data = {
+		room = personality_slaving_despots_room
+		portrait = event_target:fex_xenophobe_exiles_country.species
+	}
+
+	option = {
+		name = fex_flavour.67.a
+		response_text = fex_flavour.67.a.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = fex_flavour.67.b
+		response_text = fex_flavour.67.b.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = fex_flavour.67.c
+	}
+}
+
+# Exile raid roll - fired yearly
+# Scope = global event
+event = {
+	id = fex_flavour.70
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		years_passed >= 50
+		exists = event_target:fex_xenophobe_exiles_country
+		event_target:fex_xenophobe_exiles_country = {
+			NOR = {
+				has_country_flag = fex_exile_raid_ongoing
+				has_country_flag = fex_exile_raid_cooldown
+			}
+			any_controlled_fleet = {
+				has_fleet_flag = fex_exile_raiding_fleet
+				is_in_combat = no
+				solar_system = { has_star_flag = fex_xenophobe_exiles_system }
+			}
+		}
+		any_country = {
+			is_country_type = default
+			any_owned_planet = {
+				pop_amount > 0
+			}
+		}
+	}
+
+	immediate = {
+		random_list = {
+			10 = {
+				event_target:fex_xenophobe_exiles_country = {
+					country_event = { id = fex_flavour.71 days = 1 random = 30 }
+				}
+			}
+			90 = {} # No raid this year
+		}
+	}
+}
+
+# Exile raid dispatch - select target and send fleet
+# Scope = fex_xenophobe_exiles_country
+country_event = {
+	id = fex_flavour.71
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = fex_exile_raid_ongoing
+
+		# Select a target empire
+		random_country = {
+			limit = {
+				is_country_type = default
+				any_owned_planet = {
+					pop_amount > 0
+				}
+			}
+			save_event_target_as = fex_exile_raid_target
+
+			# Select a target planet
+			random_owned_planet = {
+				limit = { pop_amount > 0 }
+				save_event_target_as = fex_exile_raid_planet
+				solar_system = {
+					save_event_target_as = fex_exile_raid_target_system
+				}
+			}
+
+			# Establish communications if needed and send first contact event
+			if = {
+				limit = {
+					NOT = { has_communications = root }
+				}
+				establish_communications_no_message = root
+				country_event = { id = fex_flavour.60 }
+			}
+
+			# Notify the target
+			country_event = { id = fex_flavour.63 }
+		}
+
+		# Dispatch the fleet
+		random_controlled_fleet = {
+			limit = {
+				has_fleet_flag = fex_exile_raiding_fleet
+				is_in_combat = no
+				solar_system = { has_star_flag = fex_xenophobe_exiles_system }
+			}
+			set_fleet_flag = fex_exile_raid_active
+			set_fleet_stance = aggressive
+			set_fleet_bombardment_stance = indiscriminate
+			set_aggro_range_measure_from = self
+			set_aggro_range = 150
+			auto_move_to_planet = {
+				target = event_target:fex_exile_raid_planet
+				clear_auto_move_on_arrival = no
+			}
+		}
+	}
+}
+
+# Exile raid bombardment - fired via on_planet_bombarded
+# Scope = Planet, From = Bombarder (country)
+planet_event = {
+	id = fex_flavour.72
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		planet_devastation >= 50
+		from = { is_country_type = fex_exiles_country }
+		owner = {
+			is_country_type = default
+		}
+		NOT = { has_planet_flag = fex_exile_planet_raided }
+	}
+
+	immediate = {
+		set_timed_planet_flag = {
+			flag = fex_exile_planet_raided
+			days = 600
+		}
+
+		# Notify the planet owner and apply raid effects
+		save_event_target_as = fex_exile_raided_planet
+		owner = {
+			country_event = { id = fex_flavour.73 }
+		}
+
+		# Send the fleet home
+		from = {
+			random_controlled_fleet = {
+				limit = { has_fleet_flag = fex_exile_raid_active }
+				fex_end_exile_raid = yes
+			}
+		}
+	}
+}
+
+# Notification to player: planet raided by exiles, apply raid effects
+country_event = {
+	id = fex_flavour.73
+	title = fex_flavour.73.title
+	desc = fex_flavour.73.desc
+	picture = GFX_evt_burning_settlement
+	show_sound = event_ground_battle
+	location = event_target:fex_exile_raided_planet
+
+	is_triggered_only = yes
+
+	immediate = {
+		# Steal pops - take up to 3 pops (100 each) and move them to the exile habitat
+		event_target:fex_exile_raided_planet = {
+			while = {
+				count = 3
+				random_owned_pop_group = {
+					limit = {
+						is_robotic_species = no
+						pop_group_size >= 100
+					}
+					save_event_target_as = fex_stolen_pop_group
+					remove_pop_amount = 100
+				}
+				event_target:fex_xenophobe_exiles_country.capital_scope = {
+					create_pop = {
+						species = event_target:fex_stolen_pop_group.species
+						size = 100
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = fex_flavour.73.a
+	}
+}

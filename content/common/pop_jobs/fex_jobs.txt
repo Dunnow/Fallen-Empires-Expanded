@@ -12,7 +12,7 @@ fex_xeno_game = {
 	possible_pre_triggers = {
 		has_owner = yes
 		is_sapient = yes
-		is_robot_pop = no
+		is_robotic = no
 	}
 
 	possible_precalc = can_fill_precursor_job
@@ -68,7 +68,7 @@ fex_xeno_hunter = {
 	swappable_data = {
 		default = {
 			building_icon = building_fex_hunting_lodges
-    		icon = hunter
+    		icon = hunter_gatherer
 		}
 	}
 
@@ -128,7 +128,7 @@ fex_exodite_hunter = {
 	swappable_data = {
 		default = {
 			building_icon = building_crude_huts
-    		icon = hunter
+    		icon = hunter_gatherer
 		}
 	}
 
@@ -288,7 +288,6 @@ fex_exodite_druid = {
 	}
 }
 
-
 fex_monk = {
 	category = precursor
 	is_capped_by_modifier = yes
@@ -412,7 +411,7 @@ fex_arena_slave = {
 	possible_pre_triggers = {
 		has_owner = yes
 		is_sapient = yes
-		is_robot_pop = no
+		is_robotic = no
 	}
 
 	possible = {
@@ -466,7 +465,7 @@ fex_blood_serf = {
 	possible_pre_triggers = {
 		has_owner = yes
 		is_sapient = yes
-		is_robot_pop = no
+		is_robotic = no
 	}
 
 	possible = {

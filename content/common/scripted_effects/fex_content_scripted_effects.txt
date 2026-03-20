@@ -94,8 +94,35 @@ fex_create_shroud_tear_defense_fleet = {
     }
 }
 
+# Removes all vanilla leader traits that add jobs to planets
+# Scoped to a leader
+fex_clear_job_adding_traits = {
+	# Generic traits
+	remove_trait = leader_trait_capitalist
+	remove_trait = leader_trait_capitalist_2
+	remove_trait = leader_trait_private_mines
+	remove_trait = leader_trait_private_mines_2
+	remove_trait = leader_trait_homesteader
+	remove_trait = leader_trait_homesteader_2
+	remove_trait = leader_trait_scrapper
+	remove_trait = leader_trait_scrapper_2
+	remove_trait = leader_trait_entrepreneur
+	remove_trait = leader_trait_entrepreneur_2
+	remove_trait = leader_trait_venerated
+	remove_trait = leader_trait_venerated_2
+	remove_trait = leader_trait_gifted_2
+	# Governor traits
+	remove_trait = leader_trait_enlister
+	# Paragon traits
+	remove_trait = leader_trait_legendary_ancestors_knowledge
+	# Shroud traits
+	remove_trait = leader_trait_shroudshaper
+	# Other
+	remove_trait = leader_trait_academia_recruiter
+}
+
 fex_create_shroud_incursion_fleet = {
-	#Create Shroud Country
+	# Create Shroud Country
 	if = {
 		limit = { NOT = { exists = event_target:shroud_country } }
 		create_country = {

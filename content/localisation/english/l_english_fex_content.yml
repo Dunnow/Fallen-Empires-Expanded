@@ -58,7 +58,7 @@
  fex_fe_exodite_terraforming_desc: "This world is perfectly suited to hosting life. Its thriving ecosystems are almost unnaturally robust. This could be the result of meddling by a forerunner civilization."
 
  fex_overgrown_world: "Overgrown World"
- fex_overgrown_world_desc: "The flora of this world is unnaturally quick to grow, smothering all surfaces and taking mere days to grow from nothing to a considerable size."
+ fex_overgrown_world_desc: "The flora of this world is unnaturally quick to grow, smothering all surfaces and taking mere days to expand from nothing to a considerable size."
 
  fex_buried_relic_world: "Buried Ruins"
  fex_buried_relic_world_desc: "[fex_buried_relic_scripted] of this world, the remains of enormous ancient cities can be found, decayed and worn by the passage of time."
@@ -68,7 +68,7 @@
  fex_buried_relic_default: "Buried across the landscape"
 
  fex_fe_burial_grounds: "Ancient Burial Grounds"
- fex_fe_burial_grounds_desc: "This planet hosts a number of ancient tombs and burial complexes belonging to an ancient alien race."
+ fex_fe_burial_grounds_desc: "This planet hosts a number of ancient tombs and burial complexes belonging to a primeval alien race."
 
  fex_fe_ancient_bombardment: "Ancient Bombardment"
  fex_fe_ancient_bombardment_desc: "This world is covered in the faded scars of a massive orbital bombardment. The ground is unstable and pockmarked by the eroded remains of ancient craters."
@@ -136,7 +136,7 @@
 
  job_fex_exile_priest: "Purity Priest"
  job_fex_exile_priest_plural: "Purity Priests"
- job_fex_exile_priest_desc: "These priests conduct cruel rituals to assert their species' divine superiority over all lesser, primitive beings"
+ job_fex_exile_priest_desc: "These priests conduct cruel rituals to assert their species' divine superiority over all lesser, primitive beings."
  mod_job_fex_exile_priest_add: "$job_fex_exile_priest$ Jobs"
 
  # Buildings
@@ -170,7 +170,7 @@
 
  # Decisions
  fex_tomb_raiding: "Excavate Burial Complex"
- fex_tomb_raiding_desc: "This world contains a number of ancient tombs constructed by an advanced alien civilization. We would benefit "
+ fex_tomb_raiding_desc: "This world contains a number of ancient tombs constructed by an advanced alien civilization. We would benefit from investigating these aged structures."
  fex_tomb_raiding_tt: "[fex_tomb_raiding_tt_scripted]"
  fex_tomb_raiding_tt_default: "Excavate a Fallen Empire tomb, potentially recovering valuable resources."
  fex_tomb_raiding_tt_advantage: "$fex_tomb_raiding_tt_default$\n\n§YWe are more likely to be successful on this world.§!"
@@ -182,13 +182,15 @@
  col_fex_exodite_age_desc: "$col_primitive_desc$"
  col_fex_fe_frontier_world: "Fringe World"
  col_fex_fe_frontier_world_desc: "This world exists at the periphery of an incredibly advanced ancient empire."
+ col_fex_exile_hab: "Exile Habitat"
+ col_fex_exile_hab_desc: "This habitat is home to a civilization of technologically advanced raiders and plunderers."
 
  pop_cat_fex_exodus_precursor: "Exodus Precursor"
  pop_cat_fex_exodus_precursor_plural: "Exodus Precursors"
  pop_cat_fex_exodus_precursor_desc: "These individuals have consciously chosen to reject the decadent luxuries of their homeworlds in favor of leading a simpler life on the fringes of civilization."
  pop_cat_fex_exile_precursor: "Exile Precursor"
  pop_cat_fex_exile_precursor_plural: "Exile Precursors"
- pop_cat_fex_exile_precursor_desc: "Cast out from their home society millennia ago, those precursors revel in unchecked barbarism."
+ pop_cat_fex_exile_precursor_desc: "Cast out from their home society millennia ago, these precursors revel in unchecked barbarism."
  pop_cat_fex_primitive_slave: "Primitive Slave"
  pop_cat_fex_primitive_slave_plural: "Primitive Slaves"
  pop_cat_fex_primitive_slave_desc: "Wretched masses cowering from their cruel masters."

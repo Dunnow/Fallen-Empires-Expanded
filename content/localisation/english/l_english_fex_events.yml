@@ -32,7 +32,7 @@
  fex_flavour.32.a: "Unfortunate."
 
  fex_flavour.33.title: "Fruitless Endeavours"
- fex_flavour.33.desc: "We do not seem to be the first to have explored the tombs of [This.GetName]. The complex bear the marks of being entered several times, centuries apart. The treasure rooms and burial chambers have been meticulously picked clean.\n\nAlthough we can develop our understanding of the [event_target:fex_burial_origin_country.GetAdj] culture that buried their dead here by examining the markings of the tomb, we have missed out on obtaining any of the artifacts that may have once been buried here."
+ fex_flavour.33.desc: "We do not seem to be the first to have explored the tombs of [This.GetName]. The complex bears the marks of having been entered several times, centuries apart. The treasure rooms and burial chambers have been meticulously picked clean.\n\nAlthough we can develop our understanding of the [event_target:fex_burial_origin_country.GetAdj] culture that buried their dead here by examining the markings of the tomb, we have missed out on obtaining any of the artifacts that may have once been buried here."
  fex_flavour.33.a: "Disappointing."
 
  fex_flavour.41.title: "Voidspawn Incursion"
@@ -40,7 +40,7 @@
  fex_flavour.41.a: "$BATTLESTATIONS$"
 
  fex_flavour.42.title: "Unwelcome Visitors"
- fex_flavour.42.desc: "The [event_target:fex_shroud_tear_system.GetName] system has come under attack by some sort of extradimensional entities that emerged from the System's rift.\n\nAlthough the entities have been dispelled, some spacetime anomalies and odd sensor readings remain.\n\nWe have an opportunity to investigate further and learn more about these creatures."
+ fex_flavour.42.desc: "The [event_target:fex_shroud_tear_system.GetName] system has come under attack by some sort of extradimensional entities that emerged from the system's rift.\n\nAlthough the entities have been dispelled, some spacetime anomalies and odd sensor readings remain.\n\nWe have an opportunity to investigate further and learn more about these creatures."
  fex_flavour.42.a: "Make it so."
 
  fex_flavour.43.title: "Peeking Beyond the Veil"
@@ -59,3 +59,33 @@
  fex_flavour.50.c: "End transmission."
  fex_machine_fe_name_specific: "[event_target:fex_machine_fe.GetName]"
  fex_machine_fe_name_generic: "ruins of ancient civilizations"
+
+ fex_flavour.60.desc: "[This.species.GetNamePlural]. We are aware of you. Know that the stars beyond your borders are not as empty as you may believe.\n\nWe are the [From.GetName]. You will come to know us in time. All do, eventually."
+ fex_flavour.60.a: "Who are you?"
+ fex_flavour.60.a.response: "We are old, [This.species.GetName]. Old enough to remember when your worlds were quiet and empty. Our ancestors were ancient when the stars themselves were young.\n\nThose who sired us lacked the will to do what was necessary. We did not share their hesitation."
+ fex_flavour.60.b: "What do you want from us?"
+ fex_flavour.60.b.response: "Want? An interesting choice of word. One does not ask the harvest what it wants.\n\nGo about your affairs, [This.species.GetNameInsult]. We will find you when we have need."
+ fex_flavour.60.c: "End transmission."
+
+ fex_flavour.67.desc: "Ah, the [This.species.GetNamePlural] again. How pleasant. We so rarely receive willing callers.\n\nTo what do we owe the pleasure?"
+ fex_flavour.67.a: "We wish to negotiate."
+ fex_flavour.67.a.response: "Negotiate. You seem fond of that word.\n\nWe have found that the most productive arrangements are those in which we set the terms.\n\nWe are not interested in your mewling."
+ fex_flavour.67.b: "Is there anything we can offer you to aid us against one of our rivals?"
+ fex_flavour.67.b.response: "We do not take orders. The answer is no."
+ fex_flavour.67.c: "End transmission."
+
+ fex_flavour.62.title: "Raiding Party Sighted"
+ fex_flavour.62.desc: "Our sensors have detected a hostile fleet moving through the [event_target:fex_raider_spotted_system.GetName] system. The vessel signatures match those of the [event_target:fex_xenophobe_exiles_country.GetName].\n\nThe fleet appears to be a raiding party of some kind. Several of the ships bear visible battle damage and what appear to be crude trophies affixed to their hulls.\n\nTheir intentions are unclear, but unmistakeably hostile."
+ fex_flavour.62.a: "Noted."
+
+ fex_flavour.63.title: "[event_target:fex_xenophobe_exiles_country.GetName] Raiding Expedition"
+ fex_flavour.63.desc: "Our long range sensor teams have detected a [event_target:fex_xenophobe_exiles_country.GetName] fleet on a direct course for the [event_target:fex_exile_raid_target_system.GetName] system.\n\nThe fleet composition and heading suggest this is a deliberate raiding expedition rather than a chance encounter.\n\nAt their current speed, they will reach our borders shortly. We have limited time to prepare."
+ fex_flavour.63.a: "$BATTLESTATIONS$"
+
+ fex_flavour.65.title: "A Dark Haven"
+ fex_flavour.65.desc: "The [This.GetName] has entered the [event_target:fex_xenophobe_exiles_system.GetName] system. Scans have detected a large habitat in orbit around one of the inner planets, heavily fortified and bristling with weaponry.\n\nThe station appears to be of ancient precursor construction, though it has been extensively modified over the millennia. Its hull bears the scars of countless battles and crude expansions.\n\nWe are also detecting a significant number of alien life signs aboard the station, many of which do not match the dominant species. It is unclear what purpose they serve."
+ fex_flavour.65.a: "Noted."
+
+ fex_flavour.73.title: "[event_target:fex_exile_raided_planet.GetName] Raided"
+ fex_flavour.73.desc: "The [event_target:fex_xenophobe_exiles_country.GetAdj] raiding fleet has completed its assault on [event_target:fex_exile_raided_planet.GetName]. Reports from the surface indicate that the raiders seized a number of our citizens before withdrawing.\n\nThe abductees were loaded onto transport vessels and carried off. Their fate is uncertain, though given what we know of the exiles, it is unlikely to be a merciful one.\n\nThe raiding fleet has now departed the system."
+ fex_flavour.73.a: "Grim news."

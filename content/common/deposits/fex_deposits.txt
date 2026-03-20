@@ -6,9 +6,10 @@
 d_fex_forgotten_archives = {
     icon = d_fex_archives
 	is_for_colonizable = yes
-	use_for_min_max_adjustments = yes
 
 	category = deposit_cat_rare
+
+	potential = { always = no }
 
 	resources = {
 		produces = {
@@ -26,9 +27,10 @@ d_fex_forgotten_archives = {
 d_fex_ruined_monuments = {
     icon = d_fex_ruins
 	is_for_colonizable = yes
-	use_for_min_max_adjustments = yes
 
 	category = deposit_cat_rare
+
+	potential = { always = no }
 
 	resources = {
 		produces = {
@@ -47,6 +49,8 @@ d_fex_ruined_wastes_blocker = {
 	icon = d_radioactive_wasteland
 	is_for_colonizable = yes
 	category = deposit_cat_blockers_natural
+
+	potential = { always = no }
 
 	resources = {
 		category = deposit_blockers_natural
@@ -75,9 +79,10 @@ d_fex_ruined_wastes_blocker = {
 d_fex_ancient_ai_core = {
 	icon = d_fex_ai_core
 	is_for_colonizable = yes
-	use_for_min_max_adjustments = yes
 
 	category = deposit_cat_rare
+
+	potential = { always = no }
 
 	resources = {
 		produces = {
@@ -125,9 +130,10 @@ d_fex_ancient_ai_core = {
 d_fex_shattered_ai_core = {
 	icon = default_blocker
 	is_for_colonizable = yes
-	use_for_min_max_adjustments = yes
 
 	category = deposit_cat_rare
+
+	potential = { always = no }
 
 	resources = {
 		produces = {
@@ -143,9 +149,10 @@ d_fex_shattered_ai_core = {
 d_fex_leviathan_preserves = {
 	icon = d_titanic_life_blocker
 	is_for_colonizable = yes
-	use_for_min_max_adjustments = yes
 
 	category = deposit_cat_rare
+
+	potential = { always = no }
 
 	resources = {
 		produces = {
@@ -183,10 +190,10 @@ d_fex_leviathan_preserves = {
 d_fex_ancient_citadels = {
 	icon = d_fex_mountain_building
 	is_for_colonizable = yes
-	use_for_min_max_adjustments = yes
 
 	category = deposit_cat_rare
 
+	potential = { always = no }
 
 	planet_modifier = {
 		planet_orbital_bombardment_damage = -0.25
@@ -217,12 +224,14 @@ d_fex_ancient_citadels = {
 		weight = 0
 	}
 }
+
 d_fex_crypt_monument = {
 	icon = d_monument
 	is_for_colonizable = yes
-	use_for_min_max_adjustments = yes
 
 	category = deposit_cat_rare
+
+	potential = { always = no }
 
 	resources = {
 		produces = {
@@ -241,9 +250,10 @@ d_fex_crypt_monument = {
 d_fex_ancient_barrows = {
 	icon = d_fex_ruins
 	is_for_colonizable = yes
-	use_for_min_max_adjustments = yes
 
 	category = deposit_cat_rare
+
+	potential = { always = no }
 
 	resources = {
 		produces = {
@@ -263,9 +273,10 @@ d_fex_ancient_barrows = {
 d_fex_imperial_tombs = {
 	icon = d_fex_tomb
 	is_for_colonizable = yes
-	use_for_min_max_adjustments = yes
 
 	category = deposit_cat_rare
+
+	potential = { always = no }
 
 	resources = {
 		produces = {
@@ -285,9 +296,10 @@ d_fex_imperial_tombs = {
 d_fex_ancient_gene_vault = {
 	icon = default_blocker
 	is_for_colonizable = yes
-	use_for_min_max_adjustments = yes
 
 	category = deposit_cat_rare
+
+	potential = { always = no }
 
 	resources = {
 		produces = {
@@ -304,9 +316,10 @@ d_fex_ruined_fe_cities = {
 	icon = d_ruins_medium
 
 	is_for_colonizable = yes
-	use_for_min_max_adjustments = yes
 
 	category = deposit_cat_rare
+
+	potential = { always = no }
 
 	planet_modifier = {
 		planet_jobs_society_research_produces_mult = 0.1

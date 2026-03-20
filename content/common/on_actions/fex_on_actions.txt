@@ -1,18 +1,18 @@
 on_game_start = {
     events = {
-        fex_core.1
+        fex_core.1 # FEX global initialisation
     }
 }
 
 on_game_start_country = {
     events = {
-        fex_core.2
+        fex_core.2 # Per-country FEX setup (FE world flavour, discoverables, etc.)
     }
 }
 
 on_survey_planet = {
     events = {
-        fex_flavour.10
+        fex_flavour.10 # Discover exodite primitives on surveyed planet
     }
 }
 
@@ -21,24 +21,48 @@ on_survey_planet = {
 # FromFrom = Former Owner
 on_planet_transfer = {
     events = {
-        fex_flavour.12
+        fex_flavour.12 # Xenophile FE responds to player colonising an exodite world
     }
 }
 
 on_yearly_pulse = {
     events = {
-        fex_flavour.40
+        fex_flavour.40 # Shroud tear voidspawn incursion check
+        fex_flavour.70 # Exile raid roll
     }
 }
 
 on_space_battle_won = {
     events = {
-        fex_flavour.42
+        fex_flavour.42 # Post-battle investigation after defeating shroud tear entities
     }
 }
 
 on_post_communications_established = {
     events = {
-        fex_flavour.50
+        fex_flavour.50 # First contact with scavenger enclave
+        fex_flavour.60 # First contact with exiles
+    }
+}
+
+# Scope = Fleet, From = System
+on_entering_system_fleet = {
+    events = {
+        fex_flavour.61 # Exile raiding fleet spotted passing through player territory
+        fex_flavour.64 # Player fleet enters exile home system
+    }
+}
+
+# This = Country (player), From = Country (target)
+on_custom_diplomacy = {
+    events = {
+        fex_flavour.66 # Exile diplomacy gatekeeper
+    }
+}
+
+# This = Planet, From = Bombarder (country)
+on_planet_bombarded = {
+    events = {
+        fex_flavour.72 # Exile raid bombardment effects
     }
 }
