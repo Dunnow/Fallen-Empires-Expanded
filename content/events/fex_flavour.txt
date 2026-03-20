@@ -854,7 +854,7 @@ country_event = {
 		is_dialog_only = yes
 	}
 	option = {
-		name = fex_flavour.67.b
+		name = fex_flavour.67.c
 	}
 }
 
