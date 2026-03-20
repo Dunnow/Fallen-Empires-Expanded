@@ -850,6 +850,11 @@ country_event = {
 	}
 	option = {
 		name = fex_flavour.67.b
+		response_text = fex_flavour.67.b.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = fex_flavour.67.b
 	}
 }
 
