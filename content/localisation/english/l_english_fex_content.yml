@@ -240,3 +240,12 @@
  FEX_SHROUD_RIFT_INVESTIGATION_DESC: "The mysterious Rift in the [event_target:fex_shroud_tear_system.GetName] system is host to a number of hostile entities. We cannot respond appropriately without a better understanding of the phenomena at play."
  FEX_CLOSE_THE_RIFT: "Close the Rift"
  FEX_CLOSE_THE_RIFT_DESC: "The Shroud Rift in the [event_target:fex_shroud_tear_system.GetName] system will continue allowing hostile Psionic Entities to manifest as long as we leave it open.\n\nBy carefully manipulating the Zro deposits in the system that help sustain the Rift, we believe we can induce it to close."
+
+ NAME_fex_religious_order_station: "Pilgrim's Rest"
+ NAME_fex_religious_order_ship: "Pilgrim's Rest"
+ fex_religious_order_country_name: "[This.owner_main_species.GetAdj] Sacred Order"
+ NAME_fex_religious_order_system: "Sanctum"
+ NAME_fex_religious_order_holy_world: "Luminis"
+
+ fex_leader_trait_pilgrim_soul: "Pilgrim Soul"
+ fex_leader_trait_pilgrim_soul_desc: "This leader undertook a sacred pilgrimage to the holy world of the [event_target:fex_religious_order_country.GetName]. The experience has left a profound and lasting mark upon them."

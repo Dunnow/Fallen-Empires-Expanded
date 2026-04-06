@@ -1,0 +1,17 @@
+# Pilgrimage reward trait
+fex_leader_trait_pilgrim_soul = {
+	leader_trait_type = veteran
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_resilient"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = none
+	}
+	# TODO: Add real modifiers
+	self_modifier = {
+		species_leader_exp_gain = 0.25
+	}
+	leader_class = { commander scientist official }
+}
