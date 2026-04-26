@@ -20,6 +20,16 @@ fex_civic_archaeotech_legacy = {
 	modifier = { }
 }
 
+fex_civic_sacred_order = {
+	modification = no
+	icon = "gfx/interface/icons/governments/civics/civic_exalted_priesthood.dds"
+	potential = {
+		country_type = { value = fex_trader_enclave }
+	}
+	random_weight = { base = @civic_default_random_weight }
+	modifier = { }
+}
+
 fex_civic_blood_exiles = {
 	modification = no
 	icon = "gfx/interface/icons/governments/civics/civic_warrior_culture.dds"

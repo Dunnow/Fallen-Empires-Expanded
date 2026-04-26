@@ -4,6 +4,7 @@ room_selector = {
 	game_setup = {
 		"fex_exodite_room" = { always = yes }
 		"fex_scavenger_enclave_room" = { always = yes }
+		"fex_sacred_order_enclave_room" = { always = yes }
 	}
 
 	#leader scope
@@ -18,6 +19,9 @@ room_selector = {
 			#}
 		}
 		"fex_scavenger_enclave_room" = {
+			always = yes
+		}
+		"fex_sacred_order_enclave_room" = {
 			always = yes
 		}
 	}

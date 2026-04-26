@@ -118,6 +118,9 @@ fex_create_religious_order_enclave = {
 			name = random
 			type = fex_trader_enclave
 			authority = "auth_oligarchic"
+			civics = {
+				civic = fex_civic_sacred_order
+			}
 			origin = "origin_default"
 			species = event_target:fex_spiritualist_fe.species
 			flag = {
@@ -180,7 +183,7 @@ fex_create_religious_order_enclave = {
 					}
 				}
 				set_leader = last_created_leader
-				room_name_override = "personality_spiritual_seekers_room"
+				room_name_override = "fex_sacred_order_enclave_room"
 				# Establish relations with parent FE
 				establish_communications = event_target:fex_spiritualist_fe
 				set_faction_hostility = {
