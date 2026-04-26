@@ -999,445 +999,6 @@ planet_event = {
 	}
 }
 
-# ==========================================
-# Religious Order Enclave Events (80-85)
-# ==========================================
-
-# Religious Order first contact
-country_event = {
-	id = fex_flavour.80
-	title = TRANSMISSION
-	desc = fex_flavour.80.desc
-	is_triggered_only = yes
-	diplomatic = yes
-
-	trigger = {
-		exists = event_target:fex_religious_order_country
-		from = {
-			is_same_value = event_target:fex_religious_order_country
-		}
-	}
-
-	picture_event_data = {
-		room = personality_spiritual_seekers_room
-		portrait = event_target:fex_religious_order_country.species
-	}
-
-	option = {
-		name = fex_flavour.80.a
-		response_text = fex_flavour.80.a.response
-		is_dialog_only = yes
-	}
-	option = {
-		name = fex_flavour.80.b
-		response_text = fex_flavour.80.b.response
-		is_dialog_only = yes
-	}
-	option = {
-		name = fex_flavour.80.c
-	}
-}
-
-# Religious Order diplomacy gatekeeper
-country_event = {
-	id = fex_flavour.81
-	hide_window = yes
-	is_triggered_only = yes
-
-	trigger = {
-		exists = event_target:fex_religious_order_country
-		from = {
-			is_same_value = event_target:fex_religious_order_country
-		}
-	}
-
-	immediate = {
-		country_event = { id = fex_flavour.82 }
-	}
-}
-
-# Religious Order main diplomacy menu
-country_event = {
-	id = fex_flavour.82
-	title = TRANSMISSION
-	desc = fex_flavour.82.desc
-	diplomatic = yes
-	force_open = yes
-	is_triggered_only = yes
-
-	picture_event_data = {
-		room = personality_spiritual_seekers_room
-		portrait = event_target:fex_religious_order_country.species
-	}
-
-	# Seek Wisdom - repeatable
-	option = {
-		name = fex_flavour.82.a
-		trigger = {
-			NAND = {
-				exists = event_target:fex_spiritualist_fe
-				event_target:fex_spiritualist_fe = { is_awakened_fallen_empire = yes }
-			}
-		}
-		allow = {
-			custom_tooltip = {
-				fail_text = fex_flavour.82.a.blocked
-				NOT = { has_country_flag = fex_seek_wisdom_cooldown }
-			}
-		}
-		country_event = { id = fex_flavour.85 }
-	}
-
-	# Pilgrimage - gated behind 5 wisdom sessions
-	option = {
-		name = fex_flavour.82.b
-		trigger = {
-			NAND = {
-				exists = event_target:fex_spiritualist_fe
-				event_target:fex_spiritualist_fe = { is_awakened_fallen_empire = yes }
-			}
-		}
-		allow = {
-			custom_tooltip = {
-				fail_text = fex_flavour.82.b.blocked.wisdom
-				check_variable = { which = fex_wisdom_sought_count value >= 5 }
-			}
-			custom_tooltip = {
-				fail_text = fex_flavour.82.b.blocked.active
-				NOT = { has_country_flag = fex_pilgrimage_active }
-			}
-		}
-		country_event = { id = fex_flavour.83 }
-	}
-
-	# Tell us about this place
-	option = {
-		name = fex_flavour.82.c
-		trigger = {
-			NAND = {
-				exists = event_target:fex_spiritualist_fe
-				event_target:fex_spiritualist_fe = { is_awakened_fallen_empire = yes }
-			}
-		}
-		response_text = fex_flavour.82.c.response
-		is_dialog_only = yes
-	}
-
-	# Tell us about this place - FE has awakened
-	option = {
-		name = fex_flavour.82.c
-		trigger = {
-			exists = event_target:fex_spiritualist_fe
-			event_target:fex_spiritualist_fe = { is_awakened_fallen_empire = yes }
-		}
-		response_text = fex_flavour.82.c.response.awakened
-		is_dialog_only = yes
-	}
-
-	# End transmission
-	option = {
-		name = fex_flavour.82.d
-	}
-}
-
-# Pilgrimage: choose leader
-# Rolls/refreshes 3 leader candidates, then presents choice
-country_event = {
-	id = fex_flavour.83
-	title = TRANSMISSION
-	desc = fex_flavour.83.desc
-	diplomatic = yes
-	is_triggered_only = yes
-
-	picture_event_data = {
-		room = personality_spiritual_seekers_room
-		portrait = event_target:fex_religious_order_country.species
-	}
-
-	immediate = {
-		# Reroll any missing candidates
-		if = {
-			limit = {
-				OR = {
-					NOT = { exists = event_target:fex_pilgrim_candidate_1 }
-					event_target:fex_pilgrim_candidate_1 = { is_alive = no }
-				}
-			}
-			random_owned_leader = {
-				limit = {
-					is_ruler = no
-					NOT = { has_leader_flag = fex_pilgrim_candidate }
-					NOT = { has_trait = fex_leader_trait_pilgrim_soul }
-				}
-				save_event_target_as = fex_pilgrim_candidate_1
-				set_leader_flag = fex_pilgrim_candidate
-			}
-		}
-		if = {
-			limit = {
-				OR = {
-					NOT = { exists = event_target:fex_pilgrim_candidate_2 }
-					event_target:fex_pilgrim_candidate_2 = { is_alive = no }
-				}
-			}
-			random_owned_leader = {
-				limit = {
-					is_ruler = no
-					NOT = { has_leader_flag = fex_pilgrim_candidate }
-					NOT = { has_trait = fex_leader_trait_pilgrim_soul }
-					NOT = { is_same_value = event_target:fex_pilgrim_candidate_1 }
-				}
-				save_event_target_as = fex_pilgrim_candidate_2
-				set_leader_flag = fex_pilgrim_candidate
-			}
-		}
-		if = {
-			limit = {
-				OR = {
-					NOT = { exists = event_target:fex_pilgrim_candidate_3 }
-					event_target:fex_pilgrim_candidate_3 = { is_alive = no }
-				}
-			}
-			random_owned_leader = {
-				limit = {
-					is_ruler = no
-					NOT = { has_leader_flag = fex_pilgrim_candidate }
-					NOT = { has_trait = fex_leader_trait_pilgrim_soul }
-					NOT = { is_same_value = event_target:fex_pilgrim_candidate_1 }
-					NOT = { is_same_value = event_target:fex_pilgrim_candidate_2 }
-				}
-				save_event_target_as = fex_pilgrim_candidate_3
-				set_leader_flag = fex_pilgrim_candidate
-			}
-		}
-	}
-
-	# Option 1: Send candidate 1
-	option = {
-		name = fex_flavour.83.a
-		trigger = { exists = event_target:fex_pilgrim_candidate_1 }
-		allow = {
-			resource_stockpile_compare = { resource = energy value >= 2000 }
-			resource_stockpile_compare = { resource = unity value >= 500 }
-		}
-		add_resource = { energy = -2000 unity = -500 }
-		set_timed_country_flag = { flag = fex_pilgrimage_active days = 1800 }
-		hidden_effect = {
-			event_target:fex_pilgrim_candidate_1 = {
-				remove_leader_flag = fex_pilgrim_candidate
-				set_leader_flag = fex_on_pilgrimage
-				unassign_leader = this
-				exile_leader_as = fex_pilgrim_exile
-				save_event_target_as = fex_current_pilgrim
-			}
-			country_event = { id = fex_flavour.84 days = 1800 }
-		}
-	}
-
-	# Option 2: Send candidate 2
-	option = {
-		name = fex_flavour.83.b
-		trigger = { exists = event_target:fex_pilgrim_candidate_2 }
-		allow = {
-			resource_stockpile_compare = { resource = energy value >= 2000 }
-			resource_stockpile_compare = { resource = unity value >= 500 }
-		}
-		add_resource = { energy = -2000 unity = -500 }
-		set_timed_country_flag = { flag = fex_pilgrimage_active days = 1800 }
-		hidden_effect = {
-			event_target:fex_pilgrim_candidate_2 = {
-				remove_leader_flag = fex_pilgrim_candidate
-				set_leader_flag = fex_on_pilgrimage
-				unassign_leader = this
-				exile_leader_as = fex_pilgrim_exile
-				save_event_target_as = fex_current_pilgrim
-			}
-			country_event = { id = fex_flavour.84 days = 1800 }
-		}
-	}
-
-	# Option 3: Send candidate 3
-	option = {
-		name = fex_flavour.83.c
-		trigger = { exists = event_target:fex_pilgrim_candidate_3 }
-		allow = {
-			resource_stockpile_compare = { resource = energy value >= 2000 }
-			resource_stockpile_compare = { resource = unity value >= 500 }
-		}
-		add_resource = { energy = -2000 unity = -500 }
-		set_timed_country_flag = { flag = fex_pilgrimage_active days = 1800 }
-		hidden_effect = {
-			event_target:fex_pilgrim_candidate_3 = {
-				remove_leader_flag = fex_pilgrim_candidate
-				set_leader_flag = fex_on_pilgrimage
-				unassign_leader = this
-				exile_leader_as = fex_pilgrim_exile
-				save_event_target_as = fex_current_pilgrim
-			}
-			country_event = { id = fex_flavour.84 days = 1800 }
-		}
-	}
-
-	# Go back
-	option = {
-		name = fex_flavour.83.d
-		country_event = { id = fex_flavour.82 }
-	}
-}
-
-# Pilgrimage: leader returns
-country_event = {
-	id = fex_flavour.84
-	title = fex_flavour.84.title
-	desc = fex_flavour.84.desc
-	picture = GFX_evt_shroudwalker_enclave
-	is_triggered_only = yes
-
-	immediate = {
-		remove_country_flag = fex_pilgrimage_active
-		# Return the leader
-		clone_leader = {
-			target = event_target:fex_current_pilgrim
-		}
-		last_created_leader = {
-			add_trait = fex_leader_trait_pilgrim_soul
-			remove_leader_flag = fex_on_pilgrimage
-			save_event_target_as = fex_returned_pilgrim
-		}
-	}
-
-	option = {
-		name = fex_flavour.84.a
-	}
-}
-
-# Seek Wisdom: confirm and pay
-country_event = {
-	id = fex_flavour.85
-	title = TRANSMISSION
-	desc = fex_flavour.85.desc
-	diplomatic = yes
-	is_triggered_only = yes
-
-	picture_event_data = {
-		room = personality_spiritual_seekers_room
-		portrait = event_target:fex_religious_order_country.species
-	}
-
-	option = {
-		name = fex_flavour.85.a
-		allow = {
-			resource_stockpile_compare = { resource = energy value >= 5000 }
-		}
-		add_resource = { energy = -5000 }
-		set_timed_country_flag = { flag = fex_seek_wisdom_cooldown days = 2700 }
-		change_variable = { which = fex_wisdom_sought_count value = 1 }
-		hidden_effect = {
-			event_target:fex_religious_order_country = {
-				add_trust = {
-					who = root
-					amount = 5
-				}
-			}
-			country_event = { id = fex_flavour.86 }
-		}
-	}
-	option = {
-		name = fex_flavour.85.b
-		country_event = { id = fex_flavour.82 }
-	}
-}
-
-# Seek Wisdom: outcome
-country_event = {
-	id = fex_flavour.86
-	title = TRANSMISSION
-	desc = fex_flavour.86.desc
-	diplomatic = yes
-	is_triggered_only = yes
-
-	picture_event_data = {
-		room = personality_spiritual_seekers_room
-		portrait = event_target:fex_religious_order_country.species
-	}
-
-	immediate = {
-		random_list = {
-			40 = { set_country_flag = fex_wisdom_result_nothing }
-			25 = { set_country_flag = fex_wisdom_result_minor }
-			20 = { set_country_flag = fex_wisdom_result_moderate }
-			10 = { set_country_flag = fex_wisdom_result_major }
-			5 = { set_country_flag = fex_wisdom_result_psionic }
-		}
-	}
-
-	# Cryptic nonsense
-	option = {
-		name = fex_flavour.86.a
-		trigger = { has_country_flag = fex_wisdom_result_nothing }
-		custom_tooltip = fex_flavour.86.a.tooltip
-		hidden_effect = { remove_country_flag = fex_wisdom_result_nothing }
-	}
-
-	# Minor insight - small unity
-	option = {
-		name = fex_flavour.86.b
-		trigger = { has_country_flag = fex_wisdom_result_minor }
-		add_monthly_resource_mult = {
-			resource = unity
-			value = 3
-			min = 100
-			max = 9999
-		}
-		hidden_effect = { remove_country_flag = fex_wisdom_result_minor }
-	}
-
-	# Meaningful wisdom - society research
-	option = {
-		name = fex_flavour.86.c
-		trigger = { has_country_flag = fex_wisdom_result_moderate }
-		add_monthly_resource_mult = {
-			resource = society_research
-			value = 6
-			min = 200
-			max = 9999
-		}
-		hidden_effect = { remove_country_flag = fex_wisdom_result_moderate }
-	}
-
-	# Deep revelation - large society research
-	option = {
-		name = fex_flavour.86.d
-		trigger = { has_country_flag = fex_wisdom_result_major }
-		add_monthly_resource_mult = {
-			resource = society_research
-			value = 12
-			min = 500
-			max = 9999
-		}
-		hidden_effect = { remove_country_flag = fex_wisdom_result_major }
-	}
-
-	# Psionic glimpse - psionic theory tech boost
-	option = {
-		name = fex_flavour.86.e
-		trigger = { has_country_flag = fex_wisdom_result_psionic }
-		if = {
-			limit = { NOT = { has_technology = tech_psionic_theory } }
-			add_research_option = tech_psionic_theory
-		}
-		else = {
-			add_monthly_resource_mult = {
-				resource = society_research
-				value = 18
-				min = 500
-				max = 9999
-			}
-		}
-		hidden_effect = { remove_country_flag = fex_wisdom_result_psionic }
-	}
-}
-
 # Notification to player: planet raided by exiles, apply raid effects
 country_event = {
 	id = fex_flavour.73
@@ -1474,5 +1035,432 @@ country_event = {
 
 	option = {
 		name = fex_flavour.73.a
+	}
+}
+
+# Religious Order first contact
+country_event = {
+	id = fex_flavour.80
+	title = TRANSMISSION
+	desc = fex_flavour.80.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	trigger = {
+		exists = event_target:fex_spiritualist_enclave_country
+		from = {
+			is_same_value = event_target:fex_spiritualist_enclave_country
+		}
+	}
+
+	picture_event_data = {
+		room = personality_spiritual_seekers_room
+		portrait = event_target:fex_spiritualist_enclave_country.species
+	}
+
+	option = {
+		name = fex_flavour.80.a
+		response_text = fex_flavour.80.a.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = fex_flavour.80.b
+		response_text = fex_flavour.80.b.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = fex_flavour.80.c
+	}
+}
+
+# Religious Order diplomacy gatekeeper
+country_event = {
+	id = fex_flavour.81
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		exists = event_target:fex_spiritualist_enclave_country
+		from = {
+			is_same_value = event_target:fex_spiritualist_enclave_country
+		}
+	}
+
+	immediate = {
+		country_event = { id = fex_flavour.82 }
+	}
+}
+
+# Religious Order main diplomacy menu
+country_event = {
+	id = fex_flavour.82
+	title = TRANSMISSION
+	desc = fex_flavour.82.desc
+	diplomatic = yes
+	force_open = yes
+	is_triggered_only = yes
+
+	picture_event_data = {
+		room = personality_spiritual_seekers_room
+		portrait = event_target:fex_spiritualist_enclave_country.species
+	}
+
+	# Seek Wisdom - repeatable
+	option = {
+		name = fex_flavour.82.a
+		trigger = {
+			NAND = {
+				exists = event_target:fex_spiritualist_fe
+				event_target:fex_spiritualist_fe = { is_country_type = awakened_fallen_empire }
+			}
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = fex_flavour.82.a.blocked
+				NOT = { has_country_flag = fex_seek_wisdom_cooldown }
+			}
+		}
+		country_event = { id = fex_flavour.83 }
+	}
+
+	# Pilgrimage - gated behind 5 wisdom sessions
+	option = {
+		name = fex_flavour.82.b
+		trigger = {
+			NAND = {
+				exists = event_target:fex_spiritualist_fe
+				event_target:fex_spiritualist_fe = { is_country_type = awakened_fallen_empire }
+			}
+		}
+		allow = {
+			custom_tooltip = {
+				text = fex_flavour.82.b.trust
+				event_target:fex_spiritualist_enclave_country = {
+					trust = {
+						who = root
+						value >= 50
+					}
+				}
+			}
+			custom_tooltip = {
+				fail_text = fex_flavour.82.b.blocked.active
+				NOT = { has_country_flag = fex_pilgrimage_active }
+			}
+		}
+		country_event = { id = fex_flavour.85 }
+	}
+
+	# Tell us about this place
+	option = {
+		name = fex_flavour.82.c
+		trigger = {
+			NAND = {
+				exists = event_target:fex_spiritualist_fe
+				event_target:fex_spiritualist_fe = { is_country_type = awakened_fallen_empire }
+			}
+		}
+		response_text = fex_flavour.82.c.response
+		is_dialog_only = yes
+	}
+
+	# Tell us about this place - FE has awakened
+	option = {
+		name = fex_flavour.82.c
+		trigger = {
+			exists = event_target:fex_spiritualist_fe
+			event_target:fex_spiritualist_fe = { is_country_type = awakened_fallen_empire }
+		}
+		response_text = fex_flavour.82.c.response.awakened
+		is_dialog_only = yes
+	}
+
+	# End transmission
+	option = {
+		name = fex_flavour.82.d
+	}
+}
+
+# Seek Wisdom: confirm and pay
+country_event = {
+	id = fex_flavour.83
+	title = TRANSMISSION
+	desc = fex_flavour.83.desc
+	diplomatic = yes
+	is_triggered_only = yes
+
+	picture_event_data = {
+		room = personality_spiritual_seekers_room
+		portrait = event_target:fex_spiritualist_enclave_country.species
+	}
+
+	option = {
+		name = fex_flavour.83.a
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 5000 }
+		}
+		add_resource = { energy = -5000 }
+		set_timed_country_flag = { flag = fex_seek_wisdom_cooldown days = 2700 }
+		hidden_effect = {
+			change_variable = {
+				which = fex_wisdom_sought_count
+				value = 1
+			}
+			event_target:fex_spiritualist_enclave_country = {
+				add_trust = {
+					who = root
+					amount = 5
+				}
+			}
+			country_event = { id = fex_flavour.84 }
+		}
+	}
+	option = {
+		name = fex_flavour.83.b
+		country_event = { id = fex_flavour.82 }
+	}
+}
+
+# Seek Wisdom: outcome
+country_event = {
+	id = fex_flavour.84
+	title = TRANSMISSION
+	desc = fex_flavour.84.desc
+	diplomatic = yes
+	is_triggered_only = yes
+
+	picture_event_data = {
+		room = personality_spiritual_seekers_room
+		portrait = event_target:fex_spiritualist_enclave_country.species
+	}
+
+	immediate = {
+		random_list = {
+			40 = { set_country_flag = fex_wisdom_result_nothing }
+			25 = { set_country_flag = fex_wisdom_result_minor }
+			20 = { set_country_flag = fex_wisdom_result_moderate }
+			10 = { set_country_flag = fex_wisdom_result_major }
+			5 = { set_country_flag = fex_wisdom_result_psionic }
+		}
+	}
+
+	# Cryptic nonsense
+	option = {
+		name = fex_flavour.84.a
+		trigger = { has_country_flag = fex_wisdom_result_nothing }
+		custom_tooltip = fex_flavour.84.a.tooltip
+		hidden_effect = { remove_country_flag = fex_wisdom_result_nothing }
+	}
+
+	# Minor insight - small unity
+	option = {
+		name = fex_flavour.84.b
+		trigger = { has_country_flag = fex_wisdom_result_minor }
+		add_monthly_resource_mult = {
+			resource = unity
+			value = 3
+			min = 100
+			max = 9999
+		}
+		hidden_effect = { remove_country_flag = fex_wisdom_result_minor }
+	}
+
+	# Meaningful wisdom - society research
+	option = {
+		name = fex_flavour.84.c
+		trigger = { has_country_flag = fex_wisdom_result_moderate }
+		add_monthly_resource_mult = {
+			resource = society_research
+			value = 6
+			min = 200
+			max = 9999
+		}
+		hidden_effect = { remove_country_flag = fex_wisdom_result_moderate }
+	}
+
+	# Deep revelation - large society research
+	option = {
+		name = fex_flavour.84.d
+		trigger = { has_country_flag = fex_wisdom_result_major }
+		add_monthly_resource_mult = {
+			resource = society_research
+			value = 12
+			min = 500
+			max = 9999
+		}
+		hidden_effect = { remove_country_flag = fex_wisdom_result_major }
+	}
+
+	# Psionic glimpse - psionic theory tech boost
+	option = {
+		name = fex_flavour.84.e
+		trigger = { has_country_flag = fex_wisdom_result_psionic }
+		if = {
+			limit = { NOT = { has_technology = tech_psionic_theory } }
+			add_research_option = tech_psionic_theory
+		}
+		else = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 18
+				min = 500
+				max = 9999
+			}
+		}
+		hidden_effect = { remove_country_flag = fex_wisdom_result_psionic }
+	}
+}
+
+# Pilgrimage: choose leader
+# Checks we have 3 leader candidates, then presents choice
+country_event = {
+	id = fex_flavour.85
+	title = TRANSMISSION
+	desc = fex_flavour.85.desc
+	diplomatic = yes
+	is_triggered_only = yes
+
+	picture_event_data = {
+		room = personality_spiritual_seekers_room
+		portrait = event_target:fex_spiritualist_enclave_country.species
+	}
+
+	immediate = {
+		# Reroll any missing candidates
+		if = {
+			limit = {
+				NOT = { exists = event_target:fex_pilgrim_candidate_1_@root }
+			}
+			random_owned_leader = {
+				limit = {
+					is_ruler = no
+					NOT = { has_leader_flag = fex_pilgrim_candidate }
+					NOT = { has_trait = fex_leader_trait_pilgrim_soul }
+				}
+				save_global_event_target_as = fex_pilgrim_candidate_1_@root
+				set_leader_flag = fex_pilgrim_candidate
+			}
+		}
+		if = {
+			limit = {
+				NOT = { exists = event_target:fex_pilgrim_candidate_2_@root }
+			}
+			random_owned_leader = {
+				limit = {
+					is_ruler = no
+					NOT = { has_leader_flag = fex_pilgrim_candidate }
+					NOT = { has_trait = fex_leader_trait_pilgrim_soul }
+				}
+				save_global_event_target_as = fex_pilgrim_candidate_2_@root
+				set_leader_flag = fex_pilgrim_candidate
+			}
+		}
+		if = {
+			limit = {
+				NOT = { exists = event_target:fex_pilgrim_candidate_3_@root }
+			}
+			random_owned_leader = {
+				limit = {
+					is_ruler = no
+					NOT = { has_leader_flag = fex_pilgrim_candidate }
+					NOT = { has_trait = fex_leader_trait_pilgrim_soul }
+				}
+				save_global_event_target_as = fex_pilgrim_candidate_3_@root
+				set_leader_flag = fex_pilgrim_candidate
+			}
+		}
+	}
+
+	# Send the first candidate
+	option = {
+		name = fex_flavour.85.a
+		trigger = { exists = event_target:fex_pilgrim_candidate_1_@root }
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 2000 }
+			resource_stockpile_compare = { resource = unity value >= 500 }
+		}
+		add_resource = { energy = -2000 unity = -500 }
+		set_timed_country_flag = { flag = fex_pilgrimage_active days = 1800 }
+		hidden_effect = {
+			event_target:fex_pilgrim_candidate_1_@root = {
+				remove_leader_flag = fex_pilgrim_candidate
+				set_leader_flag = fex_on_pilgrimage
+				unassign_leader = this
+				exile_leader_as = fex_pilgrim_exile_@root
+				save_global_event_target_as = fex_current_pilgrim_@root
+			}
+			country_event = { id = fex_flavour.86 days = 1800 }
+		}
+	}
+
+	# Send the second candidate
+	option = {
+		name = fex_flavour.85.b
+		trigger = { exists = event_target:fex_pilgrim_candidate_2_@root }
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 2000 }
+			resource_stockpile_compare = { resource = unity value >= 500 }
+		}
+		add_resource = { energy = -2000 unity = -500 }
+		set_timed_country_flag = { flag = fex_pilgrimage_active days = 1800 }
+		hidden_effect = {
+			event_target:fex_pilgrim_candidate_2_@root = {
+				remove_leader_flag = fex_pilgrim_candidate
+				set_leader_flag = fex_on_pilgrimage
+				unassign_leader = this
+				exile_leader_as = fex_pilgrim_exile_@root
+				save_global_event_target_as = fex_current_pilgrim_@root
+			}
+			country_event = { id = fex_flavour.86 days = 1800 }
+		}
+	}
+
+	# Send the third candidate
+	option = {
+		name = fex_flavour.85.c
+		trigger = { exists = event_target:fex_pilgrim_candidate_3_@root }
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 2000 }
+			resource_stockpile_compare = { resource = unity value >= 500 }
+		}
+		add_resource = { energy = -2000 unity = -500 }
+		set_timed_country_flag = { flag = fex_pilgrimage_active days = 1800 }
+		hidden_effect = {
+			event_target:fex_pilgrim_candidate_3_@root = {
+				fex_send_leader_on_pilgrimage = yes
+			}
+			country_event = { id = fex_flavour.86 days = 1800 }
+		}
+	}
+
+	# Go back
+	option = {
+		name = fex_flavour.85.d
+		country_event = { id = fex_flavour.82 }
+	}
+}
+
+# Pilgrimage: leader returns
+country_event = {
+	id = fex_flavour.86
+	title = fex_flavour.86.title
+	desc = fex_flavour.86.desc
+	picture = GFX_evt_shroudwalker_enclave
+	is_triggered_only = yes
+
+	immediate = {
+		remove_country_flag = fex_pilgrimage_active
+		# Return the leader
+		clone_leader = {
+			target = event_target:fex_current_pilgrim_@root
+		}
+		last_created_leader = {
+			add_trait = fex_leader_trait_pilgrim_soul
+			remove_leader_flag = fex_on_pilgrimage
+			save_event_target_as = fex_returned_pilgrim
+		}
+	}
+
+	option = {
+		name = fex_flavour.86.a
 	}
 }

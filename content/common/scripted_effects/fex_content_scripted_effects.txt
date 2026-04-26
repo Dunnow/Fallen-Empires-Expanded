@@ -172,3 +172,12 @@ fex_create_shroud_incursion_fleet = {
 		}
 	}
 }
+
+# Leader scope - send a leader into exile for a pilgrimage.
+fex_send_leader_on_pilgrimage = {
+	remove_leader_flag = fex_pilgrim_candidate
+	set_leader_flag = fex_on_pilgrimage
+	unassign_leader = this
+	exile_leader_as = fex_pilgrim_exile_@root
+	save_global_event_target_as = fex_current_pilgrim_@root
+}

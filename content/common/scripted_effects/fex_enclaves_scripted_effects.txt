@@ -145,11 +145,11 @@ fex_create_religious_order_enclave = {
 			}
 			ignore_initial_colony_error = yes
 			effect = {
-				save_global_event_target_as = fex_religious_order_country
-				set_country_flag = fex_religious_order_country
+				save_global_event_target_as = fex_spiritualist_enclave_country
+				set_country_flag = fex_spiritualist_enclave_country
 				set_graphical_culture = fallen_empire_02
 				set_name = {
-					key = fex_religious_order_country_name
+					key = fex_spiritualist_enclave_country_name
 					variable_string = "\\[This.owner_main_species.GetAdj]"
 				}
 				# Create station fleet
