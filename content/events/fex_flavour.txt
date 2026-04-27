@@ -1255,6 +1255,7 @@ country_event = {
 	option = {
 		name = fex_flavour.84.b
 		trigger = { has_country_flag = fex_wisdom_result_minor }
+		custom_tooltip = fex_flavour.84.b.tooltip
 		add_monthly_resource_mult = {
 			resource = unity
 			value = 3
@@ -1268,6 +1269,7 @@ country_event = {
 	option = {
 		name = fex_flavour.84.c
 		trigger = { has_country_flag = fex_wisdom_result_moderate }
+		custom_tooltip = fex_flavour.84.c.tooltip
 		add_monthly_resource_mult = {
 			resource = society_research
 			value = 6
@@ -1281,6 +1283,7 @@ country_event = {
 	option = {
 		name = fex_flavour.84.d
 		trigger = { has_country_flag = fex_wisdom_result_major }
+		custom_tooltip = fex_flavour.84.d.tooltip
 		add_monthly_resource_mult = {
 			resource = society_research
 			value = 12
@@ -1294,6 +1297,7 @@ country_event = {
 	option = {
 		name = fex_flavour.84.e
 		trigger = { has_country_flag = fex_wisdom_result_psionic }
+		custom_tooltip = fex_flavour.84.e.tooltip
 		if = {
 			limit = { NOT = { has_technology = tech_psionic_theory } }
 			add_research_option = tech_psionic_theory
