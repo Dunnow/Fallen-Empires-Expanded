@@ -246,6 +246,7 @@
  NAME_fex_religious_order_station: "Pilgrim's Rest"
  NAME_fex_religious_order_ship: "Pilgrim's Rest"
  fex_spiritualist_enclave_country_name: "[This.owner_main_species.GetAdj] Sacred Order"
+ fex_spiritualist_enclave_ruler_title: "Hierophant"
  NAME_fex_religious_order_system: "Sanctum"
  NAME_fex_religious_order_holy_world: "Luminis"
 
