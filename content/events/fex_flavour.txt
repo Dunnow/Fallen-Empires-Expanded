@@ -1095,14 +1095,18 @@ country_event = {
 country_event = {
 	id = fex_flavour.82
 	title = TRANSMISSION
-	desc = fex_flavour.82.desc
+	desc = fex_flavour.82a.desc
 	diplomatic = yes
-	force_open = yes
 	is_triggered_only = yes
 
+	custom_gui = "enclave_trader_window"
+	custom_gui_option = "enclave_trader_option"
+	event_message_type = ENCLAVE_DIPLOMACY
+	location = event_target:xuracorp_enclave_system
+
 	picture_event_data = {
-		room = personality_spiritual_seekers_room
-		portrait = event_target:fex_spiritualist_enclave_country.species
+		portrait = event_target:fex_spiritualist_enclave_country
+		room = fex_sacred_order_enclave_room
 	}
 
 	# Seek Wisdom - repeatable
@@ -1177,6 +1181,7 @@ country_event = {
 	# End transmission
 	option = {
 		name = fex_flavour.82.d
+		default_hide_option = yes
 	}
 }
 
@@ -1188,9 +1193,15 @@ country_event = {
 	diplomatic = yes
 	is_triggered_only = yes
 
+
+	custom_gui = "enclave_trader_window"
+	custom_gui_option = "enclave_trader_option"
+	event_message_type = ENCLAVE_DIPLOMACY
+	location = event_target:xuracorp_enclave_system
+
 	picture_event_data = {
-		room = personality_spiritual_seekers_room
-		portrait = event_target:fex_spiritualist_enclave_country.species
+		portrait = event_target:fex_spiritualist_enclave_country
+		room = fex_sacred_order_enclave_room
 	}
 
 	option = {
@@ -1228,9 +1239,15 @@ country_event = {
 	diplomatic = yes
 	is_triggered_only = yes
 
+
+	custom_gui = "enclave_trader_window"
+	custom_gui_option = "enclave_trader_option"
+	event_message_type = ENCLAVE_DIPLOMACY
+	location = event_target:xuracorp_enclave_system
+
 	picture_event_data = {
-		room = personality_spiritual_seekers_room
-		portrait = event_target:fex_spiritualist_enclave_country.species
+		portrait = event_target:fex_spiritualist_enclave_country
+		room = fex_sacred_order_enclave_room
 	}
 
 	immediate = {
@@ -1323,9 +1340,15 @@ country_event = {
 	diplomatic = yes
 	is_triggered_only = yes
 
+
+	custom_gui = "enclave_trader_window"
+	custom_gui_option = "enclave_trader_option"
+	event_message_type = ENCLAVE_DIPLOMACY
+	location = event_target:xuracorp_enclave_system
+
 	picture_event_data = {
-		room = personality_spiritual_seekers_room
-		portrait = event_target:fex_spiritualist_enclave_country.species
+		portrait = event_target:fex_spiritualist_enclave_country
+		room = fex_sacred_order_enclave_room
 	}
 
 	immediate = {
