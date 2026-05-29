@@ -115,8 +115,9 @@
  fex_flavour.85.d: "Perhaps another time."
 
  fex_flavour.86.title: "Pilgrimage Complete"
- fex_flavour.86.desc: "[event_target:fex_returned_pilgrim.GetName] has returned from the sacred site, profoundly changed by the experience. They speak of visions and revelations that defy rational explanation.\n\nThe ancient shrines and meditative paths of the holy world have opened their mind to deeper truths. The Order's monks guided them through rituals older than recorded history.\n\nOur emissary returns with renewed purpose and a wisdom that will serve us well."
+ fex_flavour.86.desc: "[event_target:fex_returned_pilgrim.GetName] has returned from the sacred site, profoundly changed by the experience. [event_target:fex_returned_pilgrim.GetSheHeCap] speaks of visions and revelations that defy rational explanation.\n\nThe ancient shrines and meditative paths of the holy world have opened [event_target:fex_returned_pilgrim.GetHerHis] mind to deeper truths. The Order's monks guided [event_target:fex_returned_pilgrim.GetHerHim] through rituals older than recorded history.\n\nOur emissary returns with renewed purpose and a wisdom that will serve us well."
  fex_flavour.86.a: "Welcome home."
+ fex_flavour.86.a.tt: "Our leader returns to their role with new traits and a revitalized outlook."
 
  fex_flavour.83.desc: "Wisdom is not freely given, [This.GetSpeciesName]. The ancient truths demand sacrifice from those who would receive them.\n\nA contribution to the Order's upkeep is expected. In return, we shall share what insights we may."
  fex_flavour.83.a: "We humbly offer our contribution."

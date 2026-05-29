@@ -4,14 +4,14 @@ fex_leader_trait_pilgrim_soul = {
 	inline_script = {
 		script = trait/icon
 		CLASS = leader
-		ICON = "GFX_leader_trait_resilient"
+		ICON = "GFX_leader_trait_guided"
 		RARITY = veteran
 		COUNCIL = no
 		TIER = none
 	}
-	# TODO: Add real modifiers
 	self_modifier = {
 		species_leader_exp_gain = 0.25
+		leader_lifespan_add = 10
 	}
 	leader_class = { commander scientist official }
 }
