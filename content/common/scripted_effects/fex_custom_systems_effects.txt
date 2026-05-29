@@ -432,6 +432,42 @@ fex_generate_exile_raiding_fleet = {
 	last_created_fleet = { assign_leader = last_created_leader }
 }
 
+# System scope
+fex_spawn_religious_order_system = {
+	spawn_system = {
+		initializer = fex_religious_order_system
+		hyperlane = yes
+		max_jumps = 1
+	}
+	last_created_system = {
+		save_global_event_target_as = fex_religious_order_system
+		set_star_flag = fex_spiritualist_history
+		set_star_flag = fex_historical_system
+		create_starbase = {
+			size = starbase_outpost
+			owner = event_target:fex_spiritualist_fe
+		}
+		# Connect to the unowned neighbour system as well
+		add_hyperlane = {
+			from = this
+			to = event_target:fex_religious_order_neighbor
+		}
+		# Add hyper relay so it matches the other FE systems
+		spawn_megastructure = {
+			type = hyper_relay_ruined
+			random_pos = yes
+			graphical_culture = mammalian_01
+		}
+		random_system_megastructure = {
+			limit = { is_megastructure_type = hyper_relay_ruined }
+			upgrade_megastructure_to = hyper_relay_restored
+			finish_upgrade = yes
+			set_graphical_culture = mammalian_01
+		}
+		fex_create_religious_order_enclave = yes
+	}
+}
+
 fex_generate_exile_admiral = {
 	event_target:fex_xenophobe_exiles_country = {
 		create_leader = {

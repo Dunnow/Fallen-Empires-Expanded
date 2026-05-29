@@ -207,6 +207,27 @@ country_event = {
                 fex_generate_xenophobe_exiles = yes
             }
         }
+        if = {
+            limit = { is_fallen_empire_spiritualist = yes }
+            random_system_within_border = {
+                limit = {
+                    any_neighbor_system = {
+                        has_star_flag = fex_spiritualist_history
+                        has_owner = no
+                    }
+                }
+                # Save the unowned neighbour for hyperlane connection
+                random_neighbor_system = {
+                    limit = {
+                        has_star_flag = fex_spiritualist_history
+                        has_owner = no
+                    }
+                    save_event_target_as = fex_religious_order_neighbor
+                }
+                # Spawn off the FE system so it connects to FE space
+                fex_spawn_religious_order_system = yes
+            }
+        }
     }
 }
 

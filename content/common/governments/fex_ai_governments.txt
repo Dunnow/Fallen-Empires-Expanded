@@ -1,0 +1,15 @@
+# Spiritualist Sacred Order Enclave
+gov_fex_sacred_order_enclave = {
+	ruler_title = fex_spiritualist_enclave_ruler_title
+
+	should_force_rename = yes
+
+	possible = {
+		is_ai = yes
+		has_valid_civic = fex_civic_sacred_order
+	}
+
+	weight = {
+		base = @gov_ai_weight
+	}
+}

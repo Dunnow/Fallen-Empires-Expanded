@@ -99,15 +99,96 @@ fex_create_archaeology_enclave_country = {
 					}
 					set_leader = last_created_leader
 					room_name_override = "fex_scavenger_enclave_room"
+				}
+			}
+		}
+	}
+}
 
-					# Create comms
-					every_playable_country = {
-						limit = {
-							always = yes
-							#intel_level = { level > low system = prevprevprev }
+# Solar system Scope
+fex_create_religious_order_enclave = {
+	# Save the holy site planet for positioning
+	random_system_planet = {
+		limit = { is_planet_class = pc_gaia }
+		save_event_target_as = fex_holy_site_planet
+	}
+	solar_system.system_star = {
+		save_global_event_target_as = fex_religious_order_star
+		create_country = {
+			name = random
+			type = fex_trader_enclave
+			authority = "auth_oligarchic"
+			civics = {
+				civic = fex_civic_sacred_order
+			}
+			origin = "origin_default"
+			species = event_target:fex_spiritualist_fe.species
+			flag = {
+				icon = {
+					category = "enclaves"
+					file = "enclaves_flag_curator.dds"
+				}
+				background = {
+					category = "backgrounds"
+					file = "new_dawn.dds"
+				}
+				colors = {
+					"indigo"
+					"dark_purple"
+					"null"
+					"null"
+				}
+			}
+			ethos = {
+				ethic = ethic_fanatic_spiritualist
+				ethic = ethic_pacifist
+			}
+			ignore_initial_colony_error = yes
+			effect = {
+				save_global_event_target_as = fex_spiritualist_enclave_country
+				set_country_flag = fex_spiritualist_enclave_country
+				set_graphical_culture = fallen_empire_02
+				set_name = {
+					key = fex_spiritualist_enclave_country_name
+					variable_string = "\\[This.owner_main_species.GetAdj]"
+				}
+				# Create station fleet
+				create_fleet = {
+					name = "NAME_fex_religious_order_ship"
+					settings = { spawn_debris = no }
+					effect = {
+						set_owner = prev
+						create_ship = {
+							name = "NAME_fex_religious_order_ship"
+							design = "NAME_fex_religious_order_station"
+							graphical_culture = prev
 						}
-						establish_communications = last_created_country
+						set_location = {
+							target = event_target:fex_holy_site_planet
+							distance = 10
+							angle = 45
+						}
+						save_global_event_target_as = fex_religious_order_starbase
 					}
+				}
+				set_custom_capital_location = event_target:fex_holy_site_planet
+				# Create ruler
+				create_leader = {
+					name = random
+					class = random_ruler
+					species = event_target:fex_spiritualist_fe.species
+					skill = 5
+					traits = {
+						trait = leader_trait_spark_of_genius
+					}
+				}
+				set_leader = last_created_leader
+				room_name_override = "fex_sacred_order_enclave_room"
+				# Establish relations with parent FE
+				establish_communications = event_target:fex_spiritualist_fe
+				set_faction_hostility = {
+					target = event_target:fex_spiritualist_fe
+					set_friendly = yes
 				}
 			}
 		}
