@@ -1096,6 +1096,9 @@ country_event = {
 	id = fex_flavour.82
 	title = TRANSMISSION
 	desc = fex_flavour.82a.desc
+	desc = fex_flavour.82b.desc
+	desc = fex_flavour.82c.desc
+	desc = fex_flavour.82d.desc
 	diplomatic = yes
 	is_triggered_only = yes
 
@@ -1124,7 +1127,9 @@ country_event = {
 				NOT = { has_country_flag = fex_seek_wisdom_cooldown }
 			}
 		}
-		country_event = { id = fex_flavour.83 }
+		hidden_effect = {
+			country_event = { id = fex_flavour.83 }
+		}
 	}
 
 	# Pilgrimage - gated behind 5 wisdom sessions
@@ -1151,7 +1156,9 @@ country_event = {
 				NOT = { has_country_flag = fex_pilgrimage_active }
 			}
 		}
-		country_event = { id = fex_flavour.85 }
+		hidden_effect = {
+			country_event = { id = fex_flavour.85 }
+		}
 	}
 
 	# Tell us about this place
@@ -1192,7 +1199,6 @@ country_event = {
 	desc = fex_flavour.83.desc
 	diplomatic = yes
 	is_triggered_only = yes
-
 
 	custom_gui = "enclave_trader_window"
 	custom_gui_option = "enclave_trader_option"
@@ -1462,7 +1468,9 @@ country_event = {
 	# Go back
 	option = {
 		name = fex_flavour.85.d
-		country_event = { id = fex_flavour.82 }
+		hidden_effect = {
+			country_event = { id = fex_flavour.82 }
+		}
 	}
 }
 
